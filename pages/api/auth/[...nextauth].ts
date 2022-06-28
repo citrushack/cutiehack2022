@@ -8,7 +8,7 @@ import clientPromise from 'lib/mongodb'
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   return await NextAuth(req, res, {
     adapter: MongoDBAdapter({
-      db: (await clientPromise).db(process.env.MONGODB_DB)
+      db: (await clientPromise).db(process.env.MONGODB_DB),
     }),
     providers: [
       GoogleProvider({
@@ -21,10 +21,10 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
           port: process.env.EMAIL_SERVER_PORT,
           auth: {
             user: process.env.EMAIL_SERVER_USER,
-            pass: process.env.EMAIL_SERVER_PASSWORD
-          }
+            pass: process.env.EMAIL_SERVER_PASSWORD,
+          },
         },
-        from: process.env.EMAIL_FROM
+        from: process.env.EMAIL_FROM,
       }),
     ],
     callbacks: {
@@ -34,7 +34,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
           // -- https://github.com/nextauthjs/next-auth/blob/main/packages/next-auth/src/providers/google.ts
           user.name = {
             first: String(profile.given_name),
-            last: String(profile.family_name)
+            last: String(profile.family_name),
           }
         }
         return true
@@ -52,8 +52,8 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     },
     pages: {
       verifyRequest: '/verify-signin', // Used for check email page
-      newUser: '/' // Redirect new users to apply (replace to '/' when apps close)
+      newUser: '/', // Redirect new users to apply (replace to '/' when apps close)
     },
-    secret: process.env.SECRET
+    secret: process.env.SECRET,
   })
 }

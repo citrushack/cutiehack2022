@@ -16,16 +16,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/pages/*": [
-        "pages/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ]
-    },
+      "@/components/*": ["components/*"],
+      "@/pages/*": ["pages/*"],
+      "@/lib/*": ["lib/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/mongodb.js"],
   "exclude": ["node_modules"]
