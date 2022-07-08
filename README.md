@@ -7,6 +7,7 @@
 > Contributors:
 >
 > Minsoo Kim
+>
 > Nathan Melwani
 
 This is the codebase for Cutie Hack 2022. Below is a guide for setting up a local environment to run the website locally for development purposes.
