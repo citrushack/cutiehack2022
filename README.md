@@ -24,7 +24,7 @@ This is the codebase for Cutie Hack 2022. Below is a guide for setting up a loca
 - Install **[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)**
 - Install **[Node.JS](https://nodejs.org/en/)**
 - Install **[Yarn](https://yarnpkg.com/getting-started/install)**
-  - Run the following command to install: `npm install yarn`
+  - Run the following command to install: `npm install --global yarn`
 - Install a code editor of your choice (e.g [VScode](https://code.visualstudio.com/), [Atom](https://atom.io/), [Sublime](https://www.sublimetext.com/), etc.)
 - Install at least two popular browsers (e.g. Chrome, Firefox, Safari, etc.). This is for testing for cross compatibility for different browsers
 
