@@ -1,34 +1,118 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> modification of https://github.com/citrushack/citrushack2022/blob/dev/README.md
 
-## Getting Started
+# Cutie Hack 2022
 
-First, run the development server:
+> Author: Minsoo Kim
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> Contributors:
+>
+> Minsoo Kim
+> Nathan Melwani
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is the codebase for Cutie Hack 2022. Below is a guide for setting up a local environment to run the website locally for development purposes.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Prerequisites
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+#### Windows
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **[Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701):** This is used to navigate through the project/repo and to run the development server.
+- **[Ubuntu WSL](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) (Recommended):** This is to use the bash terminal found in Linux. I recommend using a WSL to use Linux commands for developing this project. Follow [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to install.
 
-## Learn More
+#### All OSes
 
-To learn more about Next.js, take a look at the following resources:
+- Install **[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)**
+- Install **[Node.JS](https://nodejs.org/en/)**
+- Install **[Yarn](https://yarnpkg.com/getting-started/install)**
+  - Run the following command to install: `npm install yarn`
+- Install a code editor of your choice (e.g [VScode](https://code.visualstudio.com/), [Atom](https://atom.io/), [Sublime](https://www.sublimetext.com/), etc.)
+- Install at least two popular browsers (e.g. Chrome, Firefox, Safari, etc.). This is for testing for cross compatibility for different browsers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Setting Up Your Local Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Run the following commands in a terminal.
 
-## Deploy on Vercel
+### Forking
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Forking the repo to work on your own code.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Fork the repo by clicking the `Fork` button in the upper right corner
+  - This creates a copy of the repository in your own account.
+
+### Clone the Project
+
+- `git clone <forked_repo_link>`
+- `cd citrushack2022`
+  - This is to navigate into the directory generated for the cloned repo.
+- If you are using VScode, run `code .` to open the current directory in VScode (this is mainly for easier navigation)
+  - You may need to install **code** so run `sudo apt install code`
+
+### Install Necessary Packages
+
+- `yarn` or `yarn install`
+  - This will install all necessary packages for the project.
+
+### Run the Development Server
+
+- `yarn dev`
+- Go to http://localhost:3000/
+  - This is the port where the development server is run on. Any changes you make to the code will reflect almost instantly while the server is running.
+
+## Contributing to the Project
+
+### Creating Branches
+
+- Create your feature branch from the `main` branch: `git branch <github-username>/<feature-description>`
+- `git checkout <github-username>/<feature-description>`
+- Make sure you are on the feature branch: `git branch`
+- Never work on the `main` branch
+
+### Committing Changes
+
+- Check what files you edited: `git status`
+- Adding files to commit: `git add <file-name>` or `git add .` to commit all files
+- Commit files: `git commit -m <useful-message>`
+  - Try committing frequently and writing useful messages to describe the changes you made.
+- Push your changes: `git push`
+  - If it's your first time pushing changes from a new branch, you may need to run `git push -u origin <branch-name>`
+
+### Creating Pull Requests
+
+> Make a pull request when you have code to merge.
+
+- Go to your forked repo on Github and click the "Contribute" option near the top.
+  - Click `Open Pull Request`.
+  - Compare your branch to the main branch. Then click `Create Pull Request`.
+  - Assign the webdev lead to review your code (see the righthand side).
+  - NEVER merge your own PR! (PR is short for Pull Requests)
+  - Leave a comment if you want to. Then click `Create Pull Request`.
+
+### Reviewing Pull Requests
+
+- Code reviews are just as important as the code itself.
+- Head over to the Pull Requests tab and review the changes
+  - Leave comments if you have questions/suggestions/concern
+- DON'T merge the code even after you have reviewed the code
+  - One of the web dev lead will do a final review and do the merging
+
+### Fetching Upstream
+
+> Match your repository to the master branch.
+
+- Go to your forked repo on Github and click the "Fetch upstream" option near the top.
+- Click `Fetch and Merge` to fetch the master branch and merge the master code into your repo.
+  - This will merge any new changes made in the master branch into your repo.
+  - I recommend committing any of your changes to your forked repo before doing this, so you can see if there will be any conflicts.
+
+### Assigning Yourself to Issues
+
+> Issues are tasks to be done for the project.
+
+- Go to the repo on Github and open the "Issues" tab.
+  - This acts as a taskboard for what needs to be done for the project.
+- Click on an issue to read more information about it.
+- If you want to work on an issue, assign yourself to the issue (see the righthand side).
+
+## Tech Stack
+
+- **[NextJS](https://nextjs.org/)**: This is the frontend framework for this project.
+- **MongoDB**: This is the database used for the backend for this project.
