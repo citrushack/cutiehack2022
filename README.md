@@ -64,8 +64,8 @@ Run the following commands in a terminal
 
 - Create your feature branch from the `main` branch: `git branch <github-username>/<feature-description>`
   - The feature branch should only deal with one issue
-  - Make sure to multiple branches for multiple issues, each with its own issue
-    - We don't encourage working on more than 2 tickets at a time
+  - Make sure to create multiple branches for multiple issues, each with its own issue
+    - We don't encourage working on more than 2 issues at a time
 - `git checkout <github-username>/<feature-description>`
 - Make sure you are on the feature branch: `git branch`
 - Never work on the `main` branch
