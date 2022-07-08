@@ -91,7 +91,7 @@ Run the following commands in a terminal.
 
 - Code reviews are just as important as the code itself.
 - Head over to the Pull Requests tab and review the changes
-  - Leave comments if you have questions/suggestions/concern
+  - Leave comments if you have questions/suggestions/concerns
 - DON'T merge the code even after you have reviewed the code
   - One of the web dev lead will do a final review and do the merging
 
