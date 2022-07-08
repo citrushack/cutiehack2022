@@ -41,7 +41,7 @@ Run the following commands in a terminal.
 ### Clone the Project
 
 - `git clone <forked_repo_link>`
-- `cd citrushack2022`
+- `cd cutiehack2022`
   - This is to navigate into the directory generated for the cloned repo.
 - If you are using VScode, run `code .` to open the current directory in VScode (this is mainly for easier navigation)
   - You may need to install **code** so run `sudo apt install code`
