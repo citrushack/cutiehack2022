@@ -12,6 +12,7 @@
     "@next-auth/mongodb-adapter": "0.0.2-next.285",
     "@sendgrid/mail": "^7.7.0",
     "autoprefixer": "^10.4.7",
+    "framer-motion": "^6.5.1",
     "mongodb": "^4.8.0",
     "next": "12.2.0",
     "next-auth": "^4.7.0",
