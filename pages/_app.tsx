@@ -3,9 +3,14 @@ import type { AppProps } from 'next/app'
 
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
+import { SessionProvider } from 'next-auth/react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
+      <Component {...pageProps} />
+    </SessionProvider>
+  )
 }
 
 export default MyApp
