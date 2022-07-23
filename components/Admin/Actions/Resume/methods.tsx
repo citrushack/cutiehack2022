@@ -108,7 +108,7 @@ export const downloadFiles = (docs) => {
 }
 
 export const openFile = (doc) => {
-  getDownloadURL(ref(storage, 'resumes/' + doc.name)).then((url) => {
+  getDownloadURL(ref(storage, doc.name)).then((url) => {
     window.open(url, '_blank')
   })
 }
