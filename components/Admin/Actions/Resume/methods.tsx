@@ -25,7 +25,7 @@ export const loadFiles = (setDocs) => {
 }
 
 export const downloadFile = (doc) => {
-  getDownloadURL(ref(storage, 'resumes/' + doc.name)).then((url) => {
+  getDownloadURL(ref(storage, doc.name)).then((url) => {
     const xhr = new XMLHttpRequest()
     xhr.responseType = 'blob'
     xhr.open('GET', url)
