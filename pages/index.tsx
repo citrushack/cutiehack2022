@@ -10,8 +10,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className="text-orange-400">
-          Welcome to <a href="https://nextjs.org">cutiehack 2022!</a>
+        <h1 className={styles.rainbowTitle}>
+          Cutie Hack 2022
         </h1>
       </main>
     </div>
