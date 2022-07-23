@@ -1,5 +1,4 @@
 export function OverviewStats({ users }) {
-  console.log(users)
   var numSignedUp = Object.keys(users).length
   var numNotApplied = Object.keys(users.filter((user) => !user.uid)).length
   var numPending = Object.keys(
