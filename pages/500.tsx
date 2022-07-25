@@ -1,6 +1,5 @@
 import React from 'react'
 import { Page } from '@/components/Page/Page'
-import styles from '../styles/Home.module.css'
 
 export default function error500() {
   return (
