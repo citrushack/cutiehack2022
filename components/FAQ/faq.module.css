@@ -1,0 +1,7 @@
+.faq-wrapper {
+    border-color: rgba(251, 146, 60, 0.3)
+}
+
+.faq-wrapper:hover {
+    border-color: rgb(251, 146, 60)
+}
