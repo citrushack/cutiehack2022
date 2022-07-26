@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --config prettierrc.json --write \"**/*.{js,jsx,tsx}\""
+    "format": "yarn prettier --config prettierrc.json  --write \"components/**/*.{js,jsx,ts,tsx}\" \"pages/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@next-auth/mongodb-adapter": "0.0.2-next.285",
