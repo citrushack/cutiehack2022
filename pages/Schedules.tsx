@@ -37,7 +37,11 @@ export default function Schedules() {
                     <div className="flex flex-col w-full text-left">12 PM - 12 AM</div>
                     <div className="flex flex-col w-full text-left">
                       <div>CTF</div>
-                      <div>Via Cyber@UCR Website</div>
+                      <div>
+                        <a href="https://ctf.ucrcyber.org/">
+                          <span className="hover:underline">Via Cyber@UCR Website</span>
+                        </a>
+                      </div>
                     </div>
                   </div> 
                 </div>
