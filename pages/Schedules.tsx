@@ -21,6 +21,16 @@ export default function Schedules() {
                   </div>
                 </div>
               </div>
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col w-full text-left font-medium">8 - 9 AM</div>
+                <div className="flex flex-col w-full text-left">
+                  <div className="font-medium">Opening Ceremony</div>
+                  <div className="italic text-sm">
+                    <div>Hybrid</div>
+                    <div>(In Person @ MSE 116)</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="flex flex-col w-full gap-5">
               <div className="flex flex-col font-medium">Workshops</div>
@@ -44,6 +54,18 @@ export default function Schedules() {
                   </div>
                 </div>
               </div> 
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col w-full text-left font-medium">11 AM - 12 PM</div>
+                <div className="flex flex-col w-full text-left">
+                  <div className="font-medium">Intro to Unity</div>
+                </div>
+              </div> 
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col w-full text-left font-medium">11 AM - 12 PM</div>
+                <div className="flex flex-col w-full text-left">
+                  <div className="font-medium">Intro to Discord Bots</div>
+                </div>
+              </div> 
             </div>
             <div className="flex flex-col w-full gap-5">
               <div className="flex flex-col font-medium">Activities</div>
@@ -58,6 +80,18 @@ export default function Schedules() {
                   </div>
                 </div>
               </div> 
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col w-full text-left font-medium">12:30 - 1 PM</div>
+                <div className="flex flex-col w-full text-left">
+                  <div className="font-medium">CSSBattle</div>
+                </div>
+              </div> 
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col w-full text-left font-medium">1 - 9 PM</div>
+                <div className="flex flex-col w-full text-left">
+                  <div className="font-medium">Raffle</div>
+                </div>
+              </div>
             </div>
           </div>
           <h2>Sunday, April 3</h2>
@@ -69,6 +103,12 @@ export default function Schedules() {
                 <div className="flex flex-col w-full text-left">
                   <div className="font-medium">Red Bull Giveaway</div>
                   <div className="italic text-sm">In-Person @ WCH 205/206</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col w-full text-left font-medium">9 AM</div>
+                <div className="flex flex-col w-full text-left">
+                  <div className="font-medium">Hackathon End</div>
                 </div>
               </div>
             </div>
