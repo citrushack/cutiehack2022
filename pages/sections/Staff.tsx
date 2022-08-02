@@ -1,5 +1,5 @@
 import React from 'react'
-import StaffMember from './StaffMember'
+import StaffMember from '../../components/Staff/StaffMember'
 
 export default function Staff() {
   return (
