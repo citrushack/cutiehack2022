@@ -1,15 +1,18 @@
 import { Page } from '@/components/Page/Page'
 import React from 'react'
+import { ScheduleItem } from './ScheduleItem'
 
-export default function Schedules() {
+export default function Schedule() 
+{
   return (
     <Page>
       <section className="flex flex-col text-center w-full items-center">
         <h1>Schedule</h1>
-        <h3>Schedule is in PST (Pacific Standard Time)</h3>
-        <h2>Saturday, April 2</h2>
-        <div className="flex flex-row gap-12 px-12 my-6">
-          <div className="flex flex-col w-full gap-5">
+        <p>Schedule is in PST (Pacific Standard Time)</p>
+        <p>Saturday, April 2</p>
+        <div id="Schedule-Wrapper" className="flex flex-row gap-12 px-12 my-6"> 
+        <ScheduleItem></ScheduleItem>
+            {/* <div className="flex flex-col w-full gap-5">
             <div className="flex flex-col font-medium">Events</div>
             <div className="flex items-center gap-5">
               <div className="flex flex-col w-full text-left font-medium">
@@ -114,7 +117,7 @@ export default function Schedules() {
             </div>
           </div>
         </div>
-        <h2>Sunday, April 3</h2>
+        <p>Sunday, April 3</p>
         <div className="flex flex-row gap-12 px-12 my-6">
           <div className="flex flex-col w-full gap-5">
             <div className="flex flex-col font-medium">Events</div>
@@ -148,7 +151,7 @@ export default function Schedules() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </Page>
