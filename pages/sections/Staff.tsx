@@ -1,7 +1,6 @@
 import React from 'react'
-import StaffMember from 'components/Staff/StaffMember'
-import StaffMap from "components/Staff/StaffMap.jsx";
-
+import StaffMember from '@/components/Staff/StaffMember'
+import StaffMap from '@/components/Staff/StaffMap.jsx'
 
 export default function Staff() {
   return (
@@ -9,19 +8,17 @@ export default function Staff() {
       <h1 className="mb-12">Our Team</h1>
       <div className="flex flex-wrap justify-center">
         {StaffMap.map((staff) => {
-          return(
+          return (
             <>
               <StaffMember
-              name={staff.name}
-              title={staff.title}
-              image={staff.image}
-        />
+                name={staff.name}
+                title={staff.title}
+                image={staff.image}
+              />
             </>
           )
-        })
-      }
-        
+        })}
       </div>
     </div>
-  );
+  )
 }
