@@ -25,6 +25,7 @@ export function UserBar() {
   return (
     <>
       <div className="z-[1000] fixed top-3 right-3 flex gap-3">
+        {/* add this back when we have a /apply page */}
         {/* { status === 'authenticated' && !session.user.uid && router.pathname !== '/apply' &&
           <Link passHref href='/apply'>
             <motion.button
