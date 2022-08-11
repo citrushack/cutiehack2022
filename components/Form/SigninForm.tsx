@@ -68,9 +68,7 @@ export function SigninForm({ csrfToken = '' }) {
         </motion.button>
       </form>
       <div className="flex flex-col gap-6 pt-6 justify-center w-full">
-        <div className="text-center border-b-2 border-sub leading-[0.1rem]">
-          <span className="px-4 bg-secondary text-sub">or</span>
-        </div>
+        <div className="text-center border-b-2 border-sub leading-[0.1rem]"></div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
@@ -78,6 +76,17 @@ export function SigninForm({ csrfToken = '' }) {
           onClick={() => signIn('google')}
         >
           Sign In With Google
+        </motion.button>
+      </div>
+      <div className="flex flex-col gap-6 pt-6 justify-center w-full">
+        <div className="text-center border-b-2 border-sub leading-[0.1rem]"></div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.995 }}
+          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-semibold"
+          onClick={() => signIn('github')}
+        >
+          Sign In With GitHub
         </motion.button>
       </div>
     </div>
