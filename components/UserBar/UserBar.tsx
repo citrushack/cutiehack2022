@@ -3,7 +3,9 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useSession, signIn } from 'next-auth/react'
 import { UserDropdown } from './UserDropdown'
-// import { SigninForm } from '@/components/Form'
+import Modal from '@/components/Modal'
+import { SigninForm } from '@/components/Form/SigninForm'
+import { ThemeButton } from '@/components/UserBar/ThemeButton'
 
 /** Wrapper containing user-action buttons (e.g. sign in, apply, user dropdown, theme button, etc.). */
 export function UserBar() {
@@ -47,22 +49,18 @@ export function UserBar() {
           </motion.button>
         )}
         <span className="hidden md:block">
-          {/* <ThemeButton /> */}
-          <button>theme button placeholder</button>
+          <ThemeButton />
         </span>
       </div>
       {/* use modal later */}
-      <button
-        // title='Sign In'
-        // description='Sign in to Citrus Hack via Google to apply and access more. No password required.'
-        // show={signinModalOpen}
-        // handler={setSigninModalOpen}
-        onClick={handleSignin}
+      <Modal
+        title="Sign In"
+        description="Sign in to Citrus Hack via Google to apply and access more. No password required."
+        show={signinModalOpen}
+        handler={setSigninModalOpen}
       >
-        {/* use a custom sign in form later */}
-        {/* <SigninForm /> */}
-        Sign In
-      </button>
+        <SigninForm />
+      </Modal>
     </>
   )
 }
