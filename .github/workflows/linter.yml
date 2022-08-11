@@ -1,6 +1,6 @@
 name: Lint with Prettier
 
-on: [push, fork]
+on: [push, pull_request, fork]
 
 jobs:
   prettier:
