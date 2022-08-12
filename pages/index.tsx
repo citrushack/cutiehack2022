@@ -1,20 +1,45 @@
+import { Page } from '@/components/Page/Page'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
+import { Element } from 'react-scroll'
+import Landing from '@/pages/sections/landing'
+import Schedule from '@/pages/sections/schedule'
+import About from '@/pages/sections/about'
+import Tracks from '@/pages/sections/tracks'
+import Support from '@/pages/sections/support'
+import Sponsors from '@/pages/sections/sponsors'
+import Staff from '@/pages/sections/staff'
+import Faq from '@/pages/sections/faq'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>cutiehack 2022</title>
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className="text-orange-400">
-          Welcome to <a href="https://nextjs.org">cutiehack 2022!</a>
-        </h1>
-      </main>
-    </div>
+    <Page title="Home">
+      <Element name="Home">
+        <Landing />
+      </Element>
+      <Element name="Schedule">
+        <Schedule />
+      </Element>
+      <Element name="About">
+        <About />
+      </Element>
+      <Element name="Tracks">
+        <Tracks />
+      </Element>
+      <Element name="Support">
+        <Support />
+      </Element>
+      <Element name="Sponsors">
+        <Sponsors />
+      </Element>
+      <Element name="Staff">
+        <Staff />
+      </Element>
+      <Element name="Faq">
+        <Faq />
+      </Element>
+    </Page>
   )
 }
 
