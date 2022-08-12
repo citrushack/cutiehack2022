@@ -3,7 +3,10 @@ import clientPromise from '@/lib/mongodb'
 import { sendEmail } from '@/lib/sendgrid'
 import { getSession } from 'next-auth/react'
 
-export default async function createApplication(req: NextApiRequest, res: NextApiResponse) {
+export default async function createApplication(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const session = await getSession({ req })
   const db = (await clientPromise).db(process.env.MONGODB_DB)
   if (session) {
@@ -25,7 +28,7 @@ export default async function createApplication(req: NextApiRequest, res: NextAp
       criteria_met,
       MLH_code_of_conduct,
       MLH_privacy_policy,
-      MLH_communication
+      MLH_communication,
     } = req.body
 
     // send email notification to user applying
@@ -35,12 +38,12 @@ export default async function createApplication(req: NextApiRequest, res: NextAp
       name: first_name,
       members: '',
       invite_code: '',
-      newcomer: ''
+      newcomer: '',
     })
-    
+
     await db.collection('users').updateOne(
       {
-        email: session.user.email
+        email: session.user.email,
       },
       {
         $set: {
@@ -62,17 +65,18 @@ export default async function createApplication(req: NextApiRequest, res: NextAp
           firstTimeHacker: first_time,
           participation,
           criteriaMet: criteria_met,
-          MLHAcknowledgement: Boolean(MLH_code_of_conduct && MLH_privacy_policy && MLH_communication),
+          MLHAcknowledgement: Boolean(
+            MLH_code_of_conduct && MLH_privacy_policy && MLH_communication
+          ),
           qualified: '',
           admin: false,
-          appliedAt: new Date()
-        }
+          appliedAt: new Date(),
+        },
       }
     )
-  
+
     res.status(200).json({})
-  }
-  else {
+  } else {
     res.status(401).json({})
   }
 }
