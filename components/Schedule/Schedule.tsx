@@ -10,42 +10,95 @@ export default function Schedule() {
         <h1>Schedule</h1>
         <p>Schedule is in PST (Pacific Standard Time)</p>
         <p>Saturday, April 2</p>
-        <div id="Schedule-Wrapper" className="flex flex-row gap-12 px-12 my-6"> 
+        <div id="Saturday-Schedule-Wrapper" className="flex flex-row gap-12 px-12 my-6"> 
           <div className="flex flex-col font-medium w-full px-12 gap-9">Events
-            {ScheduleItemMap.get('Events').map((scheduleItemInfo) => 
+            {ScheduleItemMap.get('EventsSaturday').map((scheduleItemInfo) => 
             {
               return(
                 <ScheduleItem
                   eventName={scheduleItemInfo.eventName}
-                  date={scheduleItemInfo.date}
                   time={scheduleItemInfo.time}
+                  format={scheduleItemInfo.format}
                   location={scheduleItemInfo.location}
+                  link={scheduleItemInfo.link}
+                  hover={scheduleItemInfo.hover}
                 />
               )
             })}
           </div>
           <div className="flex flex-col font-medium w-full px-12 gap-9">Workshops
-            {ScheduleItemMap.get('Workshops').map((scheduleItemInfo) => 
+            {ScheduleItemMap.get('WorkshopsSaturday').map((scheduleItemInfo) => 
             {
               return(
                 <ScheduleItem
                   eventName={scheduleItemInfo.eventName}
-                  date={scheduleItemInfo.date}
                   time={scheduleItemInfo.time}
+                  format={scheduleItemInfo.format}
                   location={scheduleItemInfo.location}
+                  link={scheduleItemInfo.link}
+                  hover={scheduleItemInfo.hover}
                 />
               )
             })}
           </div>
           <div className="flex flex-col font-medium w-full px-12 gap-9">Activities
-            {ScheduleItemMap.get('Activities').map((scheduleItemInfo) => 
+            {ScheduleItemMap.get('ActivitiesSaturday').map((scheduleItemInfo) => 
             {
               return(
                 <ScheduleItem
                   eventName={scheduleItemInfo.eventName}
-                  date={scheduleItemInfo.date}
+                  time={scheduleItemInfo.time}
+                  format={scheduleItemInfo.format}
+                  location={scheduleItemInfo.location}
+                  link={scheduleItemInfo.link}
+                  hover={scheduleItemInfo.hover}
+                />
+              )
+            })}
+          </div>
+        </div>
+        <p>Sunday, April 3</p>
+        <div id="Sunday-Schedule-Wrapper" className="flex flex-row gap-12 px-12 my-6"> 
+          <div className="flex flex-col font-medium w-full px-12 gap-9">Events
+            {ScheduleItemMap.get('EventsSunday').map((scheduleItemInfo) => 
+            {
+              return(
+                <ScheduleItem
+                  eventName={scheduleItemInfo.eventName}
+                  time={scheduleItemInfo.time}
+                  format={scheduleItemInfo.format}
+                  location={scheduleItemInfo.location}
+                  link={scheduleItemInfo.link}
+                  hover={scheduleItemInfo.hover}
+                />
+              )
+            })}
+          </div>
+          {/* <div className="flex flex-col font-medium w-full px-12 gap-9">Workshops
+            {ScheduleItemMap.get('WorkshopsSunday').map((scheduleItemInfo) => 
+            {
+              return(
+                <ScheduleItem
+                  eventName={scheduleItemInfo.eventName}
                   time={scheduleItemInfo.time}
                   location={scheduleItemInfo.location}
+                  link={scheduleItemInfo.link}
+                  hover={scheduleItemInfo.hover}
+                />
+              )
+            })}
+          </div> */}
+          <div className="flex flex-col font-medium w-full px-12 gap-9">Activities
+            {ScheduleItemMap.get('ActivitiesSunday').map((scheduleItemInfo) => 
+            {
+              return(
+                <ScheduleItem
+                  eventName={scheduleItemInfo.eventName}
+                  time={scheduleItemInfo.time}
+                  format={scheduleItemInfo.format}
+                  location={scheduleItemInfo.location}
+                  link={scheduleItemInfo.link}
+                  hover={scheduleItemInfo.hover}
                 />
               )
             })}
