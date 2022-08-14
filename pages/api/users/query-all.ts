@@ -2,7 +2,10 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from '@/lib/mongodb'
 import { getSession } from 'next-auth/react'
 
-export default async function queryAll(req: NextApiRequest, res: NextApiResponse) {
+export default async function queryAll(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const session = await getSession({ req })
   const db = (await clientPromise).db(process.env.MONGODB_DB)
 
@@ -11,8 +14,7 @@ export default async function queryAll(req: NextApiRequest, res: NextApiResponse
     const groups = await db.collection('groups').find().toArray()
 
     res.status(200).json({ users, groups })
-  }
-  else {
+  } else {
     res.status(401).json({})
   }
 }
