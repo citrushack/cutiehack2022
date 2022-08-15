@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function StaffMember({ name, title, image }) {
+export default function StaffMember({ name, title, image, staffKey }) {
   return (
-    <div className="text-center max-w-[7rem] md:max-w-full">
+    <div key={staffKey} className="text-center max-w-[7rem] md:max-w-full">
       <Image
         className="rounded-full"
         src={image}

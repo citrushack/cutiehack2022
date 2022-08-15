@@ -1,6 +1,6 @@
-import React from 'react'
-import StaffMember from '@/components/Staff/StaffMember'
-import StaffMap from '@/components/Staff/StaffMap'
+import React from "react";
+import StaffMember from "@/components/Staff/StaffMember";
+import StaffMap from "@/components/Staff/StaffMap";
 
 export default function Staff() {
   return (
@@ -9,16 +9,16 @@ export default function Staff() {
       <div className="flex flex-wrap justify-center gap-6 md:gap-8">
         {StaffMap.map((staff) => {
           return (
-            <>
-              <StaffMember
-                name={staff.name}
-                title={staff.title}
-                image={staff.image}
-              />
-            </>
-          )
+            <StaffMember
+              name={staff.name}
+              title={staff.title}
+              image={staff.image}
+              staffKey={staff.staffKey}
+              key={staff.staffKey}
+            />
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
