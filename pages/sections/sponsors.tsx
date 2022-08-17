@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion'
-import sponsorLogos from '@/components/Sponsors/sponsorLogos'
-import sponsorMap from '@/components/Sponsors/sponsorMap'
+import SponsorLogos from '@/components/Sponsors/sponsorLogos'
+import SponsorMap from '@/components/Sponsors/sponsorMap'
 
 export default function Sponsors() {
+  const [IsMobile, setIsMobile] = useState(false)//hydration error?
   return (
     <div>
       <div><span className="flex w-full justify-center items-center text-6xl font-bold font-sans">
@@ -16,14 +17,14 @@ export default function Sponsors() {
       Sponsor Us
       </motion.button>
       <div className="flex justify-center">
-        {sponsorLogos.map((sponsorMap) => {
+        {SponsorLogos.map((SponsorMap) => {
           return (
-            <sponsorMap
-              image={Sponsors.image}
+            <SponsorMap
+              image={SponsorMap.image}
+              key={SponsorMap.imageKey}
             />
           )
         })}
       </div>
     </div>
-  )
-}
+  )}
