@@ -10,7 +10,7 @@ export default function sponsorMap({ image }){
             <motion.div //image pop up
                 whileHover={{scale: 1.05}}
             ></motion.div>
-            <Image //sets the image shape 
+            <Image //sets the image properties 
                 src={image}
                 width={750}
                 height={750}

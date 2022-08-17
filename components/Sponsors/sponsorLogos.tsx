@@ -1,6 +1,9 @@
 import AmazonLogo from '../public/assets/amazonSponsor.png';
+interface sponsorLogos{
+    image:string
+}
 const sponsorLogos = [
-    AmazonLogo
+    {image: AmazonLogo}
 ]
 
 export default sponsorLogos

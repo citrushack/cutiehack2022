@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion'
+import sponsorLogos from '@/components/Sponsors/sponsorLogos'
+import sponsorMap from '@/components/Sponsors/sponsorMap'
 
 export default function Sponsors() {
   return (
@@ -13,6 +15,15 @@ export default function Sponsors() {
       className="flex w-full py-3 justify-center items-center text-xl font-sans font-bold bg-lime-500 rounded-xl">
       Sponsor Us
       </motion.button>
+      <div className="flex justify-center">
+        {sponsorLogos.map((sponsorMap) => {
+          return (
+            <sponsorMap
+              image={Sponsors.image}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }
