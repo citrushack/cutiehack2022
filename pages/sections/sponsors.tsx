@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import SponsorLogos from "@/components/Sponsors/SponsorLogos";
-import SponsorMap from "@/components/Sponsors/SponsorMap";
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import SponsorLogos from '@/components/Sponsors/SponsorLogos'
+import SponsorMap from '@/components/Sponsors/SponsorMap'
 
 export default function Sponsors() {
   return (
@@ -18,15 +18,15 @@ export default function Sponsors() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
           style={{
-            display: "flex",
-            width: "200px",
-            height: "3rem",
-            color: "black",
-            fontWeight: "650",
-            backgroundColor: "#87bd08d4",
-            borderRadius: "0.5rem",
-            alignItems: "center",
-            justifyContent: "center",
+            display: 'flex',
+            width: '200px',
+            height: '3rem',
+            color: 'black',
+            fontWeight: '650',
+            backgroundColor: '#87bd08d4',
+            borderRadius: '0.5rem',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           Sponsor Us
@@ -42,9 +42,9 @@ export default function Sponsors() {
               size_width={sponsor.size_width}
               size_height={sponsor.size_height}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
