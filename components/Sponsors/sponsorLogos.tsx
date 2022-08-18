@@ -2,27 +2,50 @@
 interface SponsorLogos{
     image:string
     logoKey: string
+    size_width: number
+    size_height: number
 }
 const SponsorLogos = [
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID1'},
+    logoKey: 'ID1',
+    size_width: 230,
+    size_height: 230},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID2'},
+    logoKey: 'ID2',
+    size_width: 230,
+    size_height: 230},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID3'},
+    logoKey: 'ID3',
+    size_width: 200,
+    size_height: 200},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID4'},
+    logoKey: 'ID4',
+    size_width: 200,
+    size_height: 200},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID5'},
+    logoKey: 'ID5',
+    size_width: 150,
+    size_height: 150},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID6'},
+    logoKey: 'ID6',
+    size_width: 150,
+    size_height: 150},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID7'},
+    logoKey: 'ID7',
+    size_width: 100,
+    size_height: 100},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID8'},
+    logoKey: 'ID8',
+    size_width: 100,
+    size_height: 100},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID9'},
+    logoKey: 'ID9',
+    size_width: 100,
+    size_height: 100},
     {image: '/assets/AmazonSponsor.png',
-    logoKey: 'ID10'}
+    logoKey: 'ID10',
+    size_width: 100,
+    size_height: 100},
+    
 ]
 export default SponsorLogos
