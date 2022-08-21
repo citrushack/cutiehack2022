@@ -18,6 +18,9 @@ module.exports = {
         secondary: 'var(--secondary)',
         card: 'var(--card)',
         overlay: 'var(--overlay)',
+        highlight: {
+          DEFAULT: 'var(--highlight)',
+        },
       },
     },
   },

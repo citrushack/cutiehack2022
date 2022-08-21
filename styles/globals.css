@@ -7,15 +7,18 @@
     /* default light theme */
     --overlay: #00000059;
     --secondary: #f3fbff;
+    --highlight: #9DC300;
   }
 
   [data-theme='light'] {
     --overlay: #00000059;
     --secondary: #f3fbff;
+    --highlight: #9DC300;
   }
 
   [data-theme='dark'] {
     --overlay: #00000080;
     --secondary: #152a38;
+    --highlight: #FB9A36;
   }
 }
