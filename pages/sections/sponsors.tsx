@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import SponsorLogos from "@/components/Sponsors/SponsorLogos";
-import SponsorMap from "@/components/Sponsors/SponsorMap";
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import SponsorLogos from '@/components/Sponsors/SponsorLogos'
+import SponsorMap from '@/components/Sponsors/SponsorMap'
 
-const PomeloArray = SponsorLogos.slice(0, 1);
-const OrangeArray = SponsorLogos.slice(1, 2);
-const TangerineArray = SponsorLogos.slice(2, 4);
-const CutieArray = SponsorLogos.slice(4, 11);
+const PomeloArray = SponsorLogos.slice(0, 1)
+const OrangeArray = SponsorLogos.slice(1, 2)
+const TangerineArray = SponsorLogos.slice(2, 4)
+const CutieArray = SponsorLogos.slice(4, 11)
 
 export default function Sponsors() {
   return (
@@ -23,16 +23,16 @@ export default function Sponsors() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
           style={{
-            display: "flex",
-            width: "200px",
-            height: "3rem",
-            color: "black",
-            fontWeight: "650",
-            backgroundColor: "#87bd08d4",
-            borderRadius: "0.5rem",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "1.5rem",
+            display: 'flex',
+            width: '200px',
+            height: '3rem',
+            color: 'black',
+            fontWeight: '650',
+            backgroundColor: '#87bd08d4',
+            borderRadius: '0.5rem',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: '1.5rem',
           }}
         >
           Sponsor Us
@@ -40,7 +40,7 @@ export default function Sponsors() {
       </div>
       {/* Pomelo */}
       <div
-        style={{ width: "700px" }}
+        style={{ width: '700px' }}
         className="flex justify-center items-center font-bold font-Arial text-4xl tracking-widest"
       >
         Pomelo
@@ -54,12 +54,12 @@ export default function Sponsors() {
               size_width={sponsor.size_width}
               size_height={sponsor.size_height}
             />
-          );
+          )
         })}
       </div>
       {/* Orange */}
       <div
-        style={{ width: "700px" }}
+        style={{ width: '700px' }}
         className="flex justify-center items-center font-bold font-Arial text-4xl tracking-widest"
       >
         Orange
@@ -73,12 +73,12 @@ export default function Sponsors() {
               size_width={sponsor.size_width}
               size_height={sponsor.size_height}
             />
-          );
+          )
         })}
       </div>
       {/* Tangerine */}
       <div
-        style={{ width: "700px" }}
+        style={{ width: '700px' }}
         className="flex justify-center items-center font-bold font-Arial text-4xl tracking-widest"
       >
         Tangerine
@@ -92,12 +92,12 @@ export default function Sponsors() {
               size_width={sponsor.size_width}
               size_height={sponsor.size_height}
             />
-          );
+          )
         })}
       </div>
       {/* Cutie */}
       <div
-        style={{ width: "700px" }}
+        style={{ width: '700px' }}
         className="flex justify-center items-center font-bold font-Arial text-4xl tracking-widest"
       >
         Cutie
@@ -111,9 +111,9 @@ export default function Sponsors() {
               size_width={sponsor.size_width}
               size_height={sponsor.size_height}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
