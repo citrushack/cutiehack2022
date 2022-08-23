@@ -30,7 +30,7 @@ export default function Nav() {
     ]
     const router = useRouter()
     return (
-      <div className="flex place-content-evenly sticky top-3 z-10">
+      <>
         {router.pathname === '/' &&
           hometabs.map(({ title }) => (
             <span key={title}>
@@ -46,6 +46,6 @@ export default function Nav() {
               </NavLink>
             </span>
           ))}
-      </div>
+      </>
     )
 }
