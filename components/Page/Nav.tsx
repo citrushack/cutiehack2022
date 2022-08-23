@@ -25,7 +25,7 @@ export default function Nav() {
         title: 'Staff',
       },
       {
-        title: 'FAQ',
+        title: 'Faq',
       },
     ]
     const router = useRouter()
