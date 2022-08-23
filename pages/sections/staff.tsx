@@ -5,7 +5,7 @@ import StaffMap from '@/components/Staff/StaffMap'
 export default function Staff() {
   return (
     <section className="flex w-full h-screen items-center">Sponsors</section>
-    // off centered div is messing with BiNavigation, fix this!!
+    // off centered div is messing with navigation, fix this!!
     // <div className="p-4 flex flex-col justify-center items-center mb-20">
     //   <h1 className="mb-12">Our Team</h1>
     //   <div className="flex flex-wrap justify-center gap-6 md:gap-8">
