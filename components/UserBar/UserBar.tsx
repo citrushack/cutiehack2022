@@ -6,6 +6,7 @@ import { UserDropdown } from './UserDropdown'
 import Modal from '@/components/Modal'
 import { SigninForm } from '@/components/Form/SigninForm'
 import { ThemeButton } from '@/components/UserBar/ThemeButton'
+import Nav from '@/components/Page/Nav'
 
 /** Wrapper containing user-action buttons (e.g. sign in, apply, user dropdown, theme button, etc.). */
 export function UserBar() {
@@ -24,7 +25,8 @@ export function UserBar() {
 
   return (
     <>
-      <div className="z-[1000] fixed top-3 right-3 flex gap-3">
+      <div className="z-[1000] fixed top-3 right-3 flex gap-3 items-center">
+        <Nav />
         {/* add this back when we have a /apply page */}
         {/* { status === 'authenticated' && !session.user.uid && router.pathname !== '/apply' &&
           <Link passHref href='/apply'>
