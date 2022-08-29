@@ -12,7 +12,7 @@ export function Page({ children, title }: Props) {
   return (
     <Layout>
       <Head>
-        <title>Citrus Hack 2022 {title && '| ' + title}</title>
+        <title>Cutie Hack 2022 {title && '| ' + title}</title>
       </Head>
       <section className="flex flex-col w-full justify-center items-center">
         {children}

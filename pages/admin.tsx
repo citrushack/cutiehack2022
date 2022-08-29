@@ -55,7 +55,6 @@ export default function Admin() {
                 selectedPage={selectedPage}
                 selectPage={setSelectedPage}
               />
-              {console.log(cachedData)}
               {selectedPage === 'Overview' && <Overview data={cachedData} />}
               {selectedPage === 'Statistics' && (
                 <Statistics data={cachedData} />
