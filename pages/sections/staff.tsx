@@ -16,9 +16,9 @@ export default function Staff() {
               staffKey={staff.staffKey}
               key={staff.staffKey}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
