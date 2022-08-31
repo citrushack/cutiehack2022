@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+// import { Row, Col, Container } from "react-bootstrap";
 import Link from "next/link";
 import {
   FaFacebook,
@@ -27,21 +27,19 @@ const SocialLinks = [
 
 export default function Footer() {
   return (
-    <footer className='bg-black text-white py-6'>
-      <Container className='justify-center mx-auto'>
-				<Row>
+    <footer className='bg-black text-white py-6 min-w-full'>
+      <div className='flex flex-col justify-center mx-auto items-center'>
+				<div className='flex flex-row mb-2'>
 					<p className='text-4xl font-lexend font-bold text-center'>
-						Let&#39;s connect!
+						{"Let's connect!"}
 					</p>
-				</Row>
-				<Row className='justify-center mx-auto'>
-					{SocialLinks.map((link, index) => {
+				</div>
+				<div className='flex flex-row justify-center mx-auto'>
+					{SocialLinks.map((link) => {
 						return (
-							<Col
-								key={index}
-								xs={4}
-								md={2}
-								className='flex justify-center'
+							<div
+								key={link.path}
+								className='flex justify-center mr-1'
 							>
 								<Link href={link.path}>
 									<a
@@ -53,11 +51,11 @@ export default function Footer() {
 										{link.image}
 									</a>
 								</Link>
-							</Col>
+							</div>
 						);
 					})}
-				</Row>
-			</Container>
+				</div>
+			</div>
     </footer>
   )
 }

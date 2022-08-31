@@ -11,6 +11,7 @@ import Support from '@/pages/sections/support'
 import Sponsors from '@/pages/sections/sponsors'
 import Staff from '@/pages/sections/staff'
 import Faq from '@/pages/sections/faq'
+import Footer from '@/components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -39,6 +40,7 @@ const Home: NextPage = () => {
       <Element name="Faq">
         <Faq />
       </Element>
+      <Footer />
     </Page>
   )
 }
