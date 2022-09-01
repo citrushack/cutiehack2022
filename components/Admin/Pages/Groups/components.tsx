@@ -1,52 +1,52 @@
-import React, { useState } from 'react'
-import { GroupBox, GroupActions, SearchBar } from '@/components/Admin'
+import React, { useState } from "react";
+import { GroupBox, GroupActions, SearchBar } from "@/components/Admin";
 
 export function Groups({ data }) {
-  const [expandedGroups, setExpandedGroups] = useState([])
-  const [searchFilter, setSearchFilter] = useState('')
-  const [searchQuery, setSearchQuery] = useState(Object)
-  const [validSearch, setValidSearch] = useState(false)
+  const [expandedGroups, setExpandedGroups] = useState([]);
+  const [searchFilter, setSearchFilter] = useState("");
+  const [searchQuery, setSearchQuery] = useState(Object);
+  const [validSearch, setValidSearch] = useState(false);
 
   const toggleExpandAllGroups = (expandAll: boolean) => {
     if (expandAll) {
-      setExpandedGroups(data.groups)
+      setExpandedGroups(data.groups);
     } else {
-      setExpandedGroups([])
+      setExpandedGroups([]);
     }
-  }
+  };
 
   // check if a search matches
   const groupMatch = (group) => {
-    var gidMatch = true
-    var uidMatch = true
-    var nameMatch = true
-    var emailMatch = true
-    var match = true
+    var gidMatch = true;
+    var uidMatch = true;
+    var nameMatch = true;
+    var emailMatch = true;
+    var match = true;
 
     if (searchQuery.gid) {
       if (!group.gid.includes(searchQuery.gid)) {
-        gidMatch = false
+        gidMatch = false;
       }
     }
 
-    var anyUIDMatch = false
-    var anyNameMatch = false
-    var anyEmailMatch = false
+    var anyUIDMatch = false;
+    var anyNameMatch = false;
+    var anyEmailMatch = false;
     for (let i = 0; i < group.users.length; i++) {
-      const user = group.users[i]
+      const user = group.users[i];
       if (searchQuery.uid) {
         if (user.id.includes(searchQuery.uid)) {
-          anyUIDMatch = true
+          anyUIDMatch = true;
         }
       }
       if (searchQuery.name) {
         var full_name = (user.name.first + user.name.last)
           .toLowerCase()
-          .replace(/\s/g, '')
+          .replace(/\s/g, "");
         if (
-          full_name.includes(searchQuery.name.toLowerCase().replace(/\s/g, ''))
+          full_name.includes(searchQuery.name.toLowerCase().replace(/\s/g, ""))
         ) {
-          anyNameMatch = true
+          anyNameMatch = true;
         }
       }
       if (searchQuery.email) {
@@ -54,26 +54,26 @@ export function Groups({ data }) {
           user.email &&
           user.email.toLowerCase().includes(searchQuery.email.toLowerCase())
         ) {
-          anyEmailMatch = true
+          anyEmailMatch = true;
         }
       }
     }
 
     if (searchQuery.uid) {
-      uidMatch = anyUIDMatch
+      uidMatch = anyUIDMatch;
     }
     if (searchQuery.name) {
-      nameMatch = anyNameMatch
+      nameMatch = anyNameMatch;
     }
     if (searchQuery.email) {
-      emailMatch = anyEmailMatch
+      emailMatch = anyEmailMatch;
     }
 
     if (!gidMatch || !uidMatch || !nameMatch || !emailMatch) {
-      match = false
+      match = false;
     }
-    return match
-  }
+    return match;
+  };
 
   return (
     <>
@@ -114,5 +114,5 @@ export function Groups({ data }) {
               ))}
       </div>
     </>
-  )
+  );
 }

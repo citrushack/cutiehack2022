@@ -1,4 +1,4 @@
-import { BiSearch, BiX } from 'react-icons/bi'
+import { BiSearch, BiX } from "react-icons/bi";
 
 export function SearchBar({
   searchAttributes,
@@ -9,45 +9,45 @@ export function SearchBar({
   validSearch,
   setValidSearch,
 }) {
-  const regex = new RegExp('(' + searchAttributes + '):\\s*[a-zA-Z0-9._]+')
+  const regex = new RegExp("(" + searchAttributes + "):\\s*[a-zA-Z0-9._]+");
 
   const handleSearchFilter = (e) => {
-    setSearchFilter(e.target.value)
-    const queries = e.target.value.split(',')
-    var validQueries = ''
-    var numPassed = 0
+    setSearchFilter(e.target.value);
+    const queries = e.target.value.split(",");
+    var validQueries = "";
+    var numPassed = 0;
     for (let i = 0; i < queries.length; i++) {
       if (regex.test(queries[i])) {
-        var query = queries[i].split(':')
-        if (validQueries === '') {
+        var query = queries[i].split(":");
+        if (validQueries === "") {
           validQueries +=
             '{"' +
-            query[0].replace(/\s+/, '') +
+            query[0].replace(/\s+/, "") +
             '": "' +
-            query[1].replace(/\s+/, '') +
-            '"'
+            query[1].replace(/\s+/, "") +
+            '"';
         } else {
           validQueries +=
             ', "' +
-            query[0].replace(/\s+/, '') +
+            query[0].replace(/\s+/, "") +
             '": "' +
-            query[1].replace(/\s+/, '') +
-            '"'
+            query[1].replace(/\s+/, "") +
+            '"';
         }
         if (i === queries.length - 1) {
-          validQueries += '}'
+          validQueries += "}";
         }
-        numPassed += 1
+        numPassed += 1;
       }
     }
     if (numPassed === queries.length) {
-      setSearchQuery(JSON.parse(validQueries))
-      setValidSearch(true)
+      setSearchQuery(JSON.parse(validQueries));
+      setValidSearch(true);
     } else {
-      setSearchQuery({})
-      setValidSearch(false)
+      setSearchQuery({});
+      setValidSearch(false);
     }
-  }
+  };
 
   return (
     <div className="w-full mb-3">
@@ -64,8 +64,8 @@ export function SearchBar({
           <div
             className="p-2 rounded-full text-2xl text-gray-500 hover:bg-gray-100 cursor-pointer"
             onClick={() => {
-              setSearchFilter('')
-              setSearchQuery('')
+              setSearchFilter("");
+              setSearchQuery("");
             }}
           >
             <BiX title="Clear Search" />
@@ -81,5 +81,5 @@ export function SearchBar({
         </p>
       )}
     </div>
-  )
+  );
 }

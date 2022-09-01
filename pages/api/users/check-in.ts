@@ -1,13 +1,13 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import clientPromise from '@/lib/mongodb'
-import { getSession } from 'next-auth/react'
+import { NextApiRequest, NextApiResponse } from "next";
+import clientPromise from "@/lib/mongodb";
+import { getSession } from "next-auth/react";
 
 export default async function checkin(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const session = await getSession({ req })
-  const db = (await clientPromise).db(process.env.MONGODB_DB)
+  const session = await getSession({ req });
+  const db = (await clientPromise).db(process.env.MONGODB_DB);
   if (session) {
     const {
       uid,
@@ -16,16 +16,16 @@ export default async function checkin(
       photo_consent,
       MLH_code_of_conduct,
       address,
-    } = req.body
+    } = req.body;
 
-    const participation = inperson === 'Yes' ? 'In-Person' : 'Online'
+    const participation = inperson === "Yes" ? "In-Person" : "Online";
     const dailyWellnessCheck =
-      inperson === 'Yes' && daily_wellness ? 'Completed' : 'N/A'
+      inperson === "Yes" && daily_wellness ? "Completed" : "N/A";
     const photoConsent =
-      inperson === 'Yes' && photo_consent ? 'Consented' : 'N/A'
-    const actualAddress = address === '' ? 'Lives Outside the U.S.' : address
+      inperson === "Yes" && photo_consent ? "Consented" : "N/A";
+    const actualAddress = address === "" ? "Lives Outside the U.S." : address;
 
-    await db.collection('users').updateOne(
+    await db.collection("users").updateOne(
       { uid },
       {
         $set: {
@@ -37,10 +37,10 @@ export default async function checkin(
           checkedIn: true,
         },
       }
-    )
+    );
 
-    res.status(200).json({})
+    res.status(200).json({});
   } else {
-    res.status(401).json({})
+    res.status(401).json({});
   }
 }

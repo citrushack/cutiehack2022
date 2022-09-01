@@ -1,37 +1,37 @@
-import { Link as NavLink } from 'react-scroll'
-import { useRouter } from 'next/router'
+import { Link as NavLink } from "react-scroll";
+import { useRouter } from "next/router";
 
 export default function Nav() {
   const hometabs = [
     {
-      title: 'Home',
+      title: "Home",
     },
     {
-      title: 'Schedule',
+      title: "Schedule",
     },
     {
-      title: 'About',
+      title: "About",
     },
     {
-      title: 'Tracks',
+      title: "Tracks",
     },
     {
-      title: 'Support',
+      title: "Support",
     },
     {
-      title: 'Sponsors',
+      title: "Sponsors",
     },
     {
-      title: 'Staff',
+      title: "Staff",
     },
     {
-      title: 'Faq',
+      title: "Faq",
     },
-  ]
-  const router = useRouter()
+  ];
+  const router = useRouter();
   return (
     <>
-      {router.pathname === '/' &&
+      {router.pathname === "/" &&
         hometabs.map(({ title }) => (
           <span key={title}>
             <NavLink
@@ -47,5 +47,5 @@ export default function Nav() {
           </span>
         ))}
     </>
-  )
+  );
 }

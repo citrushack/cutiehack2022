@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { loadFiles } from '@/components/Admin/Actions/Resume/methods'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { loadFiles } from "@/components/Admin/Actions/Resume/methods";
 
 export function Pages({ pageOptions, icons, selectedPage, selectPage }) {
   const [, setDocs] = useState(
-    localStorage.getItem('docs') ? JSON.parse(localStorage.getItem('docs')) : []
-  )
+    localStorage.getItem("docs") ? JSON.parse(localStorage.getItem("docs")) : []
+  );
 
   return (
     <div className="flex gap-10 my-8 mb-4 flex-wrap">
@@ -13,15 +13,15 @@ export function Pages({ pageOptions, icons, selectedPage, selectPage }) {
         <button
           key={option}
           className={
-            'flex flex-col items-center group text-3xl md:text-2xl bg-transparent ' +
+            "flex flex-col items-center group text-3xl md:text-2xl bg-transparent " +
             (selectedPage === option
-              ? 'font-semibold'
-              : 'font-medium text-sub-highlight hover:text-text')
+              ? "font-semibold"
+              : "font-medium text-sub-highlight hover:text-text")
           }
           onClick={() => {
-            selectPage(option)
-            if (option === 'Resumes') {
-              loadFiles(setDocs)
+            selectPage(option);
+            if (option === "Resumes") {
+              loadFiles(setDocs);
             }
           }}
         >
@@ -35,5 +35,5 @@ export function Pages({ pageOptions, icons, selectedPage, selectPage }) {
         </button>
       ))}
     </div>
-  )
+  );
 }

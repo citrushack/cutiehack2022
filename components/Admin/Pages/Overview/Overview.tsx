@@ -1,79 +1,83 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   OverviewStats,
   Overviews,
   UserActions,
   UserFilter,
-} from '@/components/Admin'
-import { QueriedUsers } from './components'
-import { SearchBar } from '@/components/Admin'
+} from "@/components/Admin";
+import { QueriedUsers } from "./components";
+import { SearchBar } from "@/components/Admin";
 
 export function Overview({ data }) {
-  const [selectedView, setSelectedView] = useState('Checked-In')
-  const [selectedUsers, setSelectedUsers] = useState([])
-  const [allSelected, setAllSelected] = useState(false)
-  const [expandedUsers, setExpandedUsers] = useState([])
-  const [searchFilter, setSearchFilter] = useState('')
-  const [searchQuery, setSearchQuery] = useState(Object)
-  const [validSearch, setValidSearch] = useState(false)
-  const [filter, setFilter] = useState('Default')
-  const [sorted, setSorted] = useState(false)
+  const [selectedView, setSelectedView] = useState("Checked-In");
+  const [selectedUsers, setSelectedUsers] = useState([]);
+  const [allSelected, setAllSelected] = useState(false);
+  const [expandedUsers, setExpandedUsers] = useState([]);
+  const [searchFilter, setSearchFilter] = useState("");
+  const [searchQuery, setSearchQuery] = useState(Object);
+  const [validSearch, setValidSearch] = useState(false);
+  const [filter, setFilter] = useState("Default");
+  const [sorted, setSorted] = useState(false);
 
   const viewOptions = [
-    'Checked-In',
-    'Not Checked-In',
-    'Approved',
-    'All Users',
-    'Rejected',
-    'Not Applied',
-    'Pending',
-  ]
+    "Checked-In",
+    "Not Checked-In",
+    "Approved",
+    "All Users",
+    "Rejected",
+    "Not Applied",
+    "Pending",
+  ];
 
   const selectView = (view: string) => {
-    setAllSelected(false)
-    setSelectedUsers([])
-    setSelectedView(view)
-    setExpandedUsers([])
-  }
+    setAllSelected(false);
+    setSelectedUsers([]);
+    setSelectedView(view);
+    setExpandedUsers([]);
+  };
 
   const toggleSelectAllUsers = (selectAll: boolean) => {
-    setAllSelected(selectAll)
+    setAllSelected(selectAll);
     if (selectAll) {
-      if (selectedView === 'All Users') {
-        setSelectedUsers(data.users)
-      } else if (selectedView === 'Not Applied') {
-        setSelectedUsers(data.users.filter((user) => !user.uid))
-      } else if (selectedView === 'Pending') {
-        setSelectedUsers(data.users.filter((user) => user.qualified === ''))
-      } else if (selectedView === 'Approved') {
-        setSelectedUsers(data.users.filter((user) => user.qualified === 'yeah'))
-      } else if (selectedView === 'Rejected') {
-        setSelectedUsers(data.users.filter((user) => user.qualified === 'nope'))
-      } else if (selectedView === 'Checked-In') {
+      if (selectedView === "All Users") {
+        setSelectedUsers(data.users);
+      } else if (selectedView === "Not Applied") {
+        setSelectedUsers(data.users.filter((user) => !user.uid));
+      } else if (selectedView === "Pending") {
+        setSelectedUsers(data.users.filter((user) => user.qualified === ""));
+      } else if (selectedView === "Approved") {
+        setSelectedUsers(
+          data.users.filter((user) => user.qualified === "yeah")
+        );
+      } else if (selectedView === "Rejected") {
+        setSelectedUsers(
+          data.users.filter((user) => user.qualified === "nope")
+        );
+      } else if (selectedView === "Checked-In") {
         setSelectedUsers(
           data.users.filter(
-            (user) => user.qualified === 'yeah' && user.checkedIn
+            (user) => user.qualified === "yeah" && user.checkedIn
           )
-        )
-      } else if (selectedView === 'Not Checked-In') {
+        );
+      } else if (selectedView === "Not Checked-In") {
         setSelectedUsers(
           data.users.filter(
-            (user) => user.qualified === 'yeah' && !user.checkedIn
+            (user) => user.qualified === "yeah" && !user.checkedIn
           )
-        )
+        );
       }
     } else {
-      setSelectedUsers([])
+      setSelectedUsers([]);
     }
-  }
+  };
 
   const toggleExpandAllUsers = (expandAll: boolean) => {
     if (expandAll) {
-      setExpandedUsers(data.users)
+      setExpandedUsers(data.users);
     } else {
-      setExpandedUsers([])
+      setExpandedUsers([]);
     }
-  }
+  };
 
   return (
     <>
@@ -214,5 +218,5 @@ export function Overview({ data }) {
         searchQuery={searchQuery}
       />
     </>
-  )
+  );
 }

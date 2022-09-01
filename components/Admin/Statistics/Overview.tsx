@@ -1,16 +1,16 @@
 export function OverviewStats({ users }) {
-  var numSignedUp = Object.keys(users).length
-  var numNotApplied = Object.keys(users.filter((user) => !user.uid)).length
+  var numSignedUp = Object.keys(users).length;
+  var numNotApplied = Object.keys(users.filter((user) => !user.uid)).length;
   var numPending = Object.keys(
-    users.filter((user) => user.qualified === '')
-  ).length
+    users.filter((user) => user.qualified === "")
+  ).length;
   var numApproved = Object.keys(
-    users.filter((user) => user.qualified === 'yeah')
-  ).length
+    users.filter((user) => user.qualified === "yeah")
+  ).length;
   var numRejected = Object.keys(
-    users.filter((user) => user.qualified === 'nope')
-  ).length
-  var numCheckedIn = Object.keys(users.filter((user) => user.checkedIn)).length
+    users.filter((user) => user.qualified === "nope")
+  ).length;
+  var numCheckedIn = Object.keys(users.filter((user) => user.checkedIn)).length;
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -41,5 +41,5 @@ export function OverviewStats({ users }) {
         <p className="m-0 text-sm md:text-base">Total rejected applications</p>
       </div>
     </div>
-  )
+  );
 }

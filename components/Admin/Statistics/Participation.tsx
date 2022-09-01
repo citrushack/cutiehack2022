@@ -1,34 +1,34 @@
-import { StatsBlob } from './Blob'
+import { StatsBlob } from "./Blob";
 
 export function ParticipationStats({ users, ucrUsers }) {
-  const numTotal = Object.keys(users).length
+  const numTotal = Object.keys(users).length;
 
-  const qualifiedUsers = users.filter((user) => user.qualified === 'yeah')
-  const numTotalQualified = Object.keys(qualifiedUsers).length
+  const qualifiedUsers = users.filter((user) => user.qualified === "yeah");
+  const numTotalQualified = Object.keys(qualifiedUsers).length;
 
   const numOnline = Object.keys(
-    qualifiedUsers.filter((user) => user.participation === 'Online')
-  ).length
+    qualifiedUsers.filter((user) => user.participation === "Online")
+  ).length;
   const numInPerson = Object.keys(
-    qualifiedUsers.filter((user) => user.participation === 'In-Person')
-  ).length
+    qualifiedUsers.filter((user) => user.participation === "In-Person")
+  ).length;
 
   // const numCheckedIn = Object.keys(qualifiedUsers.filter(user => user.checkedIn)).length
   const numOnlineCheckedIn = Object.keys(
     qualifiedUsers.filter(
-      (user) => user.participation === 'Online' && user.checkedIn
+      (user) => user.participation === "Online" && user.checkedIn
     )
-  ).length
+  ).length;
   const numInPersonCheckedIn = Object.keys(
     qualifiedUsers.filter(
-      (user) => user.participation === 'In-Person' && user.checkedIn
+      (user) => user.participation === "In-Person" && user.checkedIn
     )
-  ).length
+  ).length;
 
-  const numUCR = Object.keys(ucrUsers).length
+  const numUCR = Object.keys(ucrUsers).length;
   const numInPersonUCR = Object.keys(
-    ucrUsers.filter((user) => user.participation === 'In-Person')
-  ).length
+    ucrUsers.filter((user) => user.participation === "In-Person")
+  ).length;
 
   return (
     <div className="flex flex-col gap-4">
@@ -77,5 +77,5 @@ export function ParticipationStats({ users, ucrUsers }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

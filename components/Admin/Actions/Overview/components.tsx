@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 export function Overviews({
   viewOptions,
@@ -13,15 +13,15 @@ export function Overviews({
         <button
           key={option}
           className={
-            'border-b-2 bg-transparent ' +
+            "border-b-2 bg-transparent " +
             (selectedView === option
-              ? 'font-semibold border-text'
-              : 'font-medium text-sub-highlight border-sub-highlight hover:text-text hover:border-text')
+              ? "font-semibold border-text"
+              : "font-medium text-sub-highlight border-sub-highlight hover:text-text hover:border-text")
           }
           onClick={() => {
-            selectView(option)
-            setFilter('Default')
-            setSorted(false)
+            selectView(option);
+            setFilter("Default");
+            setSorted(false);
           }}
         >
           <motion.div whileHover={{ y: -3 }} className="py-1.5">
@@ -30,5 +30,5 @@ export function Overviews({
         </button>
       ))}
     </div>
-  )
+  );
 }

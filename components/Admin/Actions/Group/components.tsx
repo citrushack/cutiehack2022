@@ -1,4 +1,4 @@
-import { BiExpand, BiCollapse } from 'react-icons/bi'
+import { BiExpand, BiCollapse } from "react-icons/bi";
 
 export function GroupActions({ expandedGroups, toggleExpandAllGroups }) {
   return (
@@ -16,5 +16,5 @@ export function GroupActions({ expandedGroups, toggleExpandAllGroups }) {
         </div>
       </div>
     </>
-  )
+  );
 }

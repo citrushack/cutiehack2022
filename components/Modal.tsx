@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { BiX } from 'react-icons/bi'
+import React, { useState, useEffect } from "react";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { BiX } from "react-icons/bi";
 
 interface Props {
   /** Decides whether to show the modal. */
-  show: boolean
+  show: boolean;
   /** Toggles the visibility of the modal. */
-  handler: (arg0: boolean) => void
+  handler: (arg0: boolean) => void;
   /** Heading at the top of the modal. */
-  title: string
+  title: string;
   /** Short description below the heading. */
-  description: string
+  description: string;
   /** Other content in the modal (e.g. input fields, buttons, etc.). */
-  children: React.ReactNode | React.ReactNode[]
+  children: React.ReactNode | React.ReactNode[];
 }
 
 export default function Modal({
@@ -22,23 +22,23 @@ export default function Modal({
   description,
   children,
 }: Props) {
-  const [targetElement, setTargetElement] = useState(null)
+  const [targetElement, setTargetElement] = useState(null);
 
   useEffect(() => {
-    setTargetElement(document.querySelector('#modal'))
+    setTargetElement(document.querySelector("#modal"));
     if (targetElement) {
-      if (show) disableBodyScroll(targetElement)
-      else enableBodyScroll(targetElement)
+      if (show) disableBodyScroll(targetElement);
+      else enableBodyScroll(targetElement);
     }
-  }, [targetElement, show])
+  }, [targetElement, show]);
 
   return (
     <>
       <div
         id="modal"
         className={
-          'fixed top-1/2 left-1/2 w-11/12 sm:w-[32rem] p-4 rounded bg-secondary transform -translate-x-1/2 -translate-y-1/2 transform-gpu transition-opacity duration-150 ' +
-          (show ? 'z-[1100] visible opacity-100' : 'z-0 invisible opacity-0')
+          "fixed top-1/2 left-1/2 w-11/12 sm:w-[32rem] p-4 rounded bg-secondary transform -translate-x-1/2 -translate-y-1/2 transform-gpu transition-opacity duration-150 " +
+          (show ? "z-[1100] visible opacity-100" : "z-0 invisible opacity-0")
         }
       >
         <div className="relative flex flex-col gap-4 items-center w-full mb-4">
@@ -59,11 +59,11 @@ export default function Modal({
       </div>
       <div
         className={
-          'fixed top-0 left-0 w-full h-full bg-overlay transform-gpu transition-opacity duration-150 ' +
-          (show ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
+          "fixed top-0 left-0 w-full h-full bg-overlay transform-gpu transition-opacity duration-150 " +
+          (show ? "z-[1000] visible opacity-100" : "z-0 invisible opacity-0")
         }
         onClick={() => handler(false)}
       />
     </>
-  )
+  );
 }
