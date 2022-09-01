@@ -1,11 +1,15 @@
 import React from "react";
-// import { Row, Col, Container } from "react-bootstrap";
 import Link from "next/link";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaTwitter,
 } from "react-icons/fa";
+
+import {
+  MdEmail
+} from "react-icons/md";
 
 const SocialLinks = [
   {
@@ -23,11 +27,21 @@ const SocialLinks = [
     title: "LinkedIn",
     image: <FaLinkedin size='56'></FaLinkedin>,
   },
+  {
+    path: "https://twitter.com/citrushack",
+    title: "Twitter",
+    image: <FaTwitter size='56'></FaTwitter>,
+  },
+  {
+    path: "citrushack@gmail.com",
+    title: "Email",
+    image: <MdEmail size='56'></MdEmail>,
+  },
 ];
 
 export default function Footer() {
   return (
-    <footer className='bg-black text-white py-6 min-w-full'>
+    <footer className='bg-highlight text-white py-6 min-w-full'>
       <div className='flex flex-col justify-center mx-auto items-center'>
 				<div className='flex flex-row mb-2'>
 					<p className='text-4xl font-lexend font-bold text-center'>
