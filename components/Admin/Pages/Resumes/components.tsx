@@ -1,49 +1,49 @@
-import React, { useState } from "react";
-import { FileBox, ResumeActions, SearchBar } from "@/components/Admin";
+import React, { useState } from 'react'
+import { FileBox, ResumeActions, SearchBar } from '@/components/Admin'
 
 export function Resumes() {
   const [docs, setDocs] = useState(
-    localStorage.getItem("docs") ? JSON.parse(localStorage.getItem("docs")) : []
-  );
-  const [selectedDocs, setSelectedDocs] = useState([]);
-  const [allSelected, setAllSelected] = useState(false);
-  const [searchFilter, setSearchFilter] = useState("");
-  const [searchQuery, setSearchQuery] = useState(Object);
-  const [validSearch, setValidSearch] = useState(false);
+    localStorage.getItem('docs') ? JSON.parse(localStorage.getItem('docs')) : []
+  )
+  const [selectedDocs, setSelectedDocs] = useState([])
+  const [allSelected, setAllSelected] = useState(false)
+  const [searchFilter, setSearchFilter] = useState('')
+  const [searchQuery, setSearchQuery] = useState(Object)
+  const [validSearch, setValidSearch] = useState(false)
 
   const toggleSelectAllDocs = (selectAll: boolean) => {
-    setAllSelected(selectAll);
+    setAllSelected(selectAll)
     if (selectAll) {
-      setSelectedDocs(docs);
+      setSelectedDocs(docs)
     } else {
-      setSelectedDocs([]);
+      setSelectedDocs([])
     }
-  };
+  }
 
   // check if a search matches
   const docMatch = (doc) => {
-    var uidMatch = true;
-    var nameMatch = true;
-    var match = true;
-    var [first_name, last_name, uid] = doc.name.split("___");
+    var uidMatch = true
+    var nameMatch = true
+    var match = true
+    var [first_name, last_name, uid] = doc.name.split('___')
     if (searchQuery.uid) {
       if (!uid.includes(searchQuery.uid)) {
-        uidMatch = false;
+        uidMatch = false
       }
     }
     if (searchQuery.name) {
-      var full_name = (first_name + last_name).toLowerCase().replace(/\s/g, "");
+      var full_name = (first_name + last_name).toLowerCase().replace(/\s/g, '')
       if (
-        !full_name.includes(searchQuery.name.toLowerCase().replace(/\s/g, ""))
+        !full_name.includes(searchQuery.name.toLowerCase().replace(/\s/g, ''))
       ) {
-        nameMatch = false;
+        nameMatch = false
       }
     }
     if (!uidMatch || !nameMatch) {
-      match = false;
+      match = false
     }
-    return match;
-  };
+    return match
+  }
 
   return (
     <>
@@ -86,5 +86,5 @@ export function Resumes() {
               ))}
       </div>
     </>
-  );
+  )
 }

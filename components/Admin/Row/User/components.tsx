@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 import {
   BiCheckbox,
   BiCheckboxSquare,
   BiLoaderCircle,
   BiUserCheck,
   BiUserX,
-} from "react-icons/bi";
+} from 'react-icons/bi'
 
 export function UserBox({
   user,
@@ -19,34 +19,34 @@ export function UserBox({
     <motion.div whileHover={{ y: -2 }} className="relative group">
       <div
         className={
-          "h-full border-2 border-sub rounded-md bg-card shadow-md cursor-pointer transform-gpu transition-size duration-150 overflow-hidden " +
-          (selectedUsers.includes(user) ? "border-text " : " ") +
+          'h-full border-2 border-sub rounded-md bg-card shadow-md cursor-pointer transform-gpu transition-size duration-150 overflow-hidden ' +
+          (selectedUsers.includes(user) ? 'border-text ' : ' ') +
           (expandedUsers.includes(user)
-            ? "max-h-[40rem] "
-            : "max-h-[2.75rem] ") +
+            ? 'max-h-[40rem] '
+            : 'max-h-[2.75rem] ') +
           (pending &&
             (user.criteriaMet
-              ? "bg-green-100 border-green-300"
-              : "bg-red-100 border-red-300"))
+              ? 'bg-green-100 border-green-300'
+              : 'bg-red-100 border-red-300'))
         }
       >
         <div className="flex items-center">
           <div>
             <div
               className={
-                "w-10 p-2 rounded-full text-2xl group-hover:text-text " +
+                'w-10 p-2 rounded-full text-2xl group-hover:text-text ' +
                 (!pending
-                  ? "hover:bg-sub "
+                  ? 'hover:bg-sub '
                   : user.criteriaMet
-                  ? "hover:bg-green-200 "
-                  : "hover:bg-red-200 ") +
+                  ? 'hover:bg-green-200 '
+                  : 'hover:bg-red-200 ') +
                 (selectedUsers.includes(user)
-                  ? "text-text"
+                  ? 'text-text'
                   : pending
                   ? user.criteriaMet
-                    ? "text-green-300"
-                    : "text-red-300"
-                  : "text-sub")
+                    ? 'text-green-300'
+                    : 'text-red-300'
+                  : 'text-sub')
               }
               onClick={() =>
                 setSelectedUsers(
@@ -78,15 +78,15 @@ export function UserBox({
             }
           >
             <div className="flex items-center w-10 md:w-28 pr-2 py-1 text-center text-xs md:text-sm font-semibold uppercase">
-              {user.qualified === "" && (
+              {user.qualified === '' && (
                 <div
                   className={
-                    "flex items-center justify-center rounded-full p-1 px-2 w-full " +
+                    'flex items-center justify-center rounded-full p-1 px-2 w-full ' +
                     (pending
                       ? user.criteriaMet
-                        ? "bg-green-100 border-2 border-green-200 text-green-600"
-                        : "bg-red-100 border-2 border-red-200 text-red-500"
-                      : "bg-amber-100 text-amber-500")
+                        ? 'bg-green-100 border-2 border-green-200 text-green-600'
+                        : 'bg-red-100 border-2 border-red-200 text-red-500'
+                      : 'bg-amber-100 text-amber-500')
                   }
                 >
                   <div className="flex md:hidden text-lg">
@@ -95,7 +95,7 @@ export function UserBox({
                   <span className="hidden md:flex">Pending</span>
                 </div>
               )}
-              {user.qualified === "yeah" && (
+              {user.qualified === 'yeah' && (
                 <div className="flex items-center justify-center rounded-full bg-green-200 text-green-700 p-1 px-2 w-full">
                   <div className="flex md:hidden text-lg">
                     <BiUserCheck />
@@ -103,7 +103,7 @@ export function UserBox({
                   <span className="hidden md:flex">Approved</span>
                 </div>
               )}
-              {user.qualified === "nope" && (
+              {user.qualified === 'nope' && (
                 <div className="flex items-center justify-center rounded-full bg-red-200 text-red-700 p-1 px-2 w-full">
                   <div className="flex md:hidden text-lg">
                     <BiUserX />
@@ -117,9 +117,9 @@ export function UserBox({
         </div>
         <div
           className={
-            "py-4 border-t-2 border-sub " +
+            'py-4 border-t-2 border-sub ' +
             (pending &&
-              (user.criteriaMet ? "border-green-300" : "border-red-300"))
+              (user.criteriaMet ? 'border-green-300' : 'border-red-300'))
           }
         >
           {user.uid ? (
@@ -140,24 +140,24 @@ export function UserBox({
                   </li>
                   <li
                     className={
-                      "text-sm md:text-base " +
+                      'text-sm md:text-base ' +
                       (pending
                         ? user.criteriaMet
-                          ? "text-green-500"
-                          : "text-red-500"
-                        : "")
+                          ? 'text-green-500'
+                          : 'text-red-500'
+                        : '')
                     }
                   >
                     <b>Graduation Date:</b> {user.graduationDate}
                   </li>
                   <li className="text-sm md:text-base">
                     <b>App Status: </b>
-                    {user.qualified === "" &&
+                    {user.qualified === '' &&
                       (user.criteriaMet
-                        ? "Pending Approval"
-                        : "Pending Rejection")}
-                    {user.qualified !== "" &&
-                      (user.qualified === "yeah" ? "Approved" : "Rejected")}
+                        ? 'Pending Approval'
+                        : 'Pending Rejection')}
+                    {user.qualified !== '' &&
+                      (user.qualified === 'yeah' ? 'Approved' : 'Rejected')}
                   </li>
                   <li className="text-sm md:text-base">
                     <b>Participation:</b> {user.participation}
@@ -178,5 +178,5 @@ export function UserBox({
         </div>
       </div>
     </motion.div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import StaffMember from "@/components/Staff/StaffMember";
-import StaffMap from "@/components/Staff/StaffMap";
+import React from 'react'
+import StaffMember from '@/components/Staff/StaffMember'
+import StaffMap from '@/components/Staff/StaffMap'
 
 export default function Staff() {
   return (
@@ -22,5 +22,5 @@ export default function Staff() {
     //     })}
     //   </div>
     // </div>
-  );
+  )
 }

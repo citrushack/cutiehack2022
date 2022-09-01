@@ -1,28 +1,28 @@
-import { StatsBlob } from "./Blob";
+import { StatsBlob } from './Blob'
 
 export function ShirtStats({ users }) {
   const numXXS = Object.keys(
-    users.filter((user) => user.shirtSize === "XXS")
-  ).length;
+    users.filter((user) => user.shirtSize === 'XXS')
+  ).length
   const numXS = Object.keys(
-    users.filter((user) => user.shirtSize === "XS")
-  ).length;
+    users.filter((user) => user.shirtSize === 'XS')
+  ).length
   const numS = Object.keys(
-    users.filter((user) => user.shirtSize === "S")
-  ).length;
+    users.filter((user) => user.shirtSize === 'S')
+  ).length
   const numM = Object.keys(
-    users.filter((user) => user.shirtSize === "M")
-  ).length;
+    users.filter((user) => user.shirtSize === 'M')
+  ).length
   const numL = Object.keys(
-    users.filter((user) => user.shirtSize === "L")
-  ).length;
+    users.filter((user) => user.shirtSize === 'L')
+  ).length
   const numXL = Object.keys(
-    users.filter((user) => user.shirtSize === "XL")
-  ).length;
+    users.filter((user) => user.shirtSize === 'XL')
+  ).length
   const numXXL = Object.keys(
-    users.filter((user) => user.shirtSize === "XXL")
-  ).length;
-  const numTotal = Object.keys(users).length;
+    users.filter((user) => user.shirtSize === 'XXL')
+  ).length
+  const numTotal = Object.keys(users).length
 
   return (
     <div className="flex flex-col gap-4">
@@ -39,5 +39,5 @@ export function ShirtStats({ users }) {
         <StatsBlob num={numXXL} numTotal={numTotal} label="XXL Shirts" />
       </div>
     </div>
-  );
+  )
 }

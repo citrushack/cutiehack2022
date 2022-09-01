@@ -1,11 +1,11 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "next-themes";
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes'
 
-import "tailwindcss/tailwind.css";
-import "../styles/globals.css";
-import { SessionProvider } from "next-auth/react";
-import { UserBar } from "@/components/UserBar/UserBar";
+import 'tailwindcss/tailwind.css'
+import '../styles/globals.css'
+import { SessionProvider } from 'next-auth/react'
+import { UserBar } from '@/components/UserBar/UserBar'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <UserBar />
       </ThemeProvider>
     </SessionProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

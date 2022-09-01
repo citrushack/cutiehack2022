@@ -3,8 +3,8 @@ import {
   BiCheckboxSquare,
   BiDownload,
   BiRefresh,
-} from "react-icons/bi";
-import { loadFiles, downloadFiles } from "./methods";
+} from 'react-icons/bi'
+import { loadFiles, downloadFiles } from './methods'
 
 export function ResumeActions({
   allSelected,
@@ -48,5 +48,5 @@ export function ResumeActions({
         )}
       </div>
     </>
-  );
+  )
 }
