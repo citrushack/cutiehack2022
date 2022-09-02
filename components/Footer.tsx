@@ -1,36 +1,36 @@
-import React from "react";
-import Link from "next/link";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import React from 'react'
+import Link from 'next/link'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
-import { MdEmail } from "react-icons/md";
+import { MdEmail } from 'react-icons/md'
 
 const SocialLinks = [
   {
-    path: "https://www.facebook.com/cutiehack/",
-    title: "Facebook",
+    path: 'https://www.facebook.com/cutiehack/',
+    title: 'Facebook',
     image: <FaFacebook></FaFacebook>,
   },
   {
-    path: "https://www.instagram.com/cutiehack_ucr/",
-    title: "Instagram",
+    path: 'https://www.instagram.com/cutiehack_ucr/',
+    title: 'Instagram',
     image: <FaInstagram size="56"></FaInstagram>,
   },
   {
-    path: "https://www.linkedin.com/company/17907222/admin/",
-    title: "LinkedIn",
+    path: 'https://www.linkedin.com/company/17907222/admin/',
+    title: 'LinkedIn',
     image: <FaLinkedin></FaLinkedin>,
   },
   {
-    path: "https://twitter.com/citrushack",
-    title: "Twitter",
+    path: 'https://twitter.com/citrushack',
+    title: 'Twitter',
     image: <FaTwitter></FaTwitter>,
   },
   {
-    path: "citrushack@gmail.com",
-    title: "Email",
+    path: 'citrushack@gmail.com',
+    title: 'Email',
     image: <MdEmail></MdEmail>,
   },
-];
+]
 
 export default function Footer() {
   return (
@@ -56,10 +56,10 @@ export default function Footer() {
                   </a>
                 </Link>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </footer>
-  );
+  )
 }
