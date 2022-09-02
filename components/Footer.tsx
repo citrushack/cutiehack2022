@@ -8,7 +8,7 @@ const SocialLinks = [
   {
     path: 'https://www.facebook.com/cutiehack/',
     title: 'Facebook',
-    image: <FaFacebook></FaFacebook>,
+    image: <FaFacebook size="56"></FaFacebook>,
   },
   {
     path: 'https://www.instagram.com/cutiehack_ucr/',
@@ -18,17 +18,17 @@ const SocialLinks = [
   {
     path: 'https://www.linkedin.com/company/17907222/admin/',
     title: 'LinkedIn',
-    image: <FaLinkedin></FaLinkedin>,
+    image: <FaLinkedin size="56"></FaLinkedin>,
   },
   {
     path: 'https://twitter.com/citrushack',
     title: 'Twitter',
-    image: <FaTwitter></FaTwitter>,
+    image: <FaTwitter size="56"></FaTwitter>,
   },
   {
     path: 'citrushack@gmail.com',
     title: 'Email',
-    image: <MdEmail></MdEmail>,
+    image: <MdEmail size="56"></MdEmail>,
   },
 ]
 
