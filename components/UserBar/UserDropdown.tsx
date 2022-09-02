@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useSession, signOut } from "next-auth/react";
-import { motion } from "framer-motion";
-import { toast } from "react-hot-toast";
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useSession, signOut } from 'next-auth/react'
+import { motion } from 'framer-motion'
+import { toast } from 'react-hot-toast'
 import {
   BiUser,
   BiX,
@@ -11,14 +11,14 @@ import {
   BiLogOutCircle,
   BiHelpCircle,
   BiCategory,
-} from "react-icons/bi";
-import { FaDiscord } from "react-icons/fa";
+} from 'react-icons/bi'
+import { FaDiscord } from 'react-icons/fa'
 
 /** Dropdown for more user actions and info (e.g. app status, group page, etc.). */
 export function UserDropdown() {
-  const router = useRouter();
-  const { data: session, status } = useSession();
-  const [open, setOpen] = useState(false);
+  const router = useRouter()
+  const { data: session, status } = useSession()
+  const [open, setOpen] = useState(false)
 
   /** Display information regarding app status reviews. */
   const triggerInfo = () => {
@@ -33,11 +33,11 @@ export function UserDropdown() {
         </span>
       </div>,
       {
-        id: "appStatusInfo",
+        id: 'appStatusInfo',
         duration: 6000,
       }
-    );
-  };
+    )
+  }
 
   /** Display information regarding check-ins. */
   const triggerCheckInInfo = () => {
@@ -48,22 +48,22 @@ export function UserDropdown() {
         </span>
       </div>,
       {
-        id: "checkinInfo",
+        id: 'checkinInfo',
         duration: 4500,
       }
-    );
-  };
+    )
+  }
 
   useEffect(() => {
     /** Close dropdown on page change. */
     const handleRouteChange = () => {
-      setOpen(false);
-    };
-    router.events.on("routeChangeStart", handleRouteChange);
+      setOpen(false)
+    }
+    router.events.on('routeChangeStart', handleRouteChange)
     return () => {
-      router.events.off("routeChangeStart", handleRouteChange);
-    };
-  }, [setOpen]);
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, [setOpen])
 
   return (
     <>
@@ -82,8 +82,8 @@ export function UserDropdown() {
         </motion.button>
         <div
           className={
-            "absolute top-14 right-0 w-64 p-4 rounded bg-secondary shadow-md transform-gpu transition-all duration-150 " +
-            (open ? "z-[1000] visible opacity-100" : "z-0 invisible opacity-0")
+            'absolute top-14 right-0 w-64 p-4 rounded bg-secondary shadow-md transform-gpu transition-all duration-150 ' +
+            (open ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
           }
         >
           <div className="flex flex-col gap-3 items-center w-full text-lg">
@@ -92,7 +92,7 @@ export function UserDropdown() {
                 Signed in as <br />
                 {session.user.email}
               </span>
-              {status === "authenticated" &&
+              {status === 'authenticated' &&
                 (!session.user.uid ? (
                   <>
                     {/* <Link passHref href='/apply'>
@@ -117,24 +117,24 @@ export function UserDropdown() {
                     </span>
                     <div
                       className={
-                        "w-full py-1.5 text-center rounded-md font-semibold " +
-                        (session.user.qualified === ""
-                          ? "bg-sub text-sub-bright"
-                          : session.user.qualified === "yeah"
-                          ? "bg-[#9DC300] text-lime-800"
-                          : "bg-red-400 text-red-900")
+                        'w-full py-1.5 text-center rounded-md font-semibold ' +
+                        (session.user.qualified === ''
+                          ? 'bg-sub text-sub-bright'
+                          : session.user.qualified === 'yeah'
+                          ? 'bg-[#9DC300] text-lime-800'
+                          : 'bg-red-400 text-red-900')
                       }
                     >
-                      {session.user.qualified === "" && "Pending"}
-                      {session.user.qualified === "yeah" && "Approved"}
-                      {session.user.qualified === "nope" && "Rejected"}
+                      {session.user.qualified === '' && 'Pending'}
+                      {session.user.qualified === 'yeah' && 'Approved'}
+                      {session.user.qualified === 'nope' && 'Rejected'}
                     </div>
                   </>
                 ))}
               {/* uncomment the day before */}
-              {status === "authenticated" &&
+              {status === 'authenticated' &&
                 session.user.uid &&
-                session.user.qualified === "yeah" &&
+                session.user.qualified === 'yeah' &&
                 (!session.user.checkedIn ? (
                   <>
                     <span className="flex text-center font-semibold text-sub-bright text-sm">
@@ -160,9 +160,9 @@ export function UserDropdown() {
                     Checked-In
                   </div>
                 ))}
-              {status === "authenticated" &&
+              {status === 'authenticated' &&
                 session.user.uid &&
-                session.user.qualified === "yeah" && (
+                session.user.qualified === 'yeah' && (
                   <>
                     <Link passHref href="/group/dashboard">
                       <motion.button
@@ -201,7 +201,7 @@ export function UserDropdown() {
                     </a>
                   </>
                 )}
-              {status === "authenticated" &&
+              {status === 'authenticated' &&
                 session.user.uid &&
                 session.user.admin && (
                   <Link passHref href="/admin">
@@ -237,11 +237,11 @@ export function UserDropdown() {
       </div>
       <div
         className={
-          "fixed top-0 left-0 w-full h-full transform-gpu transition-all duration-150 " +
-          (open ? "z-[900] visible opacity-100" : "z-0 invisible opacity-0")
+          'fixed top-0 left-0 w-full h-full transform-gpu transition-all duration-150 ' +
+          (open ? 'z-[900] visible opacity-100' : 'z-0 invisible opacity-0')
         }
         onClick={() => setOpen(false)}
       />
     </>
-  );
+  )
 }

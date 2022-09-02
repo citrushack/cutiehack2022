@@ -1,7 +1,7 @@
 interface Props {
-  num: number;
-  numTotal: number;
-  label: string;
+  num: number
+  numTotal: number
+  label: string
 }
 
 export const StatsBlob = ({ num, numTotal, label }: Props) => (
@@ -17,4 +17,4 @@ export const StatsBlob = ({ num, numTotal, label }: Props) => (
       <p className="m-0 text-sm md:text-base">% of Total</p>
     </div>
   </div>
-);
+)

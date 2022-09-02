@@ -1,5 +1,5 @@
-import { userFilter, userMatch, userViewDisplay } from "./methods";
-import { UserBox } from "@/components/Admin";
+import { userFilter, userMatch, userViewDisplay } from './methods'
+import { UserBox } from '@/components/Admin'
 
 export function QueriedUsers({
   selectedView,
@@ -29,7 +29,7 @@ export function QueriedUsers({
                   )
                   .map((user, idx) => (
                     <UserBox
-                      key={"allUsers-" + String(idx)}
+                      key={'allUsers-' + String(idx)}
                       user={user}
                       selectedUsers={selectedUsers}
                       setSelectedUsers={setSelectedUsers}
@@ -48,7 +48,7 @@ export function QueriedUsers({
                   .sort((x, y) => userFilter(filter, x, y))
                   .map((user, idx) => (
                     <UserBox
-                      key={"filterAllUsers-" + String(idx)}
+                      key={'filterAllUsers-' + String(idx)}
                       user={user}
                       selectedUsers={selectedUsers}
                       setSelectedUsers={setSelectedUsers}
@@ -66,7 +66,7 @@ export function QueriedUsers({
               )
               .map((user, idx) => (
                 <UserBox
-                  key={"searchedPendingUsers-" + String(idx)}
+                  key={'searchedPendingUsers-' + String(idx)}
                   user={user}
                   selectedUsers={selectedUsers}
                   setSelectedUsers={setSelectedUsers}
@@ -78,5 +78,5 @@ export function QueriedUsers({
         </div>
       )}
     </>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 export default function StaffMember({ name, title, image, staffKey }) {
   return (
@@ -14,5 +14,5 @@ export default function StaffMember({ name, title, image, staffKey }) {
       <h3 className="mt-4 mb-2">{name}</h3>
       <p>{title}</p>
     </div>
-  );
+  )
 }

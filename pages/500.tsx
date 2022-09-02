@@ -1,5 +1,5 @@
-import React from "react";
-import { Page } from "@/components/Page/Page";
+import React from 'react'
+import { Page } from '@/components/Page/Page'
 
 export default function error500() {
   return (
@@ -9,5 +9,5 @@ export default function error500() {
         <p>Uh oh. Something broke on our end. Check back later.</p>
       </section>
     </Page>
-  );
+  )
 }

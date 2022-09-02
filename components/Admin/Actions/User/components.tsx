@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { toast } from "react-hot-toast";
+import React, { useState } from 'react'
+import axios from 'axios'
+import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { toast } from 'react-hot-toast'
 import {
   BiCheckbox,
   BiCheckboxSquare,
@@ -13,8 +13,8 @@ import {
   BiTaskX,
   BiBot,
   BiMobileVibration,
-} from "react-icons/bi";
-import Modal from "@/components/Modal";
+} from 'react-icons/bi'
+import Modal from '@/components/Modal'
 
 export function UserActions({
   allSelected,
@@ -24,147 +24,145 @@ export function UserActions({
   selectedUsers,
   selectedView,
 }) {
-  const router = useRouter();
-  const [confirmApplyReminder, setConfirmApplyReminder] = useState(false);
-  const [confirmInPersonReminder, setConfirmInPersonReminder] = useState(false);
-  const [confirmDiscordReminder, setConfirmDiscordReminder] = useState(false);
-  const [confirmCheckInReminder, setConfirmCheckInReminder] = useState(false);
-  const [confirmAuto, setConfirmAuto] = useState(false);
-  const [confirmApprove, setConfirmApprove] = useState(false);
-  const [confirmReject, setConfirmReject] = useState(false);
-  const [confirmRedoApprove, setConfirmRedoApprove] = useState(false);
+  const router = useRouter()
+  const [confirmApplyReminder, setConfirmApplyReminder] = useState(false)
+  const [confirmInPersonReminder, setConfirmInPersonReminder] = useState(false)
+  const [confirmDiscordReminder, setConfirmDiscordReminder] = useState(false)
+  const [confirmCheckInReminder, setConfirmCheckInReminder] = useState(false)
+  const [confirmAuto, setConfirmAuto] = useState(false)
+  const [confirmApprove, setConfirmApprove] = useState(false)
+  const [confirmReject, setConfirmReject] = useState(false)
+  const [confirmRedoApprove, setConfirmRedoApprove] = useState(false)
 
   const remindToApply = (users) => {
     axios
-      .post("/api/applications/remind-apply", { users })
+      .post('/api/applications/remind-apply', { users })
       .then(() => {
-        toast.success("Successfully sent reminders!", {
-          id: "appReminderSuccess",
-        });
+        toast.success('Successfully sent reminders!', {
+          id: 'appReminderSuccess',
+        })
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "appReminderError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'appReminderError',
+        })
+      })
+  }
 
   const remindAboutInPerson = (users) => {
     axios
-      .post("/api/applications/remind-inperson", { users })
+      .post('/api/applications/remind-inperson', { users })
       .then(() => {
-        toast.success("Successfully sent reminders!", {
-          id: "inPersonReminderSuccess",
-        });
+        toast.success('Successfully sent reminders!', {
+          id: 'inPersonReminderSuccess',
+        })
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "inPersonReminderError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'inPersonReminderError',
+        })
+      })
+  }
 
   const remindToJoinDiscord = (users) => {
     axios
-      .post("/api/applications/remind-discord", { users })
+      .post('/api/applications/remind-discord', { users })
       .then(() => {
-        toast.success("Successfully sent reminders!", {
-          id: "discordReminderSuccess",
-        });
+        toast.success('Successfully sent reminders!', {
+          id: 'discordReminderSuccess',
+        })
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "discordReminderError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'discordReminderError',
+        })
+      })
+  }
 
   const remindToCheckIn = (users) => {
     axios
-      .post("/api/applications/remind-checkin", { users })
+      .post('/api/applications/remind-checkin', { users })
       .then(() => {
-        toast.success("Successfully sent reminders!", {
-          id: "checkinReminderSuccess",
-        });
+        toast.success('Successfully sent reminders!', {
+          id: 'checkinReminderSuccess',
+        })
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "checkinReminderError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'checkinReminderError',
+        })
+      })
+  }
 
   const autoDecideSelected = (users) => {
     axios
-      .post("/api/applications/auto-review", { users })
+      .post('/api/applications/auto-review', { users })
       .then(() => {
-        toast.success("Auto-decided selected successfully!", {
-          id: "autoReviewSuccess",
-        });
-        router.reload();
+        toast.success('Auto-decided selected successfully!', {
+          id: 'autoReviewSuccess',
+        })
+        router.reload()
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "autoReviewError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', { id: 'autoReviewError' })
+      })
+  }
 
   const approveSelected = (users, approved) => {
     axios
-      .post("/api/applications/manual-review", { users, approved })
+      .post('/api/applications/manual-review', { users, approved })
       .then(() => {
-        toast.success("Approved selected successfully!", {
-          id: "approvedSelectedSuccess",
-        });
-        router.reload();
+        toast.success('Approved selected successfully!', {
+          id: 'approvedSelectedSuccess',
+        })
+        router.reload()
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "approvedSelectedError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'approvedSelectedError',
+        })
+      })
+  }
 
   const rejectSelected = (users, approved) => {
     axios
-      .post("/api/applications/manual-review", { users, approved })
+      .post('/api/applications/manual-review', { users, approved })
       .then(() => {
-        toast.success("Rejected selected successfully!", {
-          id: "rejectedSelectedSuccess",
-        });
-        router.reload();
+        toast.success('Rejected selected successfully!', {
+          id: 'rejectedSelectedSuccess',
+        })
+        router.reload()
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "rejectedSelectedError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'rejectedSelectedError',
+        })
+      })
+  }
 
   const redoApproveSelected = (users) => {
     axios
-      .post("/api/applications/re-review", { users })
+      .post('/api/applications/re-review', { users })
       .then(() => {
-        toast.success("Approved selected successfully!", {
-          id: "redoApprovedSelectedSuccess",
-        });
-        router.reload();
+        toast.success('Approved selected successfully!', {
+          id: 'redoApprovedSelectedSuccess',
+        })
+        router.reload()
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "redoApprovedSelectedError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'redoApprovedSelectedError',
+        })
+      })
+  }
 
   return (
     <>
-      {(selectedView === "Not Applied" ||
-        selectedView === "Pending" ||
-        selectedView == "Approved" ||
-        selectedView === "Rejected" ||
-        selectedView === "Not Checked-In") && (
+      {(selectedView === 'Not Applied' ||
+        selectedView === 'Pending' ||
+        selectedView == 'Approved' ||
+        selectedView === 'Rejected' ||
+        selectedView === 'Not Checked-In') && (
         <p className="mt-3 font-normal text-sm">
           <span className="font-medium">Tip:</span> Select a row to perform more
           actions.
@@ -172,16 +170,16 @@ export function UserActions({
       )}
       <div
         className={
-          "flex flex-col xs:flex-row gap-2 xs:items-center text-2xl " +
+          'flex flex-col xs:flex-row gap-2 xs:items-center text-2xl ' +
           (!(
-            selectedView === "Not Applied" ||
-            selectedView === "Pending" ||
-            selectedView == "Approved" ||
-            selectedView === "Rejected" ||
-            selectedView === "Not Checked-In"
+            selectedView === 'Not Applied' ||
+            selectedView === 'Pending' ||
+            selectedView == 'Approved' ||
+            selectedView === 'Rejected' ||
+            selectedView === 'Not Checked-In'
           )
-            ? "mt-3"
-            : "")
+            ? 'mt-3'
+            : '')
         }
       >
         <div className="flex">
@@ -207,13 +205,13 @@ export function UserActions({
           </div>
         </div>
         {selectedUsers.length > 0 &&
-          (selectedView == "Not Applied" ||
-            selectedView == "Pending" ||
-            selectedView == "Approved" ||
-            selectedView == "Rejected" ||
-            selectedView == "Not Checked-In") && (
+          (selectedView == 'Not Applied' ||
+            selectedView == 'Pending' ||
+            selectedView == 'Approved' ||
+            selectedView == 'Rejected' ||
+            selectedView == 'Not Checked-In') && (
             <div className="flex flex-col sm:flex-row gap-1 sm:items-center ml-[1.125rem] sm:ml-0 pl-2 border-l-2 border-sub">
-              {selectedView === "Not Applied" && (
+              {selectedView === 'Not Applied' && (
                 <div
                   className="flex items-center gap-2 p-2 pl-2.5 pr-3 rounded-full hover:text-amber-600 hover:bg-amber-200 cursor-pointer"
                   onClick={() => setConfirmApplyReminder(true)}
@@ -224,7 +222,7 @@ export function UserActions({
                   <span className="text-sm sm:text-base">Remind to Apply</span>
                 </div>
               )}
-              {selectedView === "Pending" && (
+              {selectedView === 'Pending' && (
                 <>
                   <div
                     className="flex items-center gap-2 p-2 pl-2.5 pr-3 rounded-full hover:text-blue-600 hover:bg-blue-200 cursor-pointer"
@@ -255,7 +253,7 @@ export function UserActions({
                   </div>
                 </>
               )}
-              {selectedView === "Not Checked-In" && (
+              {selectedView === 'Not Checked-In' && (
                 <div
                   className="flex items-center gap-2 p-2 pl-2.5 pr-3 rounded-full hover:text-amber-600 hover:bg-amber-200 cursor-pointer"
                   onClick={() => setConfirmCheckInReminder(true)}
@@ -266,7 +264,7 @@ export function UserActions({
                   <span className="text-base">Remind to Check-In</span>
                 </div>
               )}
-              {selectedView === "Approved" && (
+              {selectedView === 'Approved' && (
                 <>
                   <div
                     className="flex items-center gap-2 p-2 pl-2.5 pr-3 rounded-full hover:text-amber-600 hover:bg-amber-200 cursor-pointer"
@@ -288,7 +286,7 @@ export function UserActions({
                   </div>
                 </>
               )}
-              {selectedView === "Rejected" && (
+              {selectedView === 'Rejected' && (
                 <div
                   className="flex items-center gap-2 p-2 pl-2.5 pr-3 rounded-full hover:text-green-600 hover:bg-green-200 cursor-pointer"
                   onClick={() => setConfirmRedoApprove(true)}
@@ -314,8 +312,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-amber-400 text-white cursor-pointer"
             onClick={() => {
-              remindToApply(selectedUsers);
-              setConfirmApplyReminder(false);
+              remindToApply(selectedUsers)
+              setConfirmApplyReminder(false)
             }}
           >
             Remind Selected to Apply
@@ -334,8 +332,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-amber-400 text-white cursor-pointer"
             onClick={() => {
-              remindAboutInPerson(selectedUsers);
-              setConfirmInPersonReminder(false);
+              remindAboutInPerson(selectedUsers)
+              setConfirmInPersonReminder(false)
             }}
           >
             Remind Selected About In-Person
@@ -354,8 +352,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-indigo-400 text-white cursor-pointer"
             onClick={() => {
-              remindToJoinDiscord(selectedUsers);
-              setConfirmDiscordReminder(false);
+              remindToJoinDiscord(selectedUsers)
+              setConfirmDiscordReminder(false)
             }}
           >
             Remind Selected About Joining Discord
@@ -374,8 +372,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-amber-400 text-white cursor-pointer"
             onClick={() => {
-              remindToCheckIn(selectedUsers);
-              setConfirmCheckInReminder(false);
+              remindToCheckIn(selectedUsers)
+              setConfirmCheckInReminder(false)
             }}
           >
             Remind Selected to Check-In
@@ -394,8 +392,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-blue-400 text-white cursor-pointer"
             onClick={() => {
-              autoDecideSelected(selectedUsers);
-              setConfirmAuto(false);
+              autoDecideSelected(selectedUsers)
+              setConfirmAuto(false)
             }}
           >
             Auto-Decide Selected
@@ -414,8 +412,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-green-400 text-white cursor-pointer"
             onClick={() => {
-              approveSelected(selectedUsers, true);
-              setConfirmApprove(false);
+              approveSelected(selectedUsers, true)
+              setConfirmApprove(false)
             }}
           >
             Approve Selected
@@ -434,8 +432,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-red-400 text-white cursor-pointer"
             onClick={() => {
-              rejectSelected(selectedUsers, false);
-              setConfirmReject(false);
+              rejectSelected(selectedUsers, false)
+              setConfirmReject(false)
             }}
           >
             Reject Selected
@@ -454,8 +452,8 @@ export function UserActions({
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-green-400 text-white cursor-pointer"
             onClick={() => {
-              redoApproveSelected(selectedUsers);
-              setConfirmRedoApprove(false);
+              redoApproveSelected(selectedUsers)
+              setConfirmRedoApprove(false)
             }}
           >
             Approve Selected
@@ -463,5 +461,5 @@ export function UserActions({
         </div>
       </Modal>
     </>
-  );
+  )
 }

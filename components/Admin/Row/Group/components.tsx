@@ -1,45 +1,45 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { toast } from "react-hot-toast";
-import { MdArrowRight, MdArrowDropDown } from "react-icons/md";
-import { BiTrash, BiGroup } from "react-icons/bi";
-import Modal from "@/components/Modal";
+import React, { useState } from 'react'
+import axios from 'axios'
+import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { toast } from 'react-hot-toast'
+import { MdArrowRight, MdArrowDropDown } from 'react-icons/md'
+import { BiTrash, BiGroup } from 'react-icons/bi'
+import Modal from '@/components/Modal'
 
 export function GroupBox({ group, expandedGroups, setExpandedGroups }) {
-  const router = useRouter();
-  const [confirmDelete, setConfirmDelete] = useState(false);
+  const router = useRouter()
+  const [confirmDelete, setConfirmDelete] = useState(false)
   const [selectedUser, setSelectedUser] = useState({
-    name: { first: "", last: "" },
-  });
-  const [currentGroup, setCurrentGroup] = useState({ gid: "" });
+    name: { first: '', last: '' },
+  })
+  const [currentGroup, setCurrentGroup] = useState({ gid: '' })
 
   const deleteUser = (user) => {
     axios
-      .post("/api/groups/remove", { user, gid: currentGroup.gid })
+      .post('/api/groups/remove', { user, gid: currentGroup.gid })
       .then(() => {
-        toast.success("Successfully removed user!", {
-          id: "removeUserFromGroupSuccess",
-        });
-        router.reload();
+        toast.success('Successfully removed user!', {
+          id: 'removeUserFromGroupSuccess',
+        })
+        router.reload()
       })
       .catch(() => {
-        toast.error("Uh oh. Something went wrong...", {
-          id: "removeUserFromGroupError",
-        });
-      });
-  };
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'removeUserFromGroupError',
+        })
+      })
+  }
 
   return (
     <>
       <motion.div whileHover={{ y: -2 }} className="relative group">
         <div
           className={
-            "w-full border-2 border-sub rounded-md bg-card shadow-md cursor-pointer transform-gpu transition-size duration-150 overflow-hidden " +
+            'w-full border-2 border-sub rounded-md bg-card shadow-md cursor-pointer transform-gpu transition-size duration-150 overflow-hidden ' +
             (!expandedGroups.includes(group)
-              ? "max-h-[2.75rem] "
-              : "max-h-[20rem] ")
+              ? 'max-h-[2.75rem] '
+              : 'max-h-[20rem] ')
           }
         >
           <div className="flex">
@@ -84,7 +84,7 @@ export function GroupBox({ group, expandedGroups, setExpandedGroups }) {
                   <BiGroup />
                 </div>
                 <span className="hidden md:block">
-                  member{group.users.length > 1 && "s"}
+                  member{group.users.length > 1 && 's'}
                 </span>
               </span>
             </div>
@@ -104,27 +104,27 @@ export function GroupBox({ group, expandedGroups, setExpandedGroups }) {
               <div className="w-10 p-2 border-b-2 border-sub text-center" />
             </div>
             {group.users.map((user, idx) => (
-              <div key={"groupMember" + user.id} className="flex w-full">
+              <div key={'groupMember' + user.id} className="flex w-full">
                 <div
                   className={
-                    "w-10 p-2 text-center " +
+                    'w-10 p-2 text-center ' +
                     (idx + 1 < group.users.length
-                      ? "border-b-2 border-sub"
-                      : "")
+                      ? 'border-b-2 border-sub'
+                      : '')
                   }
                 >
                   {idx + 1}
                 </div>
                 <div
                   className={
-                    "w-full grid grid-cols-12 py-2 gap-4 " +
+                    'w-full grid grid-cols-12 py-2 gap-4 ' +
                     (idx + 1 < group.users.length
-                      ? "border-b-2 border-sub"
-                      : "")
+                      ? 'border-b-2 border-sub'
+                      : '')
                   }
                 >
                   <div className="col-span-12 xs:col-span-4">
-                    {user.name.first + " " + user.name.last}
+                    {user.name.first + ' ' + user.name.last}
                     <span className="block xs:hidden">(UID: {user.id})</span>
                   </div>
                   <div className="hidden sm:block sm:col-span-4">
@@ -136,18 +136,18 @@ export function GroupBox({ group, expandedGroups, setExpandedGroups }) {
                 </div>
                 <div
                   className={
-                    "text-center text-lg md:text-xl " +
+                    'text-center text-lg md:text-xl ' +
                     (idx + 1 < group.users.length
-                      ? "border-b-2 border-sub"
-                      : "")
+                      ? 'border-b-2 border-sub'
+                      : '')
                   }
                 >
                   <div
                     className="w-9 p-2 rounded-full hover:bg-red-200 hover:text-red-600"
                     onClick={() => {
-                      setSelectedUser(user);
-                      setCurrentGroup(group);
-                      setConfirmDelete(true);
+                      setSelectedUser(user)
+                      setCurrentGroup(group)
+                      setConfirmDelete(true)
                     }}
                   >
                     <BiTrash title="Remove" />
@@ -163,13 +163,13 @@ export function GroupBox({ group, expandedGroups, setExpandedGroups }) {
         handler={setConfirmDelete}
         title="Confirm Action"
         description={
-          "Are you sure you want to remove " +
+          'Are you sure you want to remove ' +
           selectedUser.name.first +
-          " " +
+          ' ' +
           selectedUser.name.last +
-          " from group " +
+          ' from group ' +
           currentGroup.gid +
-          "?"
+          '?'
         }
       >
         <div className="flex justify-center">
@@ -178,14 +178,14 @@ export function GroupBox({ group, expandedGroups, setExpandedGroups }) {
             whileTap={{ scale: 0.995 }}
             className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-red-500 text-white cursor-pointer"
             onClick={() => {
-              deleteUser(selectedUser);
-              setConfirmDelete(false);
+              deleteUser(selectedUser)
+              setConfirmDelete(false)
             }}
           >
-            Remove {selectedUser.name.first + " " + selectedUser.name.last}
+            Remove {selectedUser.name.first + ' ' + selectedUser.name.last}
           </motion.button>
         </div>
       </Modal>
     </>
-  );
+  )
 }
