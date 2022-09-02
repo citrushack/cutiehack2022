@@ -104,7 +104,13 @@ export function UserActions({
         router.reload()
       })
       .catch(() => {
+<<<<<<< HEAD
         toast.error('Uh oh. Something went wrong...', { id: 'autoReviewError' })
+=======
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'autoReviewError',
+        })
+>>>>>>> 74c0b241970fd128eede7dc193cdf8e1bc65f167
       })
   }
 
