@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import SponsorLogos from "@/components/Sponsors/SponsorLogos";
-import SponsorImage from "@/components/Sponsors/SponsorImage";
-import { MdEmojiObjects } from "react-icons/md";
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import SponsorLogos from '@/components/Sponsors/SponsorLogos'
+import SponsorImage from '@/components/Sponsors/SponsorImage'
+import { MdEmojiObjects } from 'react-icons/md'
 
 export default function Sponsors() {
   return (
@@ -19,16 +19,16 @@ export default function Sponsors() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.995 }}
             style={{
-              display: "flex",
-              width: "200px",
-              height: "3rem",
-              color: "black",
-              fontWeight: "650",
-              backgroundColor: "#78a93c",
-              borderRadius: "0.5rem",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "1.5rem",
+              display: 'flex',
+              width: '200px',
+              height: '3rem',
+              color: 'black',
+              fontWeight: '650',
+              backgroundColor: '#78a93c',
+              borderRadius: '0.5rem',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: '1.5rem',
             }}
           >
             Sponsor Us
@@ -38,7 +38,7 @@ export default function Sponsors() {
           Pomelo
         </h1>
         <div className="flex justify-center flex-wrap gap-6">
-          {SponsorLogos.get("Pomelo").map((logo) => {
+          {SponsorLogos.get('Pomelo').map((logo) => {
             return (
               <SponsorImage
                 image={logo.image}
@@ -46,7 +46,7 @@ export default function Sponsors() {
                 size_width={logo.size_width}
                 size_height={logo.size_height}
               />
-            );
+            )
           })}
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function Sponsors() {
         Orange
       </h1>
       <div className="flex justify-center flex-wrap gap-6">
-        {SponsorLogos.get("Orange").map((logo) => {
+        {SponsorLogos.get('Orange').map((logo) => {
           return (
             <SponsorImage
               image={logo.image}
@@ -62,14 +62,14 @@ export default function Sponsors() {
               size_width={logo.size_width}
               size_height={logo.size_height}
             />
-          );
+          )
         })}
       </div>
       <h1 className="flex justify-center items-center text-4xl font-bold pb-10">
         Tangerine
       </h1>
       <div className="flex justify-center flex-wrap gap-6">
-        {SponsorLogos.get("Tangerine").map((logo) => {
+        {SponsorLogos.get('Tangerine').map((logo) => {
           return (
             <SponsorImage
               image={logo.image}
@@ -77,14 +77,14 @@ export default function Sponsors() {
               size_width={logo.size_width}
               size_height={logo.size_height}
             />
-          );
+          )
         })}
       </div>
       <h1 className="flex justify-center items-center text-4xl font-bold pb-10">
         Cutie
       </h1>
       <div className="flex justify-center flex-wrap gap-6">
-        {SponsorLogos.get("Cutie").map((logo) => {
+        {SponsorLogos.get('Cutie').map((logo) => {
           return (
             <SponsorImage
               image={logo.image}
@@ -92,9 +92,9 @@ export default function Sponsors() {
               size_width={logo.size_width}
               size_height={logo.size_height}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }

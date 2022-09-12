@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { MdHighQuality } from "react-icons/md";
-import { motion } from "framer-motion";
+import React from 'react'
+import Image from 'next/image'
+import { MdHighQuality } from 'react-icons/md'
+import { motion } from 'framer-motion'
 
 //Notes: onClick add links to the images later
 
@@ -20,5 +20,5 @@ export default function SponsorImage({ image, ID, size_width, size_height }) {
         />
       </motion.div>
     </div>
-  );
+  )
 }
