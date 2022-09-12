@@ -38,10 +38,10 @@ export const SponsorLogos = new Map([
         size_height: 170,
       },
       {
-        image: "/assets/AmazonSponsor.png",
+        image: "/assets/GoogleCloudSponsor.png",
         ID: "5",
-        size_width: 100,
-        size_height: 100,
+        size_width: 200,
+        size_height: 170,
       },
     ],
   ],
@@ -60,6 +60,12 @@ export const SponsorLogos = new Map([
         size_width: 100,
         size_height: 100,
       },
+      {
+        image: "/assets/AmazonSponsor.png",
+        ID: "8",
+        size_width: 100,
+        size_height: 100,
+      },
     ],
   ],
   [
@@ -67,13 +73,25 @@ export const SponsorLogos = new Map([
     [
       {
         image: "/assets/AmazonSponsor.png",
-        ID: "8",
+        ID: "9",
         size_width: 100,
         size_height: 100,
       },
       {
         image: "/assets/GoogleCloudSponsor.png",
-        ID: "9",
+        ID: "10",
+        size_width: 100,
+        size_height: 70,
+      },
+      {
+        image: "/assets/GoogleCloudSponsor.png",
+        ID: "11",
+        size_width: 100,
+        size_height: 70,
+      },
+      {
+        image: "/assets/GoogleCloudSponsor.png",
+        ID: "12",
         size_width: 100,
         size_height: 70,
       },
