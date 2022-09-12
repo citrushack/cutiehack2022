@@ -24,7 +24,7 @@ export default function Sponsors() {
               height: "3rem",
               color: "black",
               fontWeight: "650",
-              backgroundColor: "#87bd08d4",
+              backgroundColor: "#78a93c",
               borderRadius: "0.5rem",
               alignItems: "center",
               justifyContent: "center",
