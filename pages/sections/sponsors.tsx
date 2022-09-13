@@ -40,6 +40,7 @@ export default function Sponsors() {
           {SponsorLogos.get("Pomelo").map((logo) => {
             return (
               <SponsorImage
+                ID={logo.ID}
                 image={logo.image}
                 key={logo.ID}
                 size_width={logo.size_width}
@@ -57,6 +58,7 @@ export default function Sponsors() {
           return (
             <SponsorImage
               image={logo.image}
+              ID={logo.ID}
               key={logo.ID}
               size_width={logo.size_width}
               size_height={logo.size_height}
@@ -72,6 +74,7 @@ export default function Sponsors() {
           return (
             <SponsorImage
               image={logo.image}
+              ID={logo.ID}
               key={logo.ID}
               size_width={logo.size_width}
               size_height={logo.size_height}
@@ -87,6 +90,7 @@ export default function Sponsors() {
           return (
             <SponsorImage
               image={logo.image}
+              ID={logo.ID}
               key={logo.ID}
               size_width={logo.size_width}
               size_height={logo.size_height}
