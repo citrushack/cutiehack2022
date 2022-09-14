@@ -26,7 +26,7 @@ const SocialLinks = [
     image: <FaTwitter size="56"></FaTwitter>,
   },
   {
-    path: 'citrushack@gmail.com',
+    path: 'mailto:citrushack@gmail.com',
     title: 'Email',
     image: <MdEmail size="56"></MdEmail>,
   },
