@@ -14,21 +14,15 @@ export default function Support() {
       </h2>
       <p className="text-left">
         <p className="font-medium">Mentors</p>
-        <p>
-          {MentorDescription}
-        </p>
+        <p>{MentorDescription}</p>
       </p>
       <p className="text-left">
         <p className="font-medium">Volunteers</p>
-        <p>
-          {VolunteersDescription}
-        </p>
+        <p>{VolunteersDescription}</p>
       </p>
       <p className="text-left">
         <p className="font-medium">Sponsors</p>
-        <p>
-          {SponsorsDescription}
-        </p>
+        <p>{SponsorsDescription}</p>
       </p>
       <div>
         <a href="https://www.google.com/">
