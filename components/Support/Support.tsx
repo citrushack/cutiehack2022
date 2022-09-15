@@ -1,7 +1,22 @@
 import React from 'react'
-import { MentorDescription } from './MentorDescription'
-import { VolunteersDescription } from './VolunteersDescription'
-import { SponsorsDescription } from './SponsorsDescription'
+
+const SupportInfo = [
+  {
+    title: 'Mentors',
+    description:
+      'Mentors are in charge of helping the hackers with new technologies and working through any bugs or obstacles they encounter. We recommend this position if you are well versed in a particular stack to offer the best guidance.',
+  },
+  {
+    title: 'Volunteers',
+    description:
+      'Volunteers help out with the majority of day-of event tasks including, but not limited to, matching hackers to mentors, helping hackers find teams, hosting activities, and answering general questions.',
+  },
+  {
+    title: 'Sponsors',
+    description:
+      "Sponsors are companies/individuals that want to help Cutie Hack and Citrus Hack come to life! If you are interested in contributing, please don't hesitate to contact us!",
+  },
+]
 
 export default function Support() {
   return (
@@ -12,18 +27,14 @@ export default function Support() {
         love to have you on board. Fill out the forms below if you'd like to
         help hackers throughout the day.
       </h2>
-      <p className="text-left">
-        <p className="font-medium">Mentors</p>
-        <p>{MentorDescription}</p>
-      </p>
-      <p className="text-left">
-        <p className="font-medium">Volunteers</p>
-        <p>{VolunteersDescription}</p>
-      </p>
-      <p className="text-left">
-        <p className="font-medium">Sponsors</p>
-        <p>{SponsorsDescription}</p>
-      </p>
+      {SupportInfo.map((categoryInfo) => {
+        return (
+          <p className="text-left">
+            <p className="font-medium">{categoryInfo.title}</p>
+            <p>{categoryInfo.description}</p>
+          </p>
+        )
+      })}
       <div>
         <a href="https://www.google.com/">
           <button className="p-4">mentors</button>
