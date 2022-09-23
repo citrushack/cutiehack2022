@@ -1,3 +1,4 @@
+import { createTransport } from 'nodemailer'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import NextAuth from 'next-auth'
 import EmailProvider from 'next-auth/providers/email'
@@ -5,6 +6,7 @@ import GoogleProvider from 'next-auth/providers/google'
 import GithubProvider from 'next-auth/providers/github'
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from 'lib/mongodb'
+import { htmlEmail, textEmail } from 'lib/verificationMailContent'
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   return await NextAuth(req, res, {
@@ -30,6 +32,21 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
           },
         },
         from: process.env.EMAIL_FROM,
+        async sendVerificationRequest({
+          identifier: email,
+          url,
+          provider: { server, from },
+        }) {
+          const { host } = new URL(url)
+          const transport = createTransport(server)
+          await transport.sendMail({
+            to: email,
+            from,
+            subject: `Sign in to ${host}`,
+            text: textEmail({ url, host }),
+            html: htmlEmail({ url, host, email }),
+          })
+        },
       }),
     ],
     callbacks: {
