@@ -11,8 +11,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <ThemeProvider enableSystem={false}>
-        <Component {...pageProps} />
         <UserBar />
+        <Component {...pageProps} />
       </ThemeProvider>
     </SessionProvider>
   )

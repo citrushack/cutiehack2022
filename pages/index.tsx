@@ -19,27 +19,6 @@ const Home: NextPage = () => {
       <Element name="Home">
         <Landing />
       </Element>
-      <Element name="Schedule">
-        <Schedule />
-      </Element>
-      <Element name="About">
-        <About />
-      </Element>
-      <Element name="Tracks">
-        <Tracks />
-      </Element>
-      <Element name="Support">
-        <Support />
-      </Element>
-      <Element name="Sponsors">
-        <Sponsors />
-      </Element>
-      <Element name="Staff">
-        <Staff />
-      </Element>
-      <Element name="Faq">
-        <Faq />
-      </Element>
       <Footer />
     </Page>
   )
