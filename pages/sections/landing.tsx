@@ -12,7 +12,7 @@ export default function Landing() {
               ? '/assets/coming-soon.png'
               : '/assets/coming-soon.png'
           }
-          layout='fill'
+          layout="fill"
           priority={Boolean(true)}
           alt="coming-soon"
         />
