@@ -30,103 +30,24 @@ export default function Landing() {
           <div className="flex flex-col max-w-xl">
             <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:mb-10">
               <div>
-                <h1 className="font-black uppercase">Citrus Hack</h1>
-                <h3 className="font-bold text-highlight-dark">
-                  April 2-3, 2022
-                </h3>
+                <Image
+                  src={
+                    theme == 'light'
+                      ? '/assets/title.svg'
+                      : '/assets/title.svg'
+                  }
+                  layout='fill'
+                  quality={50}
+                  priority={Boolean(true)}
+                  objectFit="contain"
+                  alt="title"
+                />
               </div>
             </div>
           </div>
-          <CountdownWrapper date="2022-04-02T16:00:00Z" />
-          <p className="max-w-lg italic text-center font-medium">
-            In-person sign-ups will close today at 5:30 PM PST, as we are
-            reaching maximum capacity
-          </p>
-          {(status === 'unauthenticated' ||
-            (status === 'authenticated' &&
-              !Boolean(session.user.qualified))) && (
-            <p className="max-w-lg italic text-center font-medium">
-              Applications will close tonight at 12 AM PST, so be sure to apply
-              while you still can!
-            </p>
-          )}
-          <span className="flex justify-center w-full mb-6">
-            <SignupCounter />
-          </span>
-          {status === 'authenticated' && !session.user.uid && (
-            <span className="flex justify-center w-full z-[200]">
-              <ButtonLink primary label="Apply Now" link="/apply" />
-            </span>
-          )}
-          {!session && (
-            <span className="flex justify-center w-full z-[200]">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.995 }}
-                className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
-                onClick={() => toggleSigninModal()}
-              >
-                Sign In
-              </motion.button>
-            </span>
-          )}
-          <div className="flex flex-col w-full gap-3">
-            {/* uncomment the day before */}
-            {status === 'authenticated' &&
-              session.user.uid &&
-              session.user.qualified === 'yeah' &&
-              !session.user.checkedIn && (
-                <span className="flex justify-center w-full z-[200]">
-                  <ButtonLink primary label="Check-In Now!" link="/checkin" />
-                </span>
-              )}
-            {status === 'authenticated' &&
-              session.user.uid &&
-              session.user.qualified === 'yeah' && (
-                <>
-                  <span className="flex justify-center w-full z-[200]">
-                    <ButtonLink
-                      secondary
-                      label="Join Our Discord"
-                      link={process.env.discord}
-                      external
-                    />
-                  </span>
-                  <span className="flex justify-center w-full z-[200]">
-                    <ButtonLink
-                      secondary
-                      label="Group Dashboard"
-                      link="/group/dashboard"
-                    />
-                  </span>
-                </>
-              )}
-          </div>
-          {/* <div className='absolute'>
-            <Image
-              src={
-                theme == 'light'
-                  ? '/assets/mountains.svg'
-                  : '/assets/mountains.svg'
-              }
-              width={1712.57}
-              height={1734.07}
-              quality={50}
-              priority={Boolean(true)}
-              objectFit="contain"
-              alt="mountains"
-            />
-          </div> */}
+          <CountdownWrapper date="2022-11-05T16:00:00Z" />
         </div>
       </section>
-      <Modal
-        title="Sign In"
-        description="Sign in to Citrus Hack via Google to apply and access more. No password required."
-        show={signinModalOpen}
-        handler={setSigninModalOpen}
-      >
-        <SigninForm />
-      </Modal>
     </>
   )
 }
