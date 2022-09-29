@@ -32,11 +32,9 @@ export default function Landing() {
               <div>
                 <Image
                   src={
-                    theme == 'light'
-                      ? '/assets/title.svg'
-                      : '/assets/title.svg'
+                    theme == 'light' ? '/assets/title.svg' : '/assets/title.svg'
                   }
-                  layout='fill'
+                  layout="fill"
                   quality={50}
                   priority={Boolean(true)}
                   objectFit="contain"

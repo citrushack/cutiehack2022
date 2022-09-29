@@ -30,7 +30,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
                 whileHover="hover"
                 className="flex justify-center items-center w-8 rounded bg-white/30 cursor-default xs:w-11 sm:w-14 h-8 xs:h-11 sm:h-14"
               >
-                <span className='!text-white font-baloo'>{n}</span>
+                <span className="!text-white font-baloo">{n}</span>
               </motion.div>
             ))}
           </div>
