@@ -19,6 +19,9 @@ module.exports = {
       backgroundImage: {
         pattern: 'var(--pattern)',
       },
+      fontFamily: {
+        baloo: ["BalooPaaji2"]
+      },
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
