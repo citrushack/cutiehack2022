@@ -1,0 +1,134 @@
+import React, { useState, useEffect } from 'react'
+import Countdown from 'react-countdown'
+import { motion } from 'framer-motion'
+import { ButtonLink } from '../ButtonLink'
+
+var buttonVariants = {}
+
+interface TimeBlockProps {
+  /** Decides when to show a particular time block (e.g. if 0 days are left, time blocks for days are hidden). */
+  condition: boolean
+  /** Number of seconds, minutes, hours, or days. */
+  num: string
+  /** Label for the time blocks (e.g. 'seconds'). */
+  label: string
+  /** Decides when to show a separator after a pair of time blocks. */
+  separator?: boolean
+}
+
+/** Blocks representing a unit of time in XX format. */
+function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
+  return (
+    condition && (
+      <>
+        <div className="relative flex flex-col col-span-3 items-center text-sub-bright">
+          <div className="flex gap-0.5 xs:gap-1 sm:gap-2 mb-2">
+            {Array.from(num).map((n, idx) => (
+              <motion.div
+                key={label + String(idx)}
+                variants={buttonVariants}
+                whileHover="hover"
+                className="flex justify-center items-center w-8 rounded bg-white/30 cursor-default xs:w-11 sm:w-14 h-8 xs:h-11 sm:h-14"
+              >
+                <span className="!text-white font-baloo">{n}</span>
+              </motion.div>
+            ))}
+          </div>
+          <p className="top-8 text-lg leading-3 font-semibold font-baloo text-white/30 xs:top-10 sm:top-[3.25rem] xs:text-xl">
+            {label}
+          </p>
+        </div>
+        {separator && (
+          <div className="flex flex-col text-xl xs:text-3xl sm:text-4xl text-center justify-center text-sub-bright"></div>
+        )}
+      </>
+    )
+  )
+}
+
+/** Content displayed after countdown finishes. */
+const Completionist = () => (
+  <div className="mb-4">
+    <h3 className="mb-6 text-center font-bold">CUTIE HACK</h3>
+    <ButtonLink primary label="Live Page" link="/live" />
+  </div>
+)
+
+/** Rendered countdown clock. */
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+    return <Completionist />
+  } else {
+    const numDays = days < 10 ? String(`0${days}`) : String(days)
+    const numHours = hours < 10 ? String(`0${hours}`) : String(hours)
+    const numMinutes = minutes < 10 ? String(`0${minutes}`) : String(minutes)
+    const numSeconds = seconds < 10 ? String(`0${seconds}`) : String(seconds)
+
+    return (
+      <div className="mb-10">
+        {/* <h3 className="text-center sm:text-left font-bold">
+          illuminate your passion 2022
+        </h3> */}
+        <div
+          className={
+            'grid ' +
+            (days <= 0
+              ? hours <= 0
+                ? minutes <= 0
+                  ? 'grid-cols-2'
+                  : 'grid-cols-5'
+                : 'grid-cols-8'
+              : 'grid-cols-11')
+          }
+        >
+          <TimeBlock
+            condition={Boolean(days > 0)}
+            num={numDays}
+            label="DAYS"
+            separator
+          />
+          <TimeBlock
+            condition={Boolean(days > 0 || hours > 0)}
+            num={numHours}
+            label="HOURS"
+            separator
+          />
+          <TimeBlock
+            condition={Boolean(days > 0 || hours > 0 || minutes > 0)}
+            num={numMinutes}
+            label="MINUTES"
+          />
+          {/* <TimeBlock
+            condition={Boolean(
+              days > 0 || hours > 0 || minutes > 0 || seconds > 0
+            )}
+            num={numSeconds}
+            label="secs"
+          /> */}
+        </div>
+      </div>
+    )
+  }
+}
+
+/** Wrapper for countdown clock. */
+export function CountdownWrapper({ date }) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  if (!isMobile) buttonVariants = { hover: { y: -3 } }
+  else buttonVariants = {}
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 720)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+  })
+
+  return (
+    <h2 className="text-2xl xs:text-4xl sm:text-5xl">
+      <Countdown date={date} renderer={renderer} />
+    </h2>
+  )
+}

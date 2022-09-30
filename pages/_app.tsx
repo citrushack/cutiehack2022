@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 
@@ -12,7 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <ThemeProvider enableSystem={false}>
         <Component {...pageProps} />
-        <UserBar />
       </ThemeProvider>
     </SessionProvider>
   )
