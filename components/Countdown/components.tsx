@@ -22,7 +22,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
     condition && (
       <>
         <div className="relative flex flex-col col-span-3 items-center text-sub-bright">
-          <div className="flex gap-0.5 xs:gap-1 sm:gap-2">
+          <div className="flex gap-0.5 xs:gap-1 sm:gap-2 mb-2">
             {Array.from(num).map((n, idx) => (
               <motion.div
                 key={label + String(idx)}
@@ -34,14 +34,12 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
               </motion.div>
             ))}
           </div>
-          <p className="top-8 xs:top-10 sm:top-[3.25rem] text-lg xs:text-xl leading-3 font-semibold font-baloo text-white/30">
+          <p className="top-8 text-lg leading-3 font-semibold font-baloo text-white/30 xs:top-10 sm:top-[3.25rem] xs:text-xl">
             {label}
           </p>
         </div>
         {separator && (
-          <div className="flex flex-col text-xl xs:text-3xl sm:text-4xl text-center justify-center text-sub-bright">
-            :
-          </div>
+          <div className="flex flex-col text-xl xs:text-3xl sm:text-4xl text-center justify-center text-sub-bright"></div>
         )}
       </>
     )
