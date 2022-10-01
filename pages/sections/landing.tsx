@@ -25,7 +25,7 @@ export default function Landing() {
 
   return (
     <>
-      <section className="flex w-full h-screen justify-center items-center my-40 min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] lg:my-0 mb-20 md:mb-0 gap-6">
+      <section className="flex w-full h-screen inset-0 justify-center items-center my-10 min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] lg:my-0 mb-20 md:mb-0 gap-6">
         <div className="flex flex-col 2xl:left-0 items-center">
           <div className="flex flex-col max-w-xl">
             <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:mb-10">
