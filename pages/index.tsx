@@ -4,8 +4,21 @@ import Head from 'next/head'
 
 import { Element } from 'react-scroll'
 import Landing from '@/pages/sections/landing'
+import { useEffect } from 'react'
 
 const Home: NextPage = () => {
+  
+  const documentHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+    console.log('called')
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', documentHeight)
+    documentHeight()
+  })
+  
   return (
     <Page title="Home">
       <Element
