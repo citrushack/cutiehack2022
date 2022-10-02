@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <Page title="Home">
       <Element
         name="Home"
-        className="w-full bg-gradient-to-b from-accent via-accent-secondary to-primary inset-0"
+        className="w-full bg-gradient-to-b from-accent via-accent-secondary to-primary"
       >
         <span className="flex w-full h-screen justify-center bg-[url('/assets/lamps.svg'),_url('/assets/mountains.svg')] bg-[position:top,bottom] bg-contain bg-repeat-x">
           <Landing />
