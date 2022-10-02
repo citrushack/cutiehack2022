@@ -43,7 +43,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <span className='pt-20'>
+          <span className="pt-20">
             <CountdownWrapper date="2022-11-05T16:00:00Z" />
           </span>
         </div>
