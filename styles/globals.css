@@ -31,28 +31,17 @@
   }
 }
 
-/* body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-html {
-  height: -webkit-fill-available;
-} */
-
-:root {
- --doc-height: 100%;
+.min-safe-h-screen {
+  /* equivalent to 100dvh in major browsers */
+  min-height: calc(
+    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0)
+  ) !important;
 }
 
-html,
-body {
- padding: 0;
- margin: 0;
- height: 100vh; /* fallback for Js load */
- height: var(--doc-height) !important;
- overflow-y: hidden;
-}
 
-/* used to debug */
-/* * {
-  border: 2px solid greenyellow;
-} */
+@supports (-webkit-touch-callout: none) {
+  .min-safe-h-screen {
+    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
+    min-height: -webkit-fill-available !important;
+  }
+}

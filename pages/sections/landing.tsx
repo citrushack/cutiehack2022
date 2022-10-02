@@ -25,10 +25,10 @@ export default function Landing() {
 
   return (
     <>
-      <div className="flex w-full h-screen justify-center items-center my-10 min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] lg:my-0 mb-20 md:mb-0 gap-6">
+      <div className="flex w-full min-safe-h-screen justify-center items-center">
         <div className="flex flex-col 2xl:left-0 items-center">
           <div className="flex flex-col max-w-xl">
-            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:mb-10">
+            <div className="flex flex-col items-center text-center sm:text-left sm:mb-10">
               <div>
                 <Image
                   src={
@@ -43,7 +43,9 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <CountdownWrapper date="2022-11-05T16:00:00Z" />
+          <span className="pt-20">
+            <CountdownWrapper date="2022-11-05T16:00:00Z" />
+          </span>
         </div>
       </div>
     </>
