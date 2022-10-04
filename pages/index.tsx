@@ -37,7 +37,7 @@ const Home: NextPage = () => {
       <Element name="Staff">
         <Staff />
       </Element>
-      <Element name="Faq">
+      <Element name="FAQ">
         <Faq />
       </Element>
       <Footer />
