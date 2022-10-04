@@ -6,19 +6,22 @@
   :root {
     /* default light theme */
     --overlay: #00000059;
-    --secondary: #f3fbff;
+    --buttons: #F09372;
+    --secondary: #DFDFDF;
     --highlight: #9DC300;
   }
 
   [data-theme='light'] {
+    --buttons: #F09372;
     --overlay: #00000059;
-    --secondary: #f3fbff;
+    --secondary: #DFDFDF;
     --highlight: #9DC300;
   }
 
   [data-theme='dark'] {
+    --buttons: #F09372;
     --overlay: #00000080;
-    --secondary: #152a38;
+    --secondary: #DFDFDF;
     --highlight: #FB9A36;
   }
 }

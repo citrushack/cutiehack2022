@@ -15,6 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        buttons: 'var(--buttons)',
         secondary: 'var(--secondary)',
         card: 'var(--card)',
         overlay: 'var(--overlay)',
