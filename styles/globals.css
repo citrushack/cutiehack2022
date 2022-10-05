@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "BalooPaaji2Bold";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-SemiBold.ttf")
+}
+@font-face {
+  font-family: "BalooPaaji2Reg";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Regular.ttf");
+}
+@font-face {
+  font-family: "BalooPaaji2Medium";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Medium.ttf");
+}
 @layer base {
   :root {
     /* default light theme */
     --overlay: #00000059;
     --buttons: #F09372;
     --secondary: #DFDFDF;
-    --highlight: #9DC300;
+    --sub-secondary: #5F3B5B;
+    --highlight: #F09372;
+    --card: #AB6F82;
+    --text: #FFFFFF;
+    --sub: #F6DD5A;
   }
 
   [data-theme='light'] {
     --buttons: #F09372;
     --overlay: #00000059;
     --secondary: #DFDFDF;
-    --highlight: #9DC300;
+    --sub-secondary: #5F3B5B;
+    --highlight: #F09372;
+    --card: #AB6F82;
+    --text: #FFFFFF;
+    --sub: #F6DD5A;
   }
 
   [data-theme='dark'] {
     --buttons: #F09372;
     --overlay: #00000080;
     --secondary: #DFDFDF;
-    --highlight: #FB9A36;
+    --sub-secondary: #5F3B5B;
+    --highlight: #F09372;
+    --card: #AB6F82;
+    --text: #FFFFFF;
+    --sub: #F6DD5A;
   }
 }
