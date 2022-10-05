@@ -45,7 +45,7 @@ export function UserBar() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.995 }}
-            className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
+            className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-buttons shadow cursor-pointer"
             onClick={() => toggleSigninModal()}
           >
             Sign In

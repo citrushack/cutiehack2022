@@ -14,14 +14,25 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      fontFamily: {
+        baloo_semi_bold: ["BalooPaaji2Bold"],
+        baloo_regular: ["BalooPaaji2Reg"],
+        baloo_medium: ["BalooPaaji2Medium"]
+      },
       colors: {
+        text: 'var(--text)',
         buttons: 'var(--buttons)',
+        card: 'var(--card)',
         secondary: 'var(--secondary)',
         card: 'var(--card)',
         overlay: 'var(--overlay)',
         highlight: {
           DEFAULT: 'var(--highlight)',
         },
+        sub: {
+          DEFAULT: 'var(--sub)',
+          secondary: 'var(--sub-secondary)'
+        }
       },
     },
   },
