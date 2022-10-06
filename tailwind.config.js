@@ -32,7 +32,11 @@ module.exports = {
         sub: {
           DEFAULT: 'var(--sub)',
           secondary: 'var(--sub-secondary)'
-        }
+        },
+        from: 'var(--from)',
+        via: 'var(--via)',
+        via2: 'var(--via2)',
+        to: 'var(--to)'
       },
     },
   },

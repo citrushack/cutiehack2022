@@ -25,6 +25,10 @@
     --card: #AB6F82;
     --text: #FFFFFF;
     --sub: #F6DD5A;
+    --from: #190E56;
+    --via: #65385D;
+    --via2: #FF8E6A;
+    --to: #B56B83;
   }
 
   [data-theme='light'] {
@@ -36,6 +40,9 @@
     --card: #AB6F82;
     --text: #FFFFFF;
     --sub: #F6DD5A;
+    --from: #190E56;
+    --via: #B56B83;
+    --to: #FF8E6A;
   }
 
   [data-theme='dark'] {
@@ -47,5 +54,17 @@
     --card: #AB6F82;
     --text: #FFFFFF;
     --sub: #F6DD5A;
+    --from: #190E56;
+    --via: #65385D;
+    --via2: #FF8E6A;
+    --to: #B56B83;
   }
+}
+
+/* * {
+  border: 2px solid greenyellow;
+} */
+html, body {
+  width: 100% !important;
+
 }
