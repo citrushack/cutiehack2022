@@ -76,8 +76,13 @@ const Home: NextPage = () => {
       <Element name="Sponsors">
         <Sponsors />
       </Element>
-      <Element name="Staff">
-        <Staff />
+      <Element
+        name="Staff"
+        className="flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
+      >
+        <span className="flex justify-center px-4 w-full">
+          <Staff />
+        </span>
       </Element>
       <Element name="FAQ">
         <Faq />
