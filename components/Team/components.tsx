@@ -25,7 +25,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
           priority={true}
           quality={100}
           className="rounded-full"
-          alt='profile photo'
+          alt="profile photo"
         />
       </a>
     </motion.span>

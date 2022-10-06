@@ -8,7 +8,9 @@ export default function Staff() {
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[70rem] justify-center items-center">
       <div className="flex justify-between pb-4">
         <Image src={staffLineLeft} alt="lineleft" className="inline" />
-        <span className='whitespace-nowrap px-12 text-5xl font-baloo_medium text-text'>Staff</span>
+        <span className="whitespace-nowrap px-12 text-5xl font-baloo_medium text-text">
+          Staff
+        </span>
         <Image src={staffLineRight} alt="lineright" className="inline" />
       </div>
       <TeamGrid />
