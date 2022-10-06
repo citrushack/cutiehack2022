@@ -35,7 +35,7 @@ const SocialLinks = [
 
 export default function Footer() {
   return (
-    <div className='flex flex-col w-screen'>
+    <div className="flex flex-col w-screen">
       <Wave type={1} bgColor="bg-primary" fillColor="wave-from" />
       <footer className="w-full bg-gradient-to-b from-from via-via to-to z-30 bottom-0">
         <div className="flex flex-col justify-center mx-auto items-center">
