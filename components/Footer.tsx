@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 import { MdEmail } from 'react-icons/md'
+import { Wave } from './Wave'
 
 const SocialLinks = [
   {
@@ -34,32 +35,35 @@ const SocialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-highlight text-white py-6 min-w-full">
-      <div className="flex flex-col justify-center mx-auto items-center">
-        <div className="flex flex-row mb-2">
-          <p className="text-4xl font-lexend font-bold text-center">
-            {"Let's connect!"}
-          </p>
+    <div className="flex flex-col w-screen">
+      <Wave type={1} bgColor="bg-primary" fillColor="wave-from" />
+      <footer className="w-full bg-gradient-to-b from-from via-via to-to z-30 bottom-0">
+        <div className="flex flex-col justify-center mx-auto items-center">
+          <div className="flex flex-row mb-2">
+            <p className="text-4xl font-lexend font-bold text-center">
+              {"Let's connect!"}
+            </p>
+          </div>
+          <div className="flex flex-row justify-center mx-auto">
+            {SocialLinks.map((link) => {
+              return (
+                <div key={link.path} className="flex justify-center mr-1">
+                  <Link href={link.path}>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title={link.title}
+                      className="fill-current text-white hover:text-gray-500"
+                    >
+                      {link.image}
+                    </a>
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
         </div>
-        <div className="flex flex-row justify-center mx-auto">
-          {SocialLinks.map((link) => {
-            return (
-              <div key={link.path} className="flex justify-center mr-1">
-                <Link href={link.path}>
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title={link.title}
-                    className="fill-current text-white hover:text-gray-500"
-                  >
-                    {link.image}
-                  </a>
-                </Link>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   )
 }
