@@ -73,7 +73,7 @@ export const ButtonLink = ({
         target="_blank"
         rel="noreferrer noopener"
         href={link}
-        className="flex justify-center w-full"
+        className="flex justify-center w-full bg-buttons rounded-md"
       >
         <Button
           primary={primary}
@@ -85,7 +85,7 @@ export const ButtonLink = ({
       </a>
     ) : (
       <Link passHref href={link}>
-        <span className="flex justify-center w-full">
+        <span className="flex justify-center w-full bg-buttons rounded-md">
           <Button
             primary={primary}
             secondary={secondary}
