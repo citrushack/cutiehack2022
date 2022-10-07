@@ -51,7 +51,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
 /** Content displayed after countdown finishes. */
 const Completionist = () => (
   <div className="mb-4">
-    <p className='font-baloo_semi_bold text-xl'>November 5, 2022</p>
+    <p className="font-baloo_semi_bold text-xl">November 5, 2022</p>
     <ButtonLink primary label="Live Page" link="/live" />
   </div>
 )
