@@ -26,7 +26,9 @@ export const SupportCard = ({
       (title == 'Volunteers' ? 'bg-card' : 'bg-sub-secondary')
     }
   >
-    <p className="grow mb-8 text-center text-text font-baloo_regular">{description}</p>
+    <p className="grow mb-8 text-center text-text font-baloo_regular">
+      {description}
+    </p>
     <ButtonLink link={buttonLink} label={buttonLabel} external />
   </motion.div>
 )

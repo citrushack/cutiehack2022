@@ -27,7 +27,9 @@ export default function Support() {
 
   return (
     <section className="flex flex-col w-full h-full max-w-[60rem] my-12 lg:mt-0 justify-center items-center pt-10">
-      <h1 className="text-center text-3xl md:text-5xl font-baloo_medium">Get Involved</h1>
+      <h1 className="text-center text-3xl md:text-5xl font-baloo_medium">
+        Get Involved
+      </h1>
       <p className="mb-10 text-center max-w-lg md:max-w-2xl">
         Not interested in hacking but still want to participate? Great! We would
         love to have you on board. Fill out the forms below if you&apos;d like
