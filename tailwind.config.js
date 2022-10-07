@@ -36,7 +36,10 @@ module.exports = {
         from: 'var(--from)',
         via: 'var(--via)',
         via2: 'var(--via2)',
-        to: 'var(--to)'
+        to: 'var(--to)',
+        waveFrom: 'var(--wave-from)',
+        waveVia: 'var(--wave-via)',
+        waveTo: 'var(--wave-to)',
       },
     },
   },
