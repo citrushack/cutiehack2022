@@ -76,6 +76,7 @@ const Home: NextPage = () => {
       <Element name="Sponsors">
         <Sponsors />
       </Element>
+      <Wave type={2} bgColor="#FFFFFF" fillColor="from" />
       <Element
         name="Staff"
         className="flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
@@ -84,6 +85,7 @@ const Home: NextPage = () => {
           <Staff />
         </span>
       </Element>
+      <Wave type={3} bgColor="#FFFFFF" fillColor="via2" />
       <Element name="FAQ">
         <Faq />
       </Element>
