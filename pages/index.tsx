@@ -93,7 +93,10 @@ const Home: NextPage = () => {
         </span>
       </Element>
       <Wave type={3} bgColor="#FFFFFF" fillColor="via2" />
-      <Element name="FAQ">
+      <Element
+        name="FAQ"
+        className="flex justify-center px-4 w-full bg-gradient-to-b"
+      >
         <Faq />
       </Element>
       <span className="flex relative w-full">
