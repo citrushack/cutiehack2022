@@ -14,6 +14,10 @@
   font-family: "BalooPaaji2Medium";
   src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Medium.ttf");
 }
+@font-face {
+  font-family: "BalooPaaji2Bold";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Bold.ttf");
+}
 @layer base {
   :root {
     /* default light theme */

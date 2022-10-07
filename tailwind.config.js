@@ -17,7 +17,8 @@ module.exports = {
       fontFamily: {
         baloo_semi_bold: ["BalooPaaji2Bold"],
         baloo_regular: ["BalooPaaji2Reg"],
-        baloo_medium: ["BalooPaaji2Medium"]
+        baloo_medium: ["BalooPaaji2Medium"],
+        baloo_bold: ["BalooPaaji2Bold"]
       },
       colors: {
         text: 'var(--text)',

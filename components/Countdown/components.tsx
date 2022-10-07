@@ -51,9 +51,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
 /** Content displayed after countdown finishes. */
 const Completionist = () => (
   <div className="mb-4">
-    <h3 className="mb-6 text-center font-baloo_semi_bold">
-      illumnate your passion.
-    </h3>
+    <p className="font-baloo_semi_bold text-xl">November 5, 2022</p>
     <ButtonLink primary label="Live Page" link="/live" />
   </div>
 )
@@ -70,9 +68,6 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 
     return (
       <div className="mb-10">
-        <h3 className="text-center sm:text-left font-bold">
-          Grow your potential in...
-        </h3>
         <div
           className={
             'grid flex max-w-xl ' +
