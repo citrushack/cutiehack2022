@@ -8,7 +8,7 @@ export default function Faq() {
       <p className="text-center">
         If you still can&apos;t find an answer to your question, feel free to
         email us at{' '}
-        <span className='text-buttons'>
+        <span className="text-buttons">
           <ExternalLink
             name="citrushack@gmail.com"
             link="mailto:citrushack@gmail.com"
