@@ -72,11 +72,13 @@ const Home: NextPage = () => {
         <About />
       </Element>
       <Wave type={5} bgColor="#FFFFFF" fillColor="via2" />
-      <Element name="Tracks">
-        <Tracks />
-      </Element>
-      <Element name="Support">
-        <Support />
+      <Element
+        name="Support"
+        className="flex justify-center w-full bg-gradient-to-b from-accent to-card"
+      >
+        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+          <Support />
+        </span>
       </Element>
       <Element name="Sponsors">
         <Sponsors />
