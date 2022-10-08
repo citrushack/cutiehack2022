@@ -35,9 +35,8 @@ const SocialLinks = [
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-screen">
-      <Wave type={1} bgColor="#FFFFFF" fillColor="from" />
-      <footer className="w-full bg-gradient-to-b from-from to-to z-30 pb-10 pt-5 md:pt-0 md:pb-20">
+    <div className="flex flex-col w-screen bg-pattern bg-repeat">
+      <footer className="w-full z-30 pb-10 pt-5 md:pt-0 md:pb-20">
         <div className="flex flex-col justify-center mx-auto items-center">
           <div className="flex flex-row mb-2 font-baloo_semi_bold text-sm md:text-2xl text-text">
             <p>Made with &lt;3 by Citrus Hack team.</p>

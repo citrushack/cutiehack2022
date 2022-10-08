@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 export default function About() {
   return (
-    <section className="grid grid-cols-3 w-full justify-center pt-10 pb-10">
+    <section className="grid grid-cols-3 w-full justify-center pt-10 pb-10 bg-pattern bg-repeat bg-contain">
       <div className="flex w-full col-span-2 justify-center">
         <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl px-20">
           <span className="flex whitespace-nowrap items-center">
