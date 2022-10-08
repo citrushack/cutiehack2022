@@ -36,6 +36,7 @@
     --via: #65385D;
     --via2: #FF8E6A;
     --to: #B56B83;
+    --pattern: url('/assets/aboutUsStars.svg');
   }
 
   [data-theme='light'] {

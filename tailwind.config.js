@@ -14,6 +14,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      backgroundImage: {
+        pattern: 'var(--pattern)',
+      },
       fontFamily: {
         baloo_semi_bold: ["BalooPaaji2Bold"],
         baloo_regular: ["BalooPaaji2Reg"],
