@@ -65,12 +65,14 @@ const Home: NextPage = () => {
         <Schedule />
       </Element>
       <Wave type={4} bgColor="#FFFFFF" fillColor="from" />
-      <Element
-        name="About"
-        className="flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
-      >
-        <About />
-      </Element>
+      <div className="flex flex-col justify-center w-full bg-gradient-to-b from-from via-via to-to">
+        <Element name="About">
+          <About />
+        </Element>
+        <Element name="Tracks">
+          <Tracks />
+        </Element>
+      </div>
       <Wave type={5} bgColor="#FFFFFF" fillColor="via2" />
       <Element
         name="Support"

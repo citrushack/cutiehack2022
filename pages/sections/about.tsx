@@ -4,14 +4,14 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 export default function About() {
   return (
-    <section className="grid grid-cols-3 w-full justify-center pt-10 pb-10 bg-pattern bg-repeat bg-contain">
-      <div className="flex w-full col-span-2 justify-center">
-        <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl px-20">
+    <section className="grid grid-cols-3 w-full justify-center pt-10 bg-pattern bg-repeat bg-contain">
+      <div className="flex w-full col-span-3 md:col-span-2 justify-center pt-20">
+        <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-3xl 2xl:max-w-5xl px-20">
           <span className="flex whitespace-nowrap items-center">
             <p className="text-5xl font-baloo_semi_bold text-text">About Us</p>
             <Image src={staffLineRight} alt="lineright" />
           </span>
-          <p className="text-text font-baloo_regular">
+          <p className="text-text font-baloo_regular z-20">
             Cutie Hack is a virtual 12-hour, beginner-oriented hackathon hosted
             by studnets at the University of California, Riverside. Hackers are
             challenged with creating a cool project within the timeframe to demo
@@ -25,14 +25,15 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex absolute opacity-50 md:opacity-100 md:static z-10 flex-col">
         <motion.div
           animate={{ y: [0, -30, 0] }}
           transition={{
             repeat: Infinity,
             duration: 5,
           }}
-          className="lg:self-end max-w-[350rem] lg:max-w-[80rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu"
+          className="lg:self-end max lg:w-10/12"
+          // className="lg:self-end max-w-[350rem] lg:max-w-[80rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu"
         >
           <Image
             src="/assets/aboutuslamps.svg"
@@ -44,7 +45,8 @@ export default function About() {
             alt="lamps"
           />
         </motion.div>
-        <div className="lg:self-end max-w-[30rem] lg:max-w-[80rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu">
+        {/* <div className="lg:self-end max-w-[30rem] lg:max-w-[80rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu"> */}
+        <div className="lg:self-end lg:w-10/12">
           <Image
             src="/assets/hand2.svg"
             width={615}
@@ -54,57 +56,6 @@ export default function About() {
             objectFit="contain"
             alt="hand"
           />
-        </div>
-      </div>
-      <div className="flex col-span-3 justify-center pb-4 px-20 items-center w-full pt-10">
-        <Image src={staffLineLeft} alt="lineleft" className="inline" />
-        <span className="whitespace-nowrap px-12 text-3xl md:text-5xl font-baloo_medium text-text">
-          Tracks
-        </span>
-        <Image src={staffLineRight} alt="lineright" className="inline" />
-      </div>
-      <div className="flex col-span-3 justify-center px-20 gap-20 md:gap-32">
-        <div className="flex flex-col justify-center items-center max-w-[4rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu">
-          <Image
-            src="/assets/plants.svg"
-            width={200}
-            height={200}
-            quality={50}
-            priority={Boolean(true)}
-            objectFit="contain"
-            alt="plants"
-          />
-          <p className="font-baloo_semi_bold text-text text-md md:text-2xl">
-            Sustainability
-          </p>
-        </div>
-        <div className="flex flex-col justify-center items-center max-w-[4rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu">
-          <Image
-            src="/assets/lightbulb.svg"
-            width={200}
-            height={200}
-            quality={50}
-            priority={Boolean(true)}
-            objectFit="contain"
-            alt="lightbulb"
-          />
-          <p className="font-baloo_semi_bold text-text text-md md:text-2xl">
-            Innovation
-          </p>
-        </div>
-        <div className="flex flex-col justify-center items-center max-w-[4rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-1/2 2xl:w-7/12 transform-gpu">
-          <Image
-            src="/assets/laptop.svg"
-            width={200}
-            height={200}
-            quality={50}
-            priority={Boolean(true)}
-            objectFit="contain"
-            alt="laptop"
-          />
-          <p className="font-baloo_semi_bold text-text text-md md:text-2xl">
-            Optimization
-          </p>
         </div>
       </div>
     </section>

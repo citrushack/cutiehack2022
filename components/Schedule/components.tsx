@@ -351,7 +351,7 @@ const sundaySchedule = {
 }
 
 export const MasterSchedule = () => (
-  <div className="flex flex-col gap-6 w-full text-center">
+  <div className="flex flex-col gap-6 w-full text-center px-4">
     <ScheduleGrid schedule={saturdaySchedule} />
   </div>
 )
