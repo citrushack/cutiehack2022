@@ -74,18 +74,6 @@ const staff = [
     role: 'Operations Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/henry-zheng00/',
-    image: '/leads/Gabs.png',
-    name: 'Gabriela Alvarez',
-    role: 'Sponsorships Lead',
-  },
-  {
-    link: 'https://www.linkedin.com/in/michellesspace/',
-    image: '/leads/Alex_.png',
-    name: 'Alex Hsieh',
-    role: 'Sponsorships Lead',
-  },
-  {
     link: 'https://www.linkedin.com/in/abhivishwas/',
     image: '/leads/Viviane_.png',
     name: 'Viviane Fernando',
@@ -96,6 +84,18 @@ const staff = [
     image: '/leads/Sarah.png',
     name: 'Sarah Kim',
     role: 'Marketing Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/henry-zheng00/',
+    image: '/leads/Gabs.png',
+    name: 'Gabriela Alvarez',
+    role: 'Sponsorships Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/michellesspace/',
+    image: '/leads/Alex_.png',
+    name: 'Alex Hsieh',
+    role: 'Sponsorships Lead',
   },
 ]
 
