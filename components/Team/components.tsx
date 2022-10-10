@@ -24,7 +24,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
           objectFit="contain"
           priority={true}
           quality={100}
-          className="rounded-full"
+          className="rounded-full mt-5"
           alt="profile photo"
         />
       </a>
@@ -36,72 +36,66 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
 
 const directors = [
   {
-    link: 'https://www.linkedin.com/in/rajbirjohar/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Rajbir Johar',
+    link: 'www.LinkedIn.com/in/henry-zheng00/',
+    image: '/leads/Henry.png',
+    name: 'Henry Zheng',
     role: 'Director',
   },
   {
-    link: 'https://www.linkedin.com/in/paulianle7/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Paulian Le',
-    role: 'Operations Lead',
+    link: 'https://www.linkedin.com/in/mariam-golwalla-74930949/',
+    image: '/leads/Mariam.png',
+    name: 'Mariam Golwalla',
+    role: 'Director',
   },
 ]
 const staff = [
   {
-    link: 'https://www.linkedin.com/in/westin-montano/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Westin Montano',
-    role: 'Operations Lead',
-  },
-  {
-    link: 'https://www.linkedin.com/in/mariam-golwalla-74930949/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Mariam Golwalla',
-    role: 'Sponsorship Lead',
-  },
-  {
-    link: 'https://www.linkedin.com/in/marshall-jones-0/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Marshall Jones',
-    role: 'Sponsorship Lead',
-  },
-  {
-    link: 'https://www.linkedin.com/in/kimberlylac/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Kimmy Lac',
-    role: 'Marketing Lead',
-  },
-  {
-    link: 'https://www.linkedin.com/in/henry-zheng00/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Henry Zheng',
-    role: 'Marketing Lead',
-  },
-  {
     link: 'https://www.linkedin.com/in/minsookime/',
-    image: '/leads/minsookim.jpeg',
+    image: '/leads/minsookim.png',
     name: 'Minsoo Kim',
     role: 'Web Dev Lead',
   },
   {
+    link: 'https://www.linkedin.com/in/nathan-melwani/',
+    image: '/leads/Nate.png',
+    name: 'Nate Melwani',
+    role: 'Web Dev Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/ashley-h-pham',
+    image: '/leads/Ash.png',
+    name: 'Ashley Pham',
+    role: 'Operations Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/kanin-liang/',
+    image: '/leads/Kanin.png',
+    name: 'Kanin Liang',
+    role: 'Operations Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/henry-zheng00/',
+    image: '/leads/Gabs.png',
+    name: 'Gabriela Alvarez',
+    role: 'Sponsorships Lead',
+  },
+  {
     link: 'https://www.linkedin.com/in/michellesspace/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Michelle Kim',
-    role: 'UX Design Lead',
+    image: '/leads/Alex_.png',
+    name: 'Alex Hsieh',
+    role: 'Sponsorships Lead',
   },
   {
     link: 'https://www.linkedin.com/in/abhivishwas/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Abhi Vishwasrao',
-    role: 'Volunteer Lead',
+    image: '/leads/Viviane_.png',
+    name: 'Viviane Fernando',
+    role: 'Marketing Lead',
   },
   {
     link: 'https://www.linkedin.com/in/jakin200/',
-    image: '/leads/minsookim.jpeg',
-    name: 'Jakin Chan',
-    role: 'Volunteer Lead',
+    image: '/leads/Sarah.png',
+    name: 'Sarah Kim',
+    role: 'Marketing Lead',
   },
 ]
 
