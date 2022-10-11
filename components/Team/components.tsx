@@ -30,7 +30,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
       </a>
     </motion.span>
     <p className="mb-0 w-max font-baloo_semi_bold text-sub">{name}</p>
-    <p className="mt-0 leading-4 text-center font-baloo_regular">{role}</p>
+    <p className="mt-0 leading-4 text-center font-baloo_regular text-text">{role}</p>
   </div>
 )
 

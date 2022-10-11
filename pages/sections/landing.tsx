@@ -28,8 +28,17 @@ export default function Landing() {
       <section className="relative flex flex-col-reverse w-full h-screen min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] justify-center items-center my-40 lg:my-0 mb-20 md:mb-0 gap-6 z-30">
         <div className="lg:absolute flex flex-col left-4 2xl:left-0 items-center">
           <div className="flex flex-col max-w-xl justify-center">
-            <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1>
-            <p className="font-baloo_semi_bold text-2xl text-highlight">
+            {/* <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1> */}
+            <Image
+              src="/assets/BigLogo.svg"
+              width={4749}
+              height={2352}
+              quality={50}
+              priority={Boolean(true)}
+              objectFit="contain"
+              alt="laptop"
+            />
+            <p className="flex font-baloo_semi_bold text-2xl text-highlight justify-center">
               illuminate your passion
             </p>
           </div>
