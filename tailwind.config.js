@@ -27,6 +27,7 @@ module.exports = {
         text: 'var(--text)',
         buttons: 'var(--buttons)',
         card: 'var(--card)',
+        primary: 'var(--primary)',
         secondary: 'var(--secondary)',
         card: 'var(--card)',
         overlay: 'var(--overlay)',

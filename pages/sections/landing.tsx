@@ -11,7 +11,6 @@ import SignupCounter from '@/components/SignupCounter'
 
 export default function Landing() {
   const [mounted, setMounted] = useState(false)
-  const { theme } = useTheme()
   const { data: session, status } = useSession()
   const [signinModalOpen, setSigninModalOpen] = useState(false)
 

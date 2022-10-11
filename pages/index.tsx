@@ -17,7 +17,10 @@ import { Wave } from '@/components/Wave'
 import LandingLamps from '../public/assets/landingLamps.svg'
 import mountains from '../public/assets/mountains.svg'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 const Home: NextPage = () => {
+  const { theme } = useTheme()
+  
   return (
     <Page title="Home">
       <Element
@@ -49,7 +52,7 @@ const Home: NextPage = () => {
           >
             <path
               d="M0 1570V0H489.347C516.147 129.023 1124.91 272.686 1007.24 435.38C865.529 631.322 1089.25 661.401 983.034 777.872C876.813 894.343 970.587 967.341 1148.04 1001.87C1325.5 1036.4 1436.07 1205.55 1688.09 1157.97C1801.82 1136.5 1860.09 1209.31 1910.43 1282.12C1913.65 1286.78 1916.84 1291.43 1920 1296.07V1569.99L0 1570Z"
-              fill="white"
+              fill={'var(--primary)'}
             />
           </svg>
           <span className="absolute right-0 top-0 z-0">
