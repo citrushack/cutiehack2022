@@ -20,7 +20,7 @@ import Image from 'next/image'
 import { useTheme } from 'next-themes'
 const Home: NextPage = () => {
   const { theme } = useTheme()
-  
+
   return (
     <Page title="Home">
       <Element
