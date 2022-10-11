@@ -62,6 +62,12 @@ const staff = [
     role: 'Web Dev Lead',
   },
   {
+    link: 'https://www.linkedin.com/in/nathan-melwani/',
+    image: '/leads/Jon.png',
+    name: 'Jonathan Chon',
+    role: 'UI/UX Lead',
+  },
+  {
     link: 'https://www.linkedin.com/in/ashley-h-pham',
     image: '/leads/Ash.png',
     name: 'Ashley Pham',
@@ -71,6 +77,18 @@ const staff = [
     link: 'https://www.linkedin.com/in/kanin-liang/',
     image: '/leads/Kanin.png',
     name: 'Kanin Liang',
+    role: 'Operations Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/kanin-liang/',
+    image: '/leads/Prathmesh.png',
+    name: 'Prathmesh Jain',
+    role: 'Operations Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/kanin-liang/',
+    image: '/leads/Jakin.png',
+    name: 'Jakin Chan',
     role: 'Operations Lead',
   },
   {
