@@ -25,9 +25,9 @@ const Home: NextPage = () => {
     <Page title="Home">
       <Element
         name="Home"
-        className="flex relative justify-center w-full bg-gradient-to-b from-from via-via to-to"
+        className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
-        <span className="flex relative justify-center w-full">
+        <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat">
           {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1920 1570"
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
           </svg> */}
 
           <svg
-            viewBox="0 0 1920 1570"
+            viewBox="0 0 1920 1300"
             height="100%"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
@@ -55,12 +55,23 @@ const Home: NextPage = () => {
               fill={'var(--primary)'}
             />
           </svg>
-          <span className="absolute right-0 top-0 z-0">
+          {/* <span className="absolute transform-gpu top-0 right-0">
             <Image src={LandingLamps} alt="lamps" />
-          </span>
-          <span className="absolute right-0 bottom-0 z-0">
+          </span> */}
+          {/* <span className="absolute right-0 bottom-0 z-0 w-full">
             <Image src={mountains} alt="mountains" />
-          </span>
+          </span> */}
+          {/* <div className="absolute bottom-0 lg:self-end max-w-[30rem] lg:max-w-[100rem] lg:w-5/12 xl:w-7/12 2xl:w-7/12 transform-gpu">
+            <Image
+              src={mountains}
+              width={615}
+              height={600}
+              quality={50}
+              priority={Boolean(true)}
+              objectFit="contain"
+              alt="hand"
+            />
+          </div> */}
           <Landing />
         </span>
       </Element>
