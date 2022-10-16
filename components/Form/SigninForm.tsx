@@ -48,13 +48,13 @@ export function SigninForm({ csrfToken = '' }) {
           defaultValue={csrfToken}
         />
         <div>
-          <label className="font-semibold">Email Address</label>
+          <label className="font-baloo_regular">Email Address</label>
           <input
             {...register('email')}
             onChange={handleEmailChange}
             className={
-              'w-full px-2 py-1 rounded border-2 bg-card focus:border-accent-primary focus:outline-none focus:ring-accent-primary ' +
-              (error ? 'border-red-500' : 'border-sub')
+              'w-full px-2 py-1 rounded border-2 bg-secondary focus:border-accent-primary focus:outline-none focus:ring-accent-primary ' +
+              (error ? 'border-red-500' : 'border-primary')
             }
           />
         </div>
@@ -62,28 +62,28 @@ export function SigninForm({ csrfToken = '' }) {
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-semibold"
+          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-baloo_regular"
         >
           Sign In With Email
         </motion.button>
       </form>
       <div className="flex flex-col gap-6 pt-6 justify-center w-full">
-        <div className="text-center border-b-2 border-sub leading-[0.1rem]"></div>
+        <div className="text-center border-b-2 border-primary leading-[0.1rem]"></div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-semibold"
+          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-baloo_regular"
           onClick={() => signIn('google')}
         >
           Sign In With Google
         </motion.button>
       </div>
       <div className="flex flex-col gap-6 pt-6 justify-center w-full">
-        <div className="text-center border-b-2 border-sub leading-[0.1rem]"></div>
+        <div className="text-center border-b-2 border-primary leading-[0.1rem]"></div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-semibold"
+          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-baloo_regular"
           onClick={() => signIn('github')}
         >
           Sign In With GitHub
