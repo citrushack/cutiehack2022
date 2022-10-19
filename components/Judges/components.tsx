@@ -12,20 +12,20 @@ interface ProfileProps {
 
 /** Individual profile for each team lead. */
 export const JudgeProfile = ({ image, name, role }: ProfileProps) => (
-  <div className='flex flex-col w-full max-w-[8rem] md:max-w-[9rem] items-center'>
+  <div className="flex flex-col w-full max-w-[8rem] md:max-w-[9rem] items-center">
     <motion.span whileHover={{ y: -4 }}>
       <Image
         src={image}
         width={150}
         height={150}
-        objectFit='contain'
+        objectFit="contain"
         priority={true}
         quality={100}
         className="rounded-full"
       />
     </motion.span>
-    <p className='mb-0 w-max font-semibold'>{name}</p>
-    <p className='mt-0 leading-4 text-base text-center'>{role}</p>
+    <p className="mb-0 w-max font-semibold">{name}</p>
+    <p className="mt-0 leading-4 text-base text-center">{role}</p>
   </div>
 )
 
@@ -73,7 +73,7 @@ const judges = [
   {
     image: '/assets/judges/cristina-lawson.jpg',
     name: 'Cristina Lawson',
-    role: 'CS Master\'s Student @ UCR',
+    role: "CS Master's Student @ UCR",
   },
   {
     image: '/assets/judges/diane-shan.jpg',
@@ -142,7 +142,7 @@ const judges = [
   },
   {
     image: '/assets/judges/michael-odea.jpg',
-    name: 'Michael O\'Dea',
+    name: "Michael O'Dea",
     role: 'Former IEEE@UCR Chair',
   },
   {
@@ -189,14 +189,9 @@ const judges = [
 
 /** Grid of judge profiles. */
 export const JudgeGrid = () => (
-  <div className='flex flex-wrap justify-center gap-6 md:gap-12 md:gap-y-12'>
-    { judges.map(({ image, name, role }) =>
-      <JudgeProfile
-        key={name}
-        image={image}
-        name={name}
-        role={role}
-      />
-    )}
+  <div className="flex flex-wrap justify-center gap-6 md:gap-12 md:gap-y-12">
+    {judges.map(({ image, name, role }) => (
+      <JudgeProfile key={name} image={image} name={name} role={role} />
+    ))}
   </div>
 )

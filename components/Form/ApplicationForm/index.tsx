@@ -23,23 +23,30 @@ export function ApplicationForm() {
     var criteria_met = true
 
     // determine if criteria to participate is met
-    if (grade === 'Graduate')
-      criteria_met = false
-    if (parseInt(year) < 2022)
-      criteria_met = false
+    if (grade === 'Graduate') criteria_met = false
+    if (parseInt(year) < 2022) criteria_met = false
     else if (parseInt(year) === 2022)
-      if (parseInt(month) < 4)
-        criteria_met = false
-      else if (parseInt(month) === 4 && parseInt(day) <= 2)
-        criteria_met = false
+      if (parseInt(month) < 4) criteria_met = false
+      else if (parseInt(month) === 4 && parseInt(day) <= 2) criteria_met = false
 
     return criteria_met
   }
 
-  const uploadFile = async (resume, first_name: string, last_name: string, uid: string) => {
+  const uploadFile = async (
+    resume,
+    first_name: string,
+    last_name: string,
+    uid: string
+  ) => {
     if (fileUploaded) {
       const file = resume[0]
-      const filename = first_name.replace(/\s/g, '') + '___' + last_name.replace(/\s/g, '') + '___' + uid + '.pdf'
+      const filename =
+        first_name.replace(/\s/g, '') +
+        '___' +
+        last_name.replace(/\s/g, '') +
+        '___' +
+        uid +
+        '.pdf'
       const fileRef = ref(storage, 'resumes/' + filename)
       const metadata = {
         contentType: 'application/pdf',
@@ -48,7 +55,7 @@ export function ApplicationForm() {
     }
   }
 
-  const onSubmit = async({
+  const onSubmit = async ({
     first_name,
     last_name,
     gender,
@@ -65,9 +72,11 @@ export function ApplicationForm() {
     participation,
     MLH_code_of_conduct,
     MLH_privacy_policy,
-    MLH_communication
+    MLH_communication,
   }) => {
-    if (clickedSubmitOnce) { return }
+    if (clickedSubmitOnce) {
+      return
+    }
     setClickedSubmitOnce(Boolean(true))
 
     // generate other user attributes
@@ -76,82 +85,76 @@ export function ApplicationForm() {
 
     await uploadFile(resume, first_name, last_name, uid)
 
-    axios.post('/api/applications/create', {
-      uid,      
-      first_name,
-      last_name,
-      gender,
-      ethnicity,
-      phone_number,
-      food_preference,
-      shirt_size,
-      school,
-      major,
-      grade,
-      grad_date,
-      first_time,
-      participation,
-      criteria_met,
-      MLH_code_of_conduct,
-      MLH_privacy_policy,
-      MLH_communication
-    })
-    .then(() => {
-      toast.success(
-        'Successfully submitted your application!',
-        { id: 'submitApplicationSuccess' }
-      )
-      router.reload()
-    })
-    .catch(() => {
-      toast.error(
-        'Uh oh. Something went wrong. If this issue persists, let us know.',
-        { id: 'submitApplicationError' }
-      )
-      setClickedSubmitOnce(Boolean(false))
-    })
+    axios
+      .post('/api/applications/create', {
+        uid,
+        first_name,
+        last_name,
+        gender,
+        ethnicity,
+        phone_number,
+        food_preference,
+        shirt_size,
+        school,
+        major,
+        grade,
+        grad_date,
+        first_time,
+        participation,
+        criteria_met,
+        MLH_code_of_conduct,
+        MLH_privacy_policy,
+        MLH_communication,
+      })
+      .then(() => {
+        toast.success('Successfully submitted your application!', {
+          id: 'submitApplicationSuccess',
+        })
+        router.reload()
+      })
+      .catch(() => {
+        toast.error(
+          'Uh oh. Something went wrong. If this issue persists, let us know.',
+          { id: 'submitApplicationError' }
+        )
+        setClickedSubmitOnce(Boolean(false))
+      })
   }
 
   const triggerErrorNotification = () => {
     if (Object.keys(errors).length > 0) {
-      toast.error('Please fill out all required fields.', 
-        { id: 'applicationNotFilledOut' }
-      )
+      toast.error('Please fill out all required fields.', {
+        id: 'applicationNotFilledOut',
+      })
     }
   }
 
   return (
-    <main className='flex flex-col items-center my-24 px-4 w-full'>
-      <h2 className='mb-6'>Application Form</h2>
-      <p className='pb-4 w-full sm:max-w-2xl'>
+    <main className="flex flex-col items-center my-24 px-4 w-full">
+      <h2 className="mb-6">Application Form</h2>
+      <p className="pb-4 w-full sm:max-w-2xl">
         Fill out this form to apply for Citrus Hack 2022!
       </p>
-      <p className='pb-4 w-full sm:max-w-2xl'>
-        Within 24 hours of submitting, you will be notified via email about your application status.
+      <p className="pb-4 w-full sm:max-w-2xl">
+        Within 24 hours of submitting, you will be notified via email about your
+        application status.
       </p>
-      <form 
-        className='flex flex-col gap-4 w-full sm:max-w-2xl self-center'
+      <form
+        className="flex flex-col gap-4 w-full sm:max-w-2xl self-center"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <PersonalInfo
-          session={session}
-          register={register}
-          errors={errors}
-        />
-        <Education
-          register={register}
-          errors={errors}
-        />
+        <PersonalInfo session={session} register={register} errors={errors} />
+        <Education register={register} errors={errors} />
         <HackerApp
           register={register}
           errors={errors}
           setFileUploaded={setFileUploaded}
         />
         <motion.button
-          whileHover={{ scale: 1.05}} 
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          type='submit'
-          className='w-full py-1.5 rounded bg-buttons font-semibold text-white'
+          type="submit"
+          className="w-full py-1.5 rounded bg-buttons font-semibold text-white"
           onClick={() => triggerErrorNotification()}
         >
           {clickedSubmitOnce ? 'Submitting...' : 'Submit'}

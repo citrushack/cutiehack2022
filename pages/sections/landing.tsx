@@ -54,16 +54,11 @@ export default function Landing() {
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
-          { status === 'authenticated' 
-            && !session.user.uid &&
-            <span className='flex justify-center z-[200]'>
-              <ButtonLink
-                primary
-                label='Apply Now'
-                link='/apply'
-              />
+          {status === 'authenticated' && !session.user.uid && (
+            <span className="flex justify-center z-[200]">
+              <ButtonLink primary label="Apply Now" link="/apply" />
             </span>
-          }
+          )}
           {!session && (
             <span className="flex justify-center w-1/2 lg:w-full z-[200]">
               <motion.button
