@@ -11,7 +11,7 @@ import Support from '@/pages/sections/support'
 import Sponsors from '@/pages/sections/sponsors'
 import Staff from '@/pages/sections/staff'
 import Faq from '@/pages/sections/faq'
-import Footer from '@/components/Footer'
+import Footer from '@/components/Page/Footer'
 import { Wave } from '@/components/Wave'
 
 import LandingLamps from '../public/assets/landingLamps.svg'

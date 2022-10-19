@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 import { MdEmail } from 'react-icons/md'
-import { Wave } from './Wave'
+import { Wave } from '../Wave'
 
 const SocialLinks = [
   {
@@ -39,7 +39,7 @@ export default function Footer() {
       <footer className="w-full z-30 pb-10 pt-5 md:pt-0 md:pb-20">
         <div className="flex flex-col justify-center mx-auto items-center">
           <div className="flex flex-row mb-2 font-baloo_semi_bold text-sm md:text-2xl text-text">
-            <p>Made with &lt;3 by Citrus Hack team.</p>
+            <p>Made with &lt;3 by Cutie Hack team.</p>
           </div>
           <div className="flex flex-row justify-center mx-auto">
             {SocialLinks.map((link) => {

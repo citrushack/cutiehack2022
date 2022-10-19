@@ -24,7 +24,7 @@ export default function Landing() {
 
   return (
     <>
-      <section className="relative flex w-full min-safe-h-screen min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] justify-center items-center my-40 lg:my-0 mb-20 md:mb-0 gap-6 z-30">
+      <section className="relative flex w-full min-safe-h-screen min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] justify-center items-center my-40 lg:my-0 mb-20 md:mb-0 gap-6 z-30 bg-pattern bg-repeat">
         <div className="lg:absolute flex flex-col left-4 2xl:left-0 items-center">
           <div className="flex flex-col max-w-xl justify-center">
             {/* <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1> */}
@@ -54,16 +54,16 @@ export default function Landing() {
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
-          {/* { status === 'authenticated' 
+          { status === 'authenticated' 
             && !session.user.uid &&
-            <span className='flex justify-center w-full z-[200]'>
+            <span className='flex justify-center z-[200]'>
               <ButtonLink
                 primary
                 label='Apply Now'
                 link='/apply'
               />
             </span>
-          } */}
+          }
           {!session && (
             <span className="flex justify-center w-1/2 lg:w-full z-[200]">
               <motion.button
