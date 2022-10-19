@@ -6,12 +6,12 @@ export default function About() {
   return (
     <section className="grid grid-cols-3 w-full justify-center pt-10 bg-pattern bg-repeat bg-contain">
       <div className="flex w-full col-span-3 md:col-span-2 justify-center pt-20">
-        <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-3xl 2xl:max-w-5xl px-10">
+        <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-3xl px-10">
           <span className="flex whitespace-nowrap items-center">
             <p className="text-5xl font-baloo_semi_bold text-text">About Us</p>
             <Image src={staffLineRight} alt="lineright" />
           </span>
-          <p className="text-text font-baloo_regular z-20">
+          <p className="text-text font-baloo_regular z-20 text-lg md:text-xl">
             Cutie Hack is a virtual 12-hour, beginner-oriented hackathon hosted
             by studnets at the University of California, Riverside. Hackers are
             challenged with creating a cool project within the timeframe to demo
