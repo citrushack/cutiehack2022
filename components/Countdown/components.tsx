@@ -21,7 +21,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
   return (
     condition && (
       <>
-        <div className="relative flex flex-col col-span-2 items-center text-sub-bright">
+        <div className="relative flex flex-col col-span-2 items-center text-sub-bright my-6">
           <div className="flex gap-0.5 xs:gap-1 sm:gap-2">
             {Array.from(num).map((n, idx) => (
               <motion.div
@@ -34,7 +34,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
               </motion.div>
             ))}
           </div>
-          <p className="absolute top-8 xs:top-10 sm:top-[3.25rem] text-lg xs:text-xl leading-3 font-semibold">
+          <p className="absolute top-8 xs:top-10 sm:top-[3.25rem] text-lg xs:text-xl leading-3 font-baloo_semi_bold pt-2">
             {label}
           </p>
         </div>
@@ -152,7 +152,7 @@ const hackingRenderer = ({ days, hours, minutes, seconds, completed }) => {
 
     return (
       <div className="mb-10">
-        <h3 className="text-center sm:text-left font-bold">
+        <h3 className="text-center sm:text-left font-baloo_semi_bold">
           Hacking ends in...
         </h3>
         <div

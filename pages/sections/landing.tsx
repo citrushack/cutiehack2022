@@ -41,7 +41,7 @@ export default function Landing() {
               illuminate your passion
             </p>
           </div>
-          <CountdownWrapper date="2022-04-02T16:00:00Z" />
+          <CountdownWrapper date="2022-11-05T16:00:00Z" />
           {/* <p className='max-w-lg italic text-center font-medium'>
             In-person sign-ups will close today at 5:30 PM PST, as we are reaching maximum capacity
           </p> */}
