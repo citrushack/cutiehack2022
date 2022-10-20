@@ -7,14 +7,14 @@ export default function Support() {
       description:
         'Not interested in hacking but still want to participate? Great! We would love to have you on board. Fill out the forms below if you’d like to help hackers throughout the day! Not interested in hacking but still want to participate? Great! We would love to have you on board. Fill out the forms below if you’d like to help hackers throughout the day!',
       buttonLabel: 'Apply',
-      buttonLink: 'https://forms.gle/DDdaTdDrxVierqwi9',
+      buttonLink: 'https://forms.gle/sGFM98Ap5GaCJaG6A',
     },
     {
       title: 'Volunteers',
       description:
         'Not interested in hacking but still want to participate? Great! We would love to have you on board. Fill out the forms below if you’d like to help hackers throughout the day! Not interested in hacking but still want to participate? Great! We would love to have you on board. Fill out the forms below if you’d like to help hackers throughout the day!',
       buttonLabel: 'Apply',
-      buttonLink: 'https://forms.gle/vwRa9wkwBdnBXFuFA',
+      buttonLink: 'https://forms.gle/sGFM98Ap5GaCJaG6A',
     },
     {
       title: 'Sponsors',
