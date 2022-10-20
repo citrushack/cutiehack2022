@@ -3,7 +3,10 @@ import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { motion } from 'framer-motion'
 import { useSession } from 'next-auth/react'
-import { CountdownWrapper, HackerCountdownWrapper } from '@/components/Countdown'
+import {
+  CountdownWrapper,
+  HackerCountdownWrapper,
+} from '@/components/Countdown'
 import { ButtonLink } from '@/components/ButtonLink'
 import Modal from '@/components/Modal'
 import { SigninForm } from '@/components/Form/SigninForm'
