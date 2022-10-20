@@ -59,19 +59,19 @@ const faq = [
   {
     question: 'When are applications due?',
     answer:
-      'Applications are due by midnight on Friday, April 1, 2022. Be sure to submit your application before then in order to participate.',
+      'Applications are due by 11:59 pm on Friday, November 4, 2022. Be sure to submit your application before then in order to participate.',
   },
   {
-    question: 'Is Citrus Hack free?',
+    question: 'Is Cutie Hack free?',
     answer:
-      'Applying and attending Citrus Hack is completely free! You’ll get access to mentors, workshops, and prizes at no extra cost.',
+      'Applying and attending Cutie Hack is completely free! You’ll get access to mentors, workshops, and prizes at no extra cost.',
   },
   {
-    question: 'How long is Citrus Hack?',
-    answer: 'Citrus Hack will be a 24-hour event.',
+    question: 'How long is Cutie Hack?',
+    answer: 'Cutie Hack will be a 12-hour event.',
   },
   {
-    question: 'Who can come to Citrus Hack?',
+    question: 'Who can come to Cutie Hack?',
     answer:
       'We welcome anyone from any high school or undergrad college to come out and hack with us.',
   },
@@ -102,33 +102,12 @@ const faq = [
   {
     question: "What if I've never been to a hackathon before?",
     answer:
-      "That's the best reason to come out! Citrus Hack is open to people of all skill-levels. We'll have workshops and activities, along with mentors to help get you started and turn your project into reality.",
+      "That's the best reason to come out! Cutie Hack is open to people of all skill-levels. We'll have workshops and activities, along with mentors to help get you started and turn your project into reality.",
   },
   {
     question: 'What will I need to participate?',
-    answer: (
-      <>
-        <p className="mt-0">
-          If you&apos;re participating in-person,{' '}
-          <span className="font-semibold">
-            you&apos;ll need to wear a mask, bring proof of vaccination, and
-            fill out
-          </span>{' '}
-          <ExternalLink
-            name="this daily wellness check-in form"
-            link="http://visitorwellnesscheck.ucr.edu/"
-          />
-          &nbsp;
-          <span className="font-semibold">per UCR&apos;s guidelines.</span>
-        </p>
-        <p>
-          Otherwise, if you&apos;re staying online, all you need is a working
-          device (i.e your laptop or PC) and a stable internet connection. If
-          you haven&apos;t already, create a Discord and/or Zoom to help you
-          participate.
-        </p>
-      </>
-    ),
+    answer:
+      'All you need is a working device (i.e your laptop or PC) and a stable internet connection. If you are attending online, create a Discord and/or Zoom to help you participate.',
   },
   {
     question: 'Where will we submit?',
@@ -136,14 +115,9 @@ const faq = [
       'You will submit through Devpost. Further instructions will follow on the day-of the event.',
   },
   {
-    question: 'Can I submit a project I’ve already worked on?',
-    answer:
-      'No, you must start working on project code after hacking starts at 9am PST. Projects started before that time or have been submitted to other hackathons will be disqualified. Make sure your submission is unique to Citrus Hack!',
-  },
-  {
     question: "What if I don't have a team?",
     answer:
-      "If you don't have a team formed prior to Citrus Hack, we will have a channel on Discord where you can find other participants that share similar interests. We'll also be providing activities at the beginning of the event to help you form teams. Teams aren't required though, so feel free to work individually.",
+      "If you don't have a team formed prior to Cutie Hack, we will have a channel on Discord where you can find other participants that share similar interests. We'll also be providing activities at the beginning of the event to help you form teams. Teams aren't required though, so feel free to work individually.",
   },
   {
     question: 'Do I have to hack or make a project?',
