@@ -152,7 +152,7 @@ const hackingRenderer = ({ days, hours, minutes, seconds, completed }) => {
 
     return (
       <div className="mb-10">
-        <h3 className="text-center sm:text-left font-baloo_semi_bold">
+        <h3 className="text-center justify-center font-baloo_semi_bold">
           Hacking ends in...
         </h3>
         <div

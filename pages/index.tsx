@@ -28,21 +28,6 @@ const Home: NextPage = () => {
         className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
         <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat">
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1920 1570"
-            preserveAspectRatio="none"
-            className="absolute w-full z-10"
-          >
-            <path
-              id="Intersection_2"
-              data-name="Intersection 2"
-              d="M388.7,1984.514v-1570H878.047c26.8,129.023,635.56,272.686,517.893,435.38-141.711,195.942,82.015,226.021-24.206,342.492s-12.447,189.469,165.009,224,288.031,203.674,540.044,156.1c113.729-21.47,172,51.341,222.341,124.153q4.831,6.987,9.575,13.947v273.923Z"
-              transform="translate(-388.702 -414.513)"
-              fill="#fff"
-            />
-          </svg> */}
-
           <svg
             viewBox="0 0 1920 1300"
             height="100%"
@@ -55,23 +40,6 @@ const Home: NextPage = () => {
               fill={'var(--primary)'}
             />
           </svg>
-          {/* <span className="absolute transform-gpu top-0 right-0">
-            <Image src={LandingLamps} alt="lamps" />
-          </span> */}
-          {/* <span className="absolute right-0 bottom-0 z-0 w-full">
-            <Image src={mountains} alt="mountains" />
-          </span> */}
-          {/* <div className="absolute bottom-0 lg:self-end max-w-[30rem] lg:max-w-[100rem] lg:w-5/12 xl:w-7/12 2xl:w-7/12 transform-gpu">
-            <Image
-              src={mountains}
-              width={615}
-              height={600}
-              quality={50}
-              priority={Boolean(true)}
-              objectFit="contain"
-              alt="hand"
-            />
-          </div> */}
           <Landing />
         </span>
       </Element>

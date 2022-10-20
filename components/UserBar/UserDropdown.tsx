@@ -119,7 +119,7 @@ export function UserDropdown() {
                       className={
                         'w-full py-1.5 text-center rounded-md font-semibold ' +
                         (session.user.qualified === ''
-                          ? 'bg-sub text-sub-bright'
+                          ? 'bg-highlight text-sub-bright'
                           : session.user.qualified === 'yeah'
                           ? 'bg-[#9DC300] text-lime-800'
                           : 'bg-red-400 text-red-900')
@@ -227,7 +227,7 @@ export function UserDropdown() {
               className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
               onClick={() => signOut()}
             >
-              <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+              <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-highlight text-sub-bright text-2xl">
                 <BiLogOutCircle />
               </div>
               <div className="p-1.5 group-hover:text-highlight">Sign Out</div>
