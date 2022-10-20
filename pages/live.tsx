@@ -8,63 +8,85 @@ import Sponsors from '@/pages/sections/sponsors'
 import Staff from '@/pages/sections/staff'
 import Schedule from '@/pages/sections/schedule'
 import { Wave } from '@/components/Wave'
+import About from './sections/about'
+import Footer from '@/components/Page/Footer'
+import Faq from './sections/faq'
 
 export default function Live() {
   return (
     <Page title="Live">
       <Element
-        name="Countdown"
-        className="flex justify-center w-full bg-gradient-to-b from-primary to-accent"
+        name="Home"
+        className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+        <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat">
+          <svg
+            viewBox="0 0 1920 1300"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            className="absolute w-full top-0 z-10"
+          >
+            <path
+              d="M0 1570V0H489.347C516.147 129.023 1124.91 272.686 1007.24 435.38C865.529 631.322 1089.25 661.401 983.034 777.872C876.813 894.343 970.587 967.341 1148.04 1001.87C1325.5 1036.4 1436.07 1205.55 1688.09 1157.97C1801.82 1136.5 1860.09 1209.31 1910.43 1282.12C1913.65 1286.78 1916.84 1291.43 1920 1296.07V1569.99L0 1570Z"
+              fill={'var(--primary)'}
+            />
+          </svg>
           <Landing />
         </span>
       </Element>
-      <Wave type={3} bgColor="bg-accent" fillColor="accent-secondary" />
-      <Element
-        name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
-      >
+      <Element name="Schedule">
         <Schedule />
       </Element>
-      <Wave bgColor="bg-accent" fillColor="primary" />
-      <Element
-        name="Judges"
-        className="relative flex justify-center w-full bg-gradient-to-b from-primary to-secondary"
-      >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
-          <Judges />
-        </span>
-      </Element>
-      <Wave type={2} bgColor="secondary" fillColor="primary" />
-      <Element name="Tracks" className="flex justify-center w-full bg-primary">
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+      <Wave type={4} bgColor="#FFFFFF" fillColor="from" />
+      <div className="flex flex-col justify-center w-full bg-gradient-to-b from-from via-via to-to">
+        <Element name="About">
+          <About />
+        </Element>
+        <Element name="Tracks">
           <Tracks />
-        </span>
-      </Element>
-      <Wave type={2} bgColor="bg-primary" fillColor="accent" />
+        </Element>
+      </div>
+      <Wave type={5} bgColor="#FFFFFF" fillColor="via2" />
       <Element
         name="Resources"
-        className="flex justify-center px-4 w-full bg-accent"
+        className="flex justify-center px-4 w-full bg-accent my-20"
       >
         <Resources />
       </Element>
-      <Wave type={3} bgColor="bg-accent" fillColor="accent-secondary" />
+      <Wave type={4} bgColor="#FFFFFF" fillColor="from" />
       <Element
-        name="Sponsors"
-        className="flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
+        name="Judges"
+        className="relative flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
       >
+        <Judges />
+      </Element>
+      <Wave type={5} bgColor="#FFFFFF" fillColor="via2" />
+
+      <Element name="Sponsors">
         <Sponsors />
       </Element>
-      <Wave bgColor="bg-accent" fillColor="primary" />
+      <Wave type={2} bgColor="#FFFFFF" fillColor="from" />
       <Element
         name="Staff"
-        className="flex justify-center w-full bg-gradient-to-b from-primary to-secondary"
+        className="flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+        <span className="flex justify-center px-4 w-full">
           <Staff />
         </span>
       </Element>
+      <Wave type={3} bgColor="#FFFFFF" fillColor="via2" />
+      <Element
+        name="FAQ"
+        className="flex justify-center px-4 w-full bg-gradient-to-b"
+      >
+        <Faq />
+      </Element>
+      <Wave type={1} bgColor="#FFFFFF" fillColor="from" />
+      <span className="flex relative w-full bg-gradient-to-b from-from to-to">
+        {/* <Wave type={1} bgColor="bg-primary" fillColor="wave-from" /> */}
+        <Footer />
+      </span>
     </Page>
   )
 }
