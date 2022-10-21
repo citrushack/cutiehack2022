@@ -76,10 +76,6 @@ export default function Nav() {
       title: 'Tracks',
     },
     {
-      icon: <BiRocket />,
-      title: 'Resources',
-    },
-    {
       icon: <BiDollarCircle />,
       title: 'Sponsors',
     },

@@ -24,7 +24,7 @@ export default function Live() {
   return (
     <Page title="Live">
       <Element
-        name="Home"
+        name="Countdown"
         className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
         {/* <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat"> */}
