@@ -43,7 +43,7 @@ export default function Landing() {
           </div>
           {/* uncomment before event starts */}
           <CountdownWrapper date="2022-11-05T00:00:00Z" />
-          
+
           {/* testing date */}
           {/* <CountdownWrapper date="2022-10-21T09:00:00Z" /> */}
 
@@ -94,7 +94,7 @@ export default function Landing() {
                     <ButtonLink
                       secondary
                       label="Join Our Discord"
-                      link={process.env.discord}
+                      link="https://discord.gg/hhx9zJYc"
                       external
                     />
                   </span>

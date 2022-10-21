@@ -86,7 +86,7 @@ export default function Landing() {
                     <ButtonLink
                       secondary
                       label="Join Our Discord"
-                      link={process.env.discord}
+                      link="https://discord.gg/hhx9zJYc"
                       external
                     />
                   </span>
