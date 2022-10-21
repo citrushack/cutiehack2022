@@ -28,7 +28,7 @@ export default function Live() {
         className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
         {/* <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat"> */}
-        <span className="flex relative justify-center w-full items-center">
+        <span className="flex relative justify-center w-full items-center bg-pattern bg-repeat bg-contain">
           <svg
             viewBox="0 0 1920 1300"
             height="100%"
