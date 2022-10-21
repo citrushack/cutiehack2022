@@ -38,7 +38,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
 
 const directors = [
   {
-    link: 'www.LinkedIn.com/in/henry-zheng00/',
+    link: 'https://www.linkedin.com/in/henry-zheng00/',
     image: '/leads/Henry.png',
     name: 'Henry Zheng',
     role: 'Director',
@@ -76,43 +76,43 @@ const staff = [
     role: 'Operations Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/kanin-liang/',
+    link: 'https://www.linkedin.com/in/prathmeshjain/',
     image: '/leads/Prathmesh.png',
     name: 'Prathmesh Jain',
     role: 'Operations Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/kanin-liang/',
+    link: 'https://www.linkedin.com/in/jakin200/',
     image: '/leads/Jakin.png',
     name: 'Jakin Chan',
     role: 'Operations Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/abhivishwas/',
+    link: 'https://www.linkedin.com/in/viviane-fernando-60282018b/',
     image: '/leads/Viviane_.png',
     name: 'Viviane Fernando',
     role: 'Marketing Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/jakin200/',
+    link: 'https://www.linkedin.com/in/sarahkim9/',
     image: '/leads/Sarah.png',
     name: 'Sarah Kim',
     role: 'Marketing Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/henry-zheng00/',
+    link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
     image: '/leads/Gabs.png',
     name: 'Gabriela Alvarez',
     role: 'Sponsorships Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/michellesspace/',
+    link: 'https://www.linkedin.com/in/alex-c-hsieh/',
     image: '/leads/Alex_.png',
     name: 'Alex Hsieh',
     role: 'Sponsorships Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/nathan-melwani/',
+    link: 'https://www.linkedin.com/in/jonathanchon/',
     image: '/leads/Jon.png',
     name: 'Jonathan Chon',
     role: 'UI/UX Lead',
