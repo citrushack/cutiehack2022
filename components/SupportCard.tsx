@@ -29,6 +29,8 @@ export const SupportCard = ({
     <p className="grow mb-8 text-center text-text font-baloo_regular">
       {description}
     </p>
-    <ButtonLink link={buttonLink} label={buttonLabel} external />
+    <span className='bg-highlight w-full rounded-md'>
+      <ButtonLink link={buttonLink} label={buttonLabel} external />
+    </span>
   </motion.div>
 )

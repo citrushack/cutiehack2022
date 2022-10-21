@@ -171,7 +171,7 @@ export function UserDropdown() {
                         className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
                         onClick={() => setOpen(!open)}
                       >
-                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-third text-sub-bright text-2xl">
                           <BiGroup />
                         </div>
                         <div className="p-1.5 group-hover:text-highlight">
@@ -191,7 +191,7 @@ export function UserDropdown() {
                         className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
                         onClick={() => setOpen(!open)}
                       >
-                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-third text-sub-bright text-2xl">
                           <FaDiscord />
                         </div>
                         <div className="p-1.5 group-hover:text-highlight">

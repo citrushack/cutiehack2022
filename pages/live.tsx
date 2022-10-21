@@ -12,6 +12,12 @@ import About from './sections/about'
 import Footer from '@/components/Page/Footer'
 import Faq from './sections/faq'
 
+import LandingLamps from '../public/assets/landingLamps.svg'
+import mobileMountains from '../public/assets/mountains4.svg'
+import desktopMountains from '../public/assets/mountains2.svg'
+
+import Image from 'next/image'
+
 export default function Live() {
   return (
     <Page title="Live">
@@ -19,7 +25,8 @@ export default function Live() {
         name="Home"
         className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
-        <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat">
+        {/* <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat"> */}
+        <span className="flex relative justify-center w-full items-center">
           <svg
             viewBox="0 0 1920 1300"
             height="100%"
@@ -32,6 +39,16 @@ export default function Live() {
               fill={'var(--primary)'}
             />
           </svg>
+          <span className="absolute transform-gpu top-0 right-0">
+            <Image src={LandingLamps} alt="lamps" />
+          </span>
+          {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
+          <span className="self-end md:hidden absolute right-0 bottom-0">
+            <Image src={mobileMountains} alt="mountains" />
+          </span>
+          <span className="sm:hidden md:flex self-end absolute right-0 bottom-0">
+            <Image src={desktopMountains} alt="mountains" />
+          </span>
           <Landing />
         </span>
       </Element>

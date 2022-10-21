@@ -85,7 +85,7 @@ export function UserFilter({
               className={
                 'px-4 py-1.5 cursor-pointer ' +
                 (filter === currentFilter
-                  ? 'font-medium text-blue-500 hover:bg-blue-100'
+                  ? 'font-baloo_regular text-blue-500 hover:bg-blue-100'
                   : 'hover:bg-gray-100')
               }
               onClick={() => {

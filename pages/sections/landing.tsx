@@ -71,7 +71,7 @@ export default function Landing() {
               </motion.button>
             </span>
           )}
-          <div className="flex flex-col w-full gap-3">
+          <div className="flex flex-col w-full gap-3 px-20 md:px-0">
             {/* uncomment the day before */}
             {status === 'authenticated' &&
               session.user.uid &&
