@@ -61,7 +61,7 @@ export default function Landing() {
               <ButtonLink primary label="Apply Now" link="/apply" />
             </span>
           )}
-          <HackerCountdownWrapper date="2022-11-05T12:00:00Z" />
+          <HackerCountdownWrapper date="2022-11-05T21:00:00Z" />
           <div className="flex flex-col gap-3">
             {/* uncomment the day before */}
             {status === 'authenticated' &&

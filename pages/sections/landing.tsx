@@ -41,7 +41,12 @@ export default function Landing() {
               illuminate your passion
             </p>
           </div>
+          {/* uncomment before event starts */}
           <CountdownWrapper date="2022-11-05T00:00:00Z" />
+          
+          {/* testing date */}
+          {/* <CountdownWrapper date="2022-10-21T09:00:00Z" /> */}
+
           {/* <p className='max-w-lg italic text-center font-medium'>
             In-person sign-ups will close today at 5:30 PM PST, as we are reaching maximum capacity
           </p> */}
