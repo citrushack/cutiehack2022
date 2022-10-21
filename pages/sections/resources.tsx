@@ -23,7 +23,12 @@ export default function Resources() {
         {status === 'authenticated' &&
           session.user.uid &&
           session.user.qualified === 'yeah' && (
-            <ButtonLink label="Discord" link={process.env.discord} external secondary/>
+            <ButtonLink
+              label="Discord"
+              link={process.env.discord}
+              external
+              secondary
+            />
           )}
       </div>
     </section>

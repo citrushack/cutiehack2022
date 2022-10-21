@@ -81,9 +81,7 @@ export default function Live() {
         name="Judges"
         className="relative flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
       > */}
-      <Element
-        name="Judges"
-      >
+      <Element name="Judges">
         <Judges />
       </Element>
       {/* <Wave type={5} bgColor="#FFFFFF" fillColor="via2" /> */}
