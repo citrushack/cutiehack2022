@@ -64,12 +64,6 @@ const staff = [
     role: 'Web Dev Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/nathan-melwani/',
-    image: '/leads/Jon.png',
-    name: 'Jonathan Chon',
-    role: 'UI/UX Lead',
-  },
-  {
     link: 'https://www.linkedin.com/in/ashley-h-pham',
     image: '/leads/Ash.png',
     name: 'Ashley Pham',
@@ -116,6 +110,12 @@ const staff = [
     image: '/leads/Alex_.png',
     name: 'Alex Hsieh',
     role: 'Sponsorships Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/nathan-melwani/',
+    image: '/leads/Jon.png',
+    name: 'Jonathan Chon',
+    role: 'UI/UX Lead',
   },
 ]
 

@@ -47,7 +47,8 @@ const Home: NextPage = () => {
               repeat: Infinity,
               duration: 5,
             }}
-            className="self-end md:hidden absolute top-0 right-0">
+            className="self-end md:hidden absolute top-0 right-0"
+          >
             <Image src={mobileLamps} alt="lamps" />
           </motion.span>
           <motion.span
@@ -55,8 +56,9 @@ const Home: NextPage = () => {
             transition={{
               repeat: Infinity,
               duration: 5,
-            }} 
-            className="hidden md:flex self-end absolute top-0 right-0">
+            }}
+            className="hidden md:flex self-end absolute top-0 right-0"
+          >
             <Image src={desktopLamps} alt="lamps" />
           </motion.span>
           {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
