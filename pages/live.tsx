@@ -12,7 +12,8 @@ import About from './sections/about'
 import Footer from '@/components/Page/Footer'
 import Faq from './sections/faq'
 
-import LandingLamps from '../public/assets/landingLamps.svg'
+import desktopLamps from '../public/assets/desktopLamps.svg'
+import mobileLamps from '../public/assets/mobileLamps.svg'
 import mobileMountains from '../public/assets/mountains4.svg'
 import desktopMountains from '../public/assets/mountains2.svg'
 
@@ -39,14 +40,17 @@ export default function Live() {
               fill={'var(--primary)'}
             />
           </svg>
-          <span className="absolute transform-gpu top-0 right-0">
-            <Image src={LandingLamps} alt="lamps" />
+          <span className="self-end md:hidden absolute top-0 right-0">
+            <Image src={mobileLamps} alt="lamps" />
+          </span>
+          <span className="hidden md:flex self-end absolute top-0 right-0">
+            <Image src={desktopLamps} alt="lamps" />
           </span>
           {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
           <span className="self-end md:hidden absolute right-0 bottom-0">
             <Image src={mobileMountains} alt="mountains" />
           </span>
-          <span className="sm:hidden md:flex self-end absolute right-0 bottom-0">
+          <span className="hidden md:flex self-end absolute right-0 bottom-0">
             <Image src={desktopMountains} alt="mountains" />
           </span>
           <Landing />
