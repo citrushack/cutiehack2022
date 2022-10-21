@@ -69,20 +69,24 @@ export default function Live() {
         </Element>
       </div>
       <Wave type={5} bgColor="#FFFFFF" fillColor="via2" />
-      <Element
+      {/* leave out resources for now */}
+      {/* <Element
         name="Resources"
         className="flex justify-center px-4 w-full bg-accent my-20"
       >
         <Resources />
       </Element>
-      <Wave type={4} bgColor="#FFFFFF" fillColor="from" />
-      <Element
+      <Wave type={4} bgColor="#FFFFFF" fillColor="from" /> */}
+      {/* <Element
         name="Judges"
         className="relative flex justify-center w-full bg-gradient-to-b from-from via-via to-to"
+      > */}
+      <Element
+        name="Judges"
       >
         <Judges />
       </Element>
-      <Wave type={5} bgColor="#FFFFFF" fillColor="via2" />
+      {/* <Wave type={5} bgColor="#FFFFFF" fillColor="via2" /> */}
 
       <Element name="Sponsors">
         <Sponsors />

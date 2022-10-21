@@ -17,12 +17,13 @@ export default function Resources() {
         <ButtonLink
           link="https://github.com/citrushack/CitrusHackResources/blob/main/README.md"
           label="GitHub"
+          secondary
           external
         />
         {status === 'authenticated' &&
           session.user.uid &&
           session.user.qualified === 'yeah' && (
-            <ButtonLink label="Discord" link={process.env.discord} external />
+            <ButtonLink label="Discord" link={process.env.discord} external secondary/>
           )}
       </div>
     </section>
