@@ -7,8 +7,8 @@ export function FoodStats({ users }) {
   const numVegetarian = Object.keys(
     users.filter((user) => user.foodPreference === 'Vegetarian')
   ).length
-  const numVegan = Object.keys(
-    users.filter((user) => user.foodPreference === 'Vegan')
+  const numNutAllergy = Object.keys(
+    users.filter((user) => user.foodPreference === 'Nut Allergy')
   ).length
   const numTotal = Object.keys(users).length
 
@@ -24,7 +24,7 @@ export function FoodStats({ users }) {
           numTotal={numTotal}
           label="Vegetarians"
         />
-        <StatsBlob num={numVegan} numTotal={numTotal} label="Vegans" />
+        <StatsBlob num={numNutAllergy} numTotal={numTotal} label="NutAllergy" />
       </div>
     </div>
   )
