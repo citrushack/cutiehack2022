@@ -15,8 +15,8 @@ export function Pages({ pageOptions, icons, selectedPage, selectPage }) {
           className={
             'flex flex-col items-center group text-3xl md:text-2xl bg-transparent ' +
             (selectedPage === option
-              ? 'font-semibold'
-              : 'font-medium text-sub-highlight hover:text-text')
+              ? 'font-semibold text-highlight'
+              : 'font-medium text-sub-highlight hover:text-highlight')
           }
           onClick={() => {
             selectPage(option)

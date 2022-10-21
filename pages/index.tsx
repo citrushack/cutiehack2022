@@ -1,6 +1,5 @@
 import { Page } from '@/components/Page/Page'
 import type { NextPage } from 'next'
-import Head from 'next/head'
 
 import { Element } from 'react-scroll'
 import Landing from '@/pages/sections/landing'
@@ -14,20 +13,22 @@ import Faq from '@/pages/sections/faq'
 import Footer from '@/components/Page/Footer'
 import { Wave } from '@/components/Wave'
 
-import LandingLamps from '../public/assets/landingLamps.svg'
-import mountains from '../public/assets/mountains.svg'
-import Image from 'next/image'
-import { useTheme } from 'next-themes'
-const Home: NextPage = () => {
-  const { theme } = useTheme()
+import desktopLamps from '../public/assets/desktopLamps.svg'
+import mobileLamps from '../public/assets/mobileLamps.svg'
+import mobileMountains from '../public/assets/mountains4.svg'
+import desktopMountains from '../public/assets/mountains2.svg'
 
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+const Home: NextPage = () => {
   return (
     <Page title="Home">
       <Element
         name="Home"
         className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
-        <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat">
+        {/* <span className="flex relative justify-center w-full items-center bg-[url('/assets/landingLamps.svg'),_url('/assets/mountains2.svg')] bg-[position:top_right,bottom_right] bg-contain bg-no-repeat"> */}
+        <span className="flex relative justify-center w-full items-center bg-pattern bg-repeat bg-contain">
           <svg
             viewBox="0 0 1920 1300"
             height="100%"
@@ -40,6 +41,33 @@ const Home: NextPage = () => {
               fill={'var(--primary)'}
             />
           </svg>
+          <motion.span
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 5,
+            }}
+            className="self-end md:hidden absolute top-0 right-0"
+          >
+            <Image src={mobileLamps} alt="lamps" />
+          </motion.span>
+          <motion.span
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 5,
+            }}
+            className="hidden md:flex self-end absolute top-0 right-0"
+          >
+            <Image src={desktopLamps} alt="lamps" />
+          </motion.span>
+          {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
+          <span className="self-end md:hidden absolute right-0 bottom-0">
+            <Image src={mobileMountains} alt="mountains" />
+          </span>
+          <span className="hidden md:flex self-end absolute right-0 bottom-0">
+            <Image src={desktopMountains} alt="mountains" />
+          </span>
           <Landing />
         </span>
       </Element>

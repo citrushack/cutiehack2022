@@ -15,8 +15,8 @@ export function Overviews({
           className={
             'border-b-2 bg-transparent ' +
             (selectedView === option
-              ? 'font-semibold border-text'
-              : 'font-medium text-sub-highlight border-sub-highlight hover:text-text hover:border-text')
+              ? 'font-semibold border-highlight text-highlight'
+              : 'font-medium text-sub-highlight border-sub-highlight hover:text-highlight hover:border-highlight')
           }
           onClick={() => {
             selectView(option)

@@ -28,8 +28,8 @@ export default function SignupCounter() {
         <div>
           <BiEdit className="text-2xl xs:text-3xl" />
         </div>
-        <h4 className="text-base xs:text-xl font-medium">
-          <span className="font-bold">
+        <h4 className="text-base xs:text-xl font-baloo_medium">
+          <span className="font-baloo_medium">
             {cachedCount ? (
               <CountUp
                 start={cachedCount.numUsers - 100}

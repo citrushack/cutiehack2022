@@ -38,7 +38,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
 
 const directors = [
   {
-    link: 'www.LinkedIn.com/in/henry-zheng00/',
+    link: 'https://www.linkedin.com/in/henry-zheng00/',
     image: '/leads/Henry.png',
     name: 'Henry Zheng',
     role: 'Director',
@@ -62,12 +62,6 @@ const staff = [
     image: '/leads/Nate.png',
     name: 'Nate Melwani',
     role: 'Web Dev Lead',
-  },
-  {
-    link: 'https://www.linkedin.com/in/jonathanchon/',
-    image: '/leads/Jon.png',
-    name: 'Jonathan Chon',
-    role: 'UI/UX Lead',
   },
   {
     link: 'https://www.linkedin.com/in/ashley-h-pham',
@@ -112,10 +106,16 @@ const staff = [
     role: 'Sponsorships Lead',
   },
   {
-    link: 'https://www.linkedin.com/in/michellesspace/',
+    link: 'https://www.linkedin.com/in/alex-c-hsieh/',
     image: '/leads/Alex_.png',
     name: 'Alex Hsieh',
     role: 'Sponsorships Lead',
+  },
+  {
+    link: 'https://www.linkedin.com/in/jonathanchon/',
+    image: '/leads/Jon.png',
+    name: 'Jonathan Chon',
+    role: 'UI/UX Lead',
   },
 ]
 

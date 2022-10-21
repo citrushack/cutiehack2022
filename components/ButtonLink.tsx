@@ -20,11 +20,11 @@ const Button = ({
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.995 }}
     className={
-      'flex justify-center items-center self-center w-full px-4 font-semibold shadow rounded-md cursor-pointer ' +
+      'flex justify-center items-center self-center w-full px-4 font-baloo_medium shadow rounded-md cursor-pointer ' +
       (primary
         ? 'bg-highlight hover:bg-highlight-dark '
         : secondary
-        ? 'bg-sub hover:bg-highlight '
+        ? 'bg-third hover:bg-highlight '
         : 'hover:bg-accent-sub ') +
       (skinny ? 'py-1.5 ' : 'h-11 md:max-w-[16rem] text-lg ') +
       (minWidth ? 'md:w-auto' : '')
@@ -73,7 +73,7 @@ export const ButtonLink = ({
         target="_blank"
         rel="noreferrer noopener"
         href={link}
-        className="flex justify-center w-full bg-buttons rounded-md"
+        className="flex justify-center w-full rounded-md"
       >
         <Button
           primary={primary}
@@ -85,7 +85,7 @@ export const ButtonLink = ({
       </a>
     ) : (
       <Link passHref href={link}>
-        <span className="flex justify-center w-full bg-buttons rounded-md">
+        <span className="flex justify-center w-full rounded-md">
           <Button
             primary={primary}
             secondary={secondary}
