@@ -7,7 +7,9 @@ export default function verifySignIn() {
     <Page>
       <section className="p-4 flex flex-col justify-center items-center text-center">
         <h1>Check your email</h1>
-        <p className='pb-4'>A sign in link has been sent to your email address.</p>
+        <p className="pb-4">
+          A sign in link has been sent to your email address.
+        </p>
         <ButtonLink primary label="Go Back to Homepage" link="/" />
       </section>
     </Page>
