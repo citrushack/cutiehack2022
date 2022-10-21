@@ -1,16 +1,16 @@
-import { StatsBlob } from "./Blob";
+import { StatsBlob } from './Blob'
 
 export function FoodStats({ users }) {
   const numMeat = Object.keys(
-    users.filter((user) => user.foodPreference === "Meat")
-  ).length;
+    users.filter((user) => user.foodPreference === 'Meat')
+  ).length
   const numVegetarian = Object.keys(
-    users.filter((user) => user.foodPreference === "Vegetarian")
-  ).length;
+    users.filter((user) => user.foodPreference === 'Vegetarian')
+  ).length
   const numNutAllergy = Object.keys(
-    users.filter((user) => user.foodPreference === "Nut Allergy")
-  ).length;
-  const numTotal = Object.keys(users).length;
+    users.filter((user) => user.foodPreference === 'Nut Allergy')
+  ).length
+  const numTotal = Object.keys(users).length
 
   return (
     <div className="flex flex-col gap-4">
@@ -27,5 +27,5 @@ export function FoodStats({ users }) {
         <StatsBlob num={numNutAllergy} numTotal={numTotal} label="NutAllergy" />
       </div>
     </div>
-  );
+  )
 }
