@@ -32,7 +32,8 @@ export default function SignupCounter() {
           <span className="font-baloo_medium">
             {cachedCount ? (
               <CountUp
-                start={cachedCount.numUsers - 100}
+                // start={cachedCount.numUsers - 100}
+                start={0}
                 end={cachedCount.numUsers}
                 duration={1.5}
               />
@@ -53,7 +54,7 @@ export default function SignupCounter() {
         <h4 className="text-base xs:text-xl font-medium">
           <span className="font-bold">
             <CountUp
-              start={data.numUsers - 100}
+              start={0}
               end={data.numUsers}
               duration={1.5}
             />
