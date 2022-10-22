@@ -13,7 +13,7 @@ export const Wave = ({ type, bgColor, fillColor }: Props) => (
     {type === 1 && (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1901.502 208.535"
+        viewBox="0 0 1900 210"
         className="w-full -mb-px"
       >
         <path
