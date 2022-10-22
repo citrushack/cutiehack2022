@@ -14,7 +14,7 @@ import Footer from '@/components/Page/Footer'
 import { Wave } from '@/components/Wave'
 
 import desktopLamps from '../public/assets/desktopLamps.svg'
-import mobileLamps from '../public/assets/mobileLamps.svg'
+import mobileLamps from '../public/assets/mobileLamps2.svg'
 import mobileMountains from '../public/assets/mountains4.svg'
 import desktopMountains from '../public/assets/mountains2.svg'
 
@@ -53,6 +53,7 @@ const Home: NextPage = () => {
               alt=""
               placeholder="blur"
               blurDataURL="/assets/mobileLampsBlur.png"
+              priority={Boolean(true)}
             />
           </motion.span>
           <motion.span
@@ -68,6 +69,7 @@ const Home: NextPage = () => {
               alt=""
               placeholder="blur"
               blurDataURL="/assets/desktopLampsBlur.png"
+              priority={Boolean(true)}
             />
           </motion.span>
           {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
@@ -77,6 +79,7 @@ const Home: NextPage = () => {
               alt=""
               placeholder="blur"
               blurDataURL="/assets/mountains4blur.png"
+              priority={Boolean(true)}
             />
           </span>
           <span className="hidden md:flex self-end absolute right-0 bottom-0">
@@ -85,6 +88,7 @@ const Home: NextPage = () => {
               alt=""
               placeholder="blur"
               blurDataURL="/assets/mountain2blur.png"
+              priority={Boolean(true)}
             />
           </span>
           <Landing />

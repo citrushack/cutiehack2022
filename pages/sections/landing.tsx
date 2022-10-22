@@ -32,7 +32,7 @@ export default function Landing() {
               src="/assets/BigLogo.svg"
               width={4749}
               height={2352}
-              quality={50}
+              quality={100}
               priority={Boolean(true)}
               objectFit="contain"
               alt=""
