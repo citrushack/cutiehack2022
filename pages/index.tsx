@@ -48,7 +48,12 @@ const Home: NextPage = () => {
             }}
             className="self-end md:hidden absolute top-0 right-0"
           >
-            <Image src={mobileLamps} alt="lamps" />
+            <Image
+              src={mobileLamps}
+              alt=""
+              placeholder="blur"
+              blurDataURL="/assets/mobileLampsBlur.png"
+            />
           </motion.span>
           <motion.span
             animate={{ y: [0, -10, 0] }}
@@ -58,14 +63,29 @@ const Home: NextPage = () => {
             }}
             className="hidden md:flex self-end absolute top-0 right-0"
           >
-            <Image src={desktopLamps} alt="lamps" />
+            <Image
+              src={desktopLamps}
+              alt=""
+              placeholder="blur"
+              blurDataURL="/assets/desktopLampsBlur.png"
+            />
           </motion.span>
           {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
           <span className="self-end md:hidden absolute right-0 bottom-0">
-            <Image src={mobileMountains} alt="mountains" />
+            <Image
+              src={mobileMountains}
+              alt=""
+              placeholder="blur"
+              blurDataURL="/assets/mountains4blur.png"
+            />
           </span>
           <span className="hidden md:flex self-end absolute right-0 bottom-0">
-            <Image src={desktopMountains} alt="mountains" />
+            <Image
+              src={desktopMountains}
+              alt=""
+              placeholder="blur"
+              blurDataURL="/assets/mountain2blur.png"
+            />
           </span>
           <Landing />
         </span>
