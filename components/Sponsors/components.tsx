@@ -19,12 +19,19 @@ interface SponsorProps {
 }
 
 /** Individual sponsor logo linked to sponsor website. */
-export const Sponsor = ({ image, width, height, link, shrink, tall }: SponsorProps) => (
+export const Sponsor = ({
+  image,
+  width,
+  height,
+  link,
+  shrink,
+  tall,
+}: SponsorProps) => (
   <div
     className={
       'flex items-center justify-center min-h-[5rem] w-48 md:w-64 ' +
-          (shrink ? 'w-28 md:w-28' : '') +
-          (tall ? 'w-20 md:w-28' : '')
+      (shrink ? 'w-28 md:w-28' : '') +
+      (tall ? 'w-20 md:w-28' : '')
     }
   >
     <motion.div>
@@ -59,9 +66,9 @@ export const Sponsor = ({ image, width, height, link, shrink, tall }: SponsorPro
   //     </a>
   //   </motion.div>
   // </div>
-  )
-  
-  const sponsors = [
+)
+
+const sponsors = [
   {
     name: 'redbull',
     image: '/assets/sponsors/redbull.svg',
@@ -128,7 +135,7 @@ export const Sponsor = ({ image, width, height, link, shrink, tall }: SponsorPro
 export function SponsorsGrid() {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
-  
+
   useEffect(() => setMounted(true), [])
 
   if (!mounted) return null
@@ -137,7 +144,7 @@ export function SponsorsGrid() {
     <div className="flex flex-col md:grid md:grid-cols-2 md:gap-20 mt-16">
       {sponsors.map(
         ({ name, link, width, height, shrink, tall, image, imageDark }) => (
-          <div key={name} className='flex justify-center grid-cols-1'>
+          <div key={name} className="flex justify-center grid-cols-1">
             <Sponsor
               key={link}
               image={theme === 'light' ? image : imageDark}

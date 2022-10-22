@@ -61,15 +61,13 @@ export default function Landing() {
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
-          
-          
+
           {/* TODO: uncomment this when signups reach over 300+ */}
           {/* <p className='font-baloo_regular text-center pb-6 max-w-sm'>
             We reached our participants limit! Feel free to still come out but we
             can no longer guarantee a meal/shirt.
           </p> */}
 
-          
           {/* TODO: comment when signups reach over 300+ */}
           {status === 'authenticated' && !session.user.uid && (
             <span className="flex justify-center z-[200]">
