@@ -14,9 +14,9 @@ export default function Staff() {
         <Image src={staffLineRight} alt="lineright" className="inline" />
       </div>
       <TeamGrid />
-      <div className="pt-20 flex flex-col justify-center">
-        <p className="text-text">Committee Members</p>
-        <div className="flex flex-col text-center text-sub">
+      <div className="pt-10 md:pt-20 flex flex-col justify-center">
+        <p className="text-text font-baloo_semi_bold">Committee Members</p>
+        <div className="flex flex-col text-center text-sub font-baloo_regular">
           <p>Valerie Wong</p>
           <p>Theo Fernandez</p>
           <p>Andrei Dimaano</p>
