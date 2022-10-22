@@ -53,11 +53,7 @@ export default function SignupCounter() {
         </div>
         <h4 className="text-base xs:text-xl font-medium">
           <span className="font-bold">
-            <CountUp
-              start={0}
-              end={data.numUsers}
-              duration={1.5}
-            />
+            <CountUp start={0} end={data.numUsers} duration={1.5} />
           </span>
           &nbsp;hackers signed up so far!
         </h4>
