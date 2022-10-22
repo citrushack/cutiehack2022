@@ -29,6 +29,7 @@ export default async function createApplication(
       MLH_code_of_conduct,
       MLH_privacy_policy,
       MLH_communication,
+      applied_after_limit,
     } = req.body
 
     // send email notification to user applying
@@ -71,6 +72,7 @@ export default async function createApplication(
           qualified: '',
           admin: false,
           appliedAt: new Date(),
+          applied_after_limit: applied_after_limit,
         },
       }
     )

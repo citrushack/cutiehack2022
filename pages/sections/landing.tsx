@@ -55,7 +55,7 @@ export default function Landing() {
           {/* {
             (status === 'unauthenticated' || (status === 'authenticated' && !Boolean(session.user.qualified))) &&
             <p className='max-w-lg italic text-center font-medium'>
-              Applications will close tonight at 12 AM PST, so be sure to apply while you still can!
+            Applications will close tonight at 12 AM PST, so be sure to apply while you still can!
             </p>
           } */}
           <span className="flex justify-center w-full mb-6">
@@ -63,12 +63,12 @@ export default function Landing() {
           </span>
 
           {/* TODO: uncomment this when signups reach over 300+ */}
-          {/* <p className='font-baloo_regular text-center pb-6 max-w-sm'>
+          {status == 'authenticated' && session.user.applied_after_limit && 
+          <p className='font-baloo_regular text-center pb-6 max-w-sm'>
             We reached our participants limit! Feel free to still come out but we
             can no longer guarantee a meal/shirt.
-          </p> */}
+          </p>}
 
-          {/* TODO: comment when signups reach over 300+ */}
           {status === 'authenticated' && !session.user.uid && (
             <span className="flex justify-center z-[200]">
               <ButtonLink primary label="Apply Now" link="/apply" />
