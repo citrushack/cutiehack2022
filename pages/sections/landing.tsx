@@ -96,7 +96,7 @@ export default function Landing() {
                     <ButtonLink
                       secondary
                       label="Join Our Discord"
-                      link="https://discord.gg/hhx9zJYc"
+                      link="https://discord.gg/jduNFuwKuk"
                       external
                     />
                   </span>

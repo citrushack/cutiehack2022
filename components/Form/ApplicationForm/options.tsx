@@ -48,14 +48,11 @@ export const grades = [
 
 export const firstTimeHacker = ['Yes', 'No']
 
-export const participation = [
-  // 'In-Person',
-  'Online',
-]
+export const participation = ['In-Person', 'Online']
 
-export const foodPreference = ['Meat', 'Vegetarian', 'Vegan']
+export const foodPreference = ['Meat', 'Vegetarian', 'Nut Allergy']
 
-export const shirtSize = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']
+export const shirtSize = ['XS', 'S', 'M', 'L', 'XL']
 
 export const MLH = [
   [
