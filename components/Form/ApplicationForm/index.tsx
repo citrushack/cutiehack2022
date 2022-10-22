@@ -25,7 +25,7 @@ export function ApplicationForm() {
       setTimeout(() => revalidate({ retryCount }), 1500)
     },
   })
-  
+
   const { data: session } = useSession()
   const { register, handleSubmit, control } = useForm()
   const { errors } = useFormState({ control })
