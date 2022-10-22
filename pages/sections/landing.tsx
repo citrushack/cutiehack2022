@@ -30,8 +30,8 @@ export default function Landing() {
             {/* <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1> */}
             <Image
               src="/assets/BigLogo.svg"
-              width={4749}
-              height={2352}
+              width={3514}
+              height={2252}
               quality={1}
               priority={Boolean(true)}
               objectFit="contain"
