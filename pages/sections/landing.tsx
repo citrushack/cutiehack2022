@@ -36,8 +36,8 @@ export default function Landing() {
               priority={Boolean(true)}
               objectFit="contain"
               alt=""
-              placeholder='blur'
-              blurDataURL='/assets/blurredLogo.png'
+              placeholder="blur"
+              blurDataURL="/assets/blurredLogo.png"
             />
             <p className="flex font-baloo_semi_bold text-2xl text-highlight justify-center">
               illuminate your passion

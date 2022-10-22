@@ -39,7 +39,7 @@ export default function Landing() {
               priority={Boolean(true)}
               objectFit="contain"
               alt=""
-              placeholder='blur'
+              placeholder="blur"
               blurDataURL="/assets/blurredLogo.png"
             />
             <p className="flex font-baloo_semi_bold text-2xl text-highlight justify-center">
