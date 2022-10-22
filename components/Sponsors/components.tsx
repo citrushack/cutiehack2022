@@ -42,6 +42,7 @@ export const Sponsor = ({
           width={width}
           height={height}
           objectFit="contain"
+          quality={1}
         />
       </a>
     </motion.div>

@@ -39,7 +39,7 @@ export default function About() {
             src="/assets/aboutuslamps.svg"
             width={558}
             height={500}
-            quality={50}
+            quality={1}
             priority={Boolean(true)}
             objectFit="contain"
             alt="lamps"
@@ -51,7 +51,7 @@ export default function About() {
             src="/assets/hand2.svg"
             width={615}
             height={600}
-            quality={50}
+            quality={1}
             priority={Boolean(true)}
             objectFit="contain"
             alt="hand"
