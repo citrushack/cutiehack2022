@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { sendEmail } from '@/lib/sendgrid'
+import { sendInPersonReminderEmail } from '@/lib/inpersonReminder'
 import { getSession } from 'next-auth/react'
 
 export default async function remindInPerson(
@@ -12,13 +13,8 @@ export default async function remindInPerson(
 
     // send email notification to remind user to apply
     for (let i = 0; i < users.length; i++) {
-      await sendEmail({
+      await sendInPersonReminderEmail({
         email: users[i].email,
-        template_id: process.env.INPERSON_REMINDER_EMAIL_ID,
-        name: '',
-        members: '',
-        invite_code: '',
-        newcomer: '',
       })
     }
 
