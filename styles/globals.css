@@ -38,6 +38,7 @@
     --via: #65385D;
     --via2: #FF8E6A;
     --to: #B56B83;
+    --transparent: #0000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 
@@ -50,11 +51,12 @@
     --sub-secondary: #5F3B5B;
     --highlight: #F09372;
     --card: #AB6F82;
-    --text: #FFFFFF;
+    --text: #000000;
     --sub: #F6DD5A;
     --from: #190E56;
     --via: #B56B83;
     --to: #FF8E6A;
+    --transparent: #0000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 
@@ -72,6 +74,7 @@
     --from: #190E56;
     --via: #B56B83;
     --to: #FF8E6A;
+    --transparent: #0000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 }
