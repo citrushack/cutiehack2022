@@ -25,7 +25,9 @@ export default function Staff() {
       </div>
       <TeamGrid />
       <div className="pt-10 md:pt-20 flex flex-col justify-center">
-        <p className="text-text font-baloo_semi_bold text-center pb-4">Committee Members</p>
+        <p className="text-text font-baloo_semi_bold text-center pb-4">
+          Committee Members
+        </p>
         <div className="grid grid-cols-2 text-center text-sub font-baloo_regular">
           <div>
             <p className="text-text font-baloo_semi_bold">Web Development</p>
