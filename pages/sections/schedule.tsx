@@ -6,7 +6,9 @@ export default function Schedule() {
       <h1 className="text-center text-4xl font-baloo_semi_bold mb-16">
         Schedule (PST)
       </h1>
-      <p className='font-baloo_semi_bold pb-20'>Schedule will be posted closer to Cutie Hack!</p>
+      <p className="font-baloo_semi_bold pb-20">
+        Schedule will be posted closer to Cutie Hack!
+      </p>
       {/* TODO: uncomment once mariam says so with updated schedule*/}
       {/* <MasterSchedule /> */}
     </section>

@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ButtonLink'
 import { SupportCard } from '@/components/SupportCard'
 
 export default function Support() {
@@ -32,26 +33,29 @@ export default function Support() {
       </h1>
       <p className="mb-10 text-center max-w-lg md:max-w-2xl">
         Not interested in hacking but still want to participate? Great! We would
-        love to have you on board. Fill out the forms below if you&apos;d like
-        to help hackers throughout the day.
+        love to have you on board. Fill out the forms below if you’d like to
+        help hackers throughout the day! Not interested in hacking but still
+        want to participate? Great! We would love to have you on board. Fill out
+        the forms below if you’d like to help hackers throughout the day!
       </p>
       <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-center gap-6 mb-12">
         {cards.map(({ title, description, buttonLabel, buttonLink }) => (
           <div className="flex-col space-y-3" key={title}>
             <div
               className={
-                'flex justify-center bg-card rounded-md pt-3 pb-3 items-center ' +
+                'flex justify-center bg-card rounded-md items-center ' +
                 (title == 'Volunteers' ? 'bg-card' : 'bg-sub-secondary')
               }
             >
-              <h3 className="text-text font-baloo_semi_bold">{title}</h3>
+              {/* <h3 className="text-text font-baloo_semi_bold px-4">{title}</h3> */}
+              <ButtonLink link={buttonLink} label={title} external />
             </div>
-            <SupportCard
+            {/* <SupportCard
               title={title}
               description={description}
               buttonLabel={buttonLabel}
               buttonLink={buttonLink}
-            />
+            /> */}
           </div>
         ))}
       </div>
