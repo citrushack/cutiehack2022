@@ -31,7 +31,7 @@ export const Sponsor = ({
     className={
       'flex items-center justify-center min-h-[5rem] w-20 md:w-64 ' +
       (shrink ? 'w-28 md:w-28' : '') +
-      (tall ? 'w-20 md:w-28' : '')
+      (tall ? ' w-32 md:w-28' : '')
     }
   >
     <motion.div>
@@ -98,7 +98,7 @@ const sponsors = [
     height: 83,
     link: 'https://www.redbull.com/us-en/',
     shrink: null,
-    tall: null,
+    tall: Boolean(true),
   },
   {
     name: 'wolfram',
