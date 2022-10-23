@@ -52,7 +52,7 @@ export const participation = ['In-Person', 'Online']
 
 export const foodPreference = ['Meat', 'Vegetarian', 'Nut Allergy']
 
-export const shirtSize = ['XS', 'S', 'M', 'L', 'XL']
+export const shirtSize = ['S', 'M', 'L', 'XL']
 
 export const MLH = [
   [

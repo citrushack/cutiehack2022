@@ -9,8 +9,23 @@ import { toast } from 'react-hot-toast'
 import storage from '@/lib/firebase'
 import { ref, uploadBytes } from 'firebase/storage'
 import { PersonalInfo, Education, HackerApp } from './components'
+import useSWR from 'swr'
 
 export function ApplicationForm() {
+  const fetcher = (url) => fetch(url).then((res) => res.json())
+  const { data, error } = useSWR('/api/users/count', fetcher, {
+    onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
+      // Never retry on 404.
+      if (error.status === 404) return
+
+      // Only retry up to 10 times.
+      if (retryCount >= 10) return
+
+      // Retry after 1.5 seconds.
+      setTimeout(() => revalidate({ retryCount }), 1500)
+    },
+  })
+
   const { data: session } = useSession()
   const { register, handleSubmit, control } = useForm()
   const { errors } = useFormState({ control })
@@ -70,14 +85,16 @@ export function ApplicationForm() {
     resume,
     first_time,
     participation,
-    MLH_code_of_conduct,
-    MLH_privacy_policy,
-    MLH_communication,
+    // MLH_code_of_conduct,
+    // MLH_privacy_policy,
+    // MLH_communication,
   }) => {
     if (clickedSubmitOnce) {
       return
     }
     setClickedSubmitOnce(Boolean(true))
+
+    let applied_after_limit = data.numUsers >= 350 ? true : false
 
     // generate other user attributes
     let criteria_met = determineCriteriaMet(grad_date, grade)
@@ -102,9 +119,10 @@ export function ApplicationForm() {
         first_time,
         participation,
         criteria_met,
-        MLH_code_of_conduct,
-        MLH_privacy_policy,
-        MLH_communication,
+        // MLH_code_of_conduct,
+        // MLH_privacy_policy,
+        // MLH_communication,
+        applied_after_limit,
       })
       .then(() => {
         toast.success('Successfully submitted your application!', {

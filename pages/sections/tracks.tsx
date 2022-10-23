@@ -17,7 +17,7 @@ export default function Tracks() {
             src="/assets/plants.svg"
             width={200}
             height={200}
-            quality={50}
+            quality={1}
             priority={Boolean(true)}
             objectFit="contain"
             alt="plants"
@@ -31,7 +31,7 @@ export default function Tracks() {
             src="/assets/lightbulb.svg"
             width={200}
             height={200}
-            quality={50}
+            quality={1}
             priority={Boolean(true)}
             objectFit="contain"
             alt="lightbulb"
@@ -45,7 +45,7 @@ export default function Tracks() {
             src="/assets/laptop.svg"
             width={200}
             height={200}
-            quality={50}
+            quality={1}
             priority={Boolean(true)}
             objectFit="contain"
             alt="laptop"

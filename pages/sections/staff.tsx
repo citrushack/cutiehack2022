@@ -7,11 +7,21 @@ export default function Staff() {
   return (
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[70rem] justify-center items-center bg-pattern bg-repeat bg-contain pb-4">
       <div className="flex justify-between pb-4">
-        <Image src={staffLineLeft} alt="lineleft" className="inline" />
+        <Image
+          src={staffLineLeft}
+          alt="lineleft"
+          className="inline"
+          quality={1}
+        />
         <span className="whitespace-nowrap px-12 text-5xl font-baloo_medium text-text">
           Staff
         </span>
-        <Image src={staffLineRight} alt="lineright" className="inline" />
+        <Image
+          src={staffLineRight}
+          alt="lineright"
+          className="inline"
+          quality={1}
+        />
       </div>
       <TeamGrid />
       <div className="pt-10 md:pt-20 flex flex-col justify-center">

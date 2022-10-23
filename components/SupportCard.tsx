@@ -19,18 +19,19 @@ export const SupportCard = ({
   buttonLabel,
   buttonLink,
 }: Props) => (
-  <motion.div
-    whileHover={{ y: -8 }}
-    className={
-      'flex flex-col items-center w-full md:max-w-md p-10 shadow-lg rounded-md cursor-default ' +
-      (title == 'Volunteers' ? 'bg-card' : 'bg-sub-secondary')
-    }
-  >
-    <p className="grow mb-8 text-center text-text font-baloo_regular">
-      {description}
-    </p>
-    <span className="bg-highlight w-full rounded-md">
-      <ButtonLink link={buttonLink} label={buttonLabel} external />
-    </span>
-  </motion.div>
+  <ButtonLink link={buttonLink} label={buttonLabel} external primary />
+  // <motion.div
+  //   whileHover={{ y: -8 }}
+  //   className={
+  //     'flex flex-col items-center w-full md:max-w-md p-10 shadow-lg rounded-md cursor-default ' +
+  //     (title == 'Volunteers' ? 'bg-card' : 'bg-sub-secondary')
+  //   }
+  // >
+  //   <p className="grow mb-8 text-center text-text font-baloo_regular">
+  //     {description}
+  //   </p>
+  //   <span className="bg-highlight w-full rounded-md">
+  //     <ButtonLink link={buttonLink} label={buttonLabel} external />
+  //   </span>
+  // </motion.div>
 )

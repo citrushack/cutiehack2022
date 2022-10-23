@@ -33,9 +33,9 @@ export default function Landing() {
             {/* <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1> */}
             <Image
               src="/assets/BigLogo.svg"
-              width={4749}
-              height={2352}
-              quality={50}
+              width={3514}
+              height={2252}
+              quality={1}
               priority={Boolean(true)}
               objectFit="contain"
               alt=""
@@ -58,11 +58,6 @@ export default function Landing() {
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
-          {status === 'authenticated' && !session.user.uid && (
-            <span className="flex justify-center z-[200]">
-              <ButtonLink primary label="Apply Now" link="/apply" />
-            </span>
-          )}
           <HackerCountdownWrapper date="2022-11-05T21:00:00Z" />
           <div className="flex flex-col gap-3">
             {/* uncomment the day before */}

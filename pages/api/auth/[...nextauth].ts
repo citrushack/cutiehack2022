@@ -75,6 +75,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         session.user.admin = user.admin
         session.user.checkedIn = user.checkedIn
         session.user.participation = user.participation
+        session.user.applied_after_limit = user.applied_after_limit
         return session
       },
     },

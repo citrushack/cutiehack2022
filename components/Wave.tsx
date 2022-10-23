@@ -14,7 +14,7 @@ export const Wave = ({ type, bgColor, fillColor }: Props) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1900 210"
-        className="w-full -mb-px"
+        className="w-full -mb-2"
       >
         <path
           id="Subtraction_3"

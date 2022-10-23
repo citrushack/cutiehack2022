@@ -30,9 +30,9 @@ export default function Landing() {
             {/* <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1> */}
             <Image
               src="/assets/BigLogo.svg"
-              width={4749}
-              height={2352}
-              quality={100}
+              width={3514}
+              height={2252}
+              quality={1}
               priority={Boolean(true)}
               objectFit="contain"
               alt=""
@@ -55,17 +55,27 @@ export default function Landing() {
           {/* {
             (status === 'unauthenticated' || (status === 'authenticated' && !Boolean(session.user.qualified))) &&
             <p className='max-w-lg italic text-center font-medium'>
-              Applications will close tonight at 12 AM PST, so be sure to apply while you still can!
+            Applications will close tonight at 12 AM PST, so be sure to apply while you still can!
             </p>
           } */}
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
+
+          {/* TODO: uncomment this when signups reach over 300+ */}
+          {status == 'authenticated' && session.user.applied_after_limit && (
+            <p className="font-baloo_regular text-center pb-6 max-w-sm">
+              We reached our participants limit! Feel free to still come out but
+              we can no longer guarantee a meal/shirt.
+            </p>
+          )}
+
           {status === 'authenticated' && !session.user.uid && (
             <span className="flex justify-center z-[200]">
               <ButtonLink primary label="Apply Now" link="/apply" />
             </span>
           )}
+
           {!session && (
             <span className="flex justify-center w-1/2 lg:w-full z-[200]">
               <motion.button

@@ -11,7 +11,7 @@ interface GroupProps {
 
 /** Group of input fields. */
 export const Group = ({ title, subtitle, children }: GroupProps) => (
-  <div className="flex flex-col gap-3 sm:p-6 bg-secondary sm:bg-secondary sm:rounded-md sm:shadow-md">
+  <div className="flex flex-col gap-3 sm:p-6 bg-secondary rounded-md p-4 sm:bg-secondary sm:rounded-md sm:shadow-md">
     <h4 className="mt-0 font-semibold">{title}</h4>
     {subtitle && <p className="m-0 text-base">{subtitle}</p>}
     {children}
