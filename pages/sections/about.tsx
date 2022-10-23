@@ -13,7 +13,7 @@ export default function About() {
           </span>
           <p className="text-text font-baloo_regular z-20 text-lg md:text-xl">
             Cutie Hack is a virtual 12-hour, beginner-oriented hackathon hosted
-            by studnets at the University of California, Riverside. Hackers are
+            by students at the University of California, Riverside. Hackers are
             challenged with creating a cool project within the timeframe to demo
             in order to win awesome prizes. Cutie Hack will also be hosting
             informative workshops, fun games, and industry networking.
