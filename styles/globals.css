@@ -23,7 +23,7 @@
     /* default light theme */
     --overlay: #00000059;
     --buttons: #F09372;
-    --primary: #FFFFFF;
+    --primary: #FFD5C3;
     --secondary: #DFDFDF;
     --third: #B56B83;
     --sub-secondary: #5F3B5B;
@@ -44,7 +44,7 @@
   [data-theme='light'] {
     --buttons: #F09372;
     --overlay: #00000059;
-    --primary: #FFFFFF;
+    --primary: #FFD5C3;
     --secondary: #DFDFDF;
     --third: #B56B83;
     --sub-secondary: #5F3B5B;
@@ -61,7 +61,7 @@
   [data-theme='dark'] {
     --buttons: #F09372;
     --overlay: #00000080;
-    --primary: #252525;
+    --primary: #110A36;
     --secondary: #353535;
     --third: #B56B83;
     --sub-secondary: #5F3B5B;
