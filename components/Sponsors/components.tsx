@@ -29,7 +29,7 @@ export const Sponsor = ({
 }: SponsorProps) => (
   <div
     className={
-      'flex items-center justify-center min-h-[5rem] w-48 md:w-64 ' +
+      'flex items-center justify-center min-h-[5rem] w-20 md:w-64 ' +
       (shrink ? 'w-28 md:w-28' : '') +
       (tall ? 'w-20 md:w-28' : '')
     }
@@ -71,63 +71,83 @@ export const Sponsor = ({
 
 const sponsors = [
   {
-    name: 'redbull',
-    image: '/assets/sponsors/redbull.svg',
-    imageDark: '/assets/sponsors/redbull.svg',
-    width: 380.2,
-    height: 228.7,
-    link: 'https://www.redbull.com/us-en/',
+    name: 'google cloud',
+    image: '/assets/sponsors/google-cloud.svg',
+    imageDark: '/assets/sponsors/google-cloud.svg',
+    width: 2278,
+    height: 1833,
+    link: 'https://cloud.google.com/',
     shrink: Boolean(true),
     tall: null,
   },
   {
     name: 'triad',
-    image: '/assets/sponsors/triad.png',
-    imageDark: '/assets/sponsors/triad.png',
-    width: 371,
-    height: 95,
+    image: '/assets/sponsors/triad-light.svg',
+    imageDark: '/assets/sponsors/triad-dark.svg',
+    width: 1789,
+    height: 2201,
     link: 'https://www.triadmagnetics.com/',
     shrink: Boolean(true),
     tall: null,
   },
   {
-    name: 'wolfram',
-    image: '/assets/sponsors/wolfram.svg',
-    imageDark: '/assets/sponsors/wolfram.svg',
-    width: 334,
-    height: 58,
-    link: 'https://www.wolframalpha.com/',
+    name: 'redbull',
+    image: '/assets/sponsors/redbull-black.svg',
+    imageDark: '/assets/sponsors/redbull-white.svg',
+    width: 225,
+    height: 83,
+    link: 'https://www.redbull.com/us-en/',
     shrink: null,
     tall: null,
   },
   {
-    name: 'google cloud',
-    image: '/assets/sponsors/googlecloud.svg',
-    imageDark: '/assets/sponsors/googlecloud.svg',
-    width: 11682.8504,
-    height: 2111.8095,
-    link: 'https://cloud.google.com/',
-    shrink: null,
+    name: 'wolfram',
+    image: '/assets/sponsors/wolfram-light.svg',
+    imageDark: '/assets/sponsors/wolfram-dark.svg',
+    width: 3755,
+    height: 2927,
+    link: 'https://www.wolframalpha.com/',
+    shrink: Boolean(true),
     tall: null,
   },
   {
     name: 'sketch',
-    image: '/assets/sponsors/sketch.svg',
-    imageDark: '/assets/sponsors/sketch.svg',
-    width: 200,
-    height: 46,
+    image: '/assets/sponsors/sketch-light.svg',
+    imageDark: '/assets/sponsors/sketch-dark.svg',
+    width: 1407,
+    height: 1288,
     link: 'https://sketch.com/',
     shrink: Boolean(true),
     tall: null,
   },
   {
     name: 'interview cake',
-    image: '/assets/sponsors/cake.png',
-    imageDark: '/assets/sponsors/cake.svg',
-    width: 525,
-    height: 90,
+    image: '/assets/sponsors/interview-cake-light.svg',
+    imageDark: '/assets/sponsors/interview-cake-dark.svg',
+    width: 1754,
+    height: 1850,
     link: 'https://www.interviewcake.com/',
-    shrink: null,
+    shrink: Boolean(true),
+    tall: null,
+  },
+  {
+    name: 'ACM',
+    image: '/assets/sponsors/acm-light.svg',
+    imageDark: '/assets/sponsors/acm-dark.svg',
+    width: 910,
+    height: 910,
+    link: 'https://acmucr.org',
+    shrink: Boolean(true),
+    tall: null,
+  },
+  {
+    name: 'IEEE',
+    image: '/assets/sponsors/ieee-light.svg',
+    imageDark: '/assets/sponsors/ieee-dark.svg',
+    width: 745,
+    height: 959,
+    link: 'https://ieee.ucr.edu/',
+    shrink: Boolean(true),
     tall: null,
   },
 ]
@@ -142,7 +162,7 @@ export function SponsorsGrid() {
   if (!mounted) return null
 
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 md:gap-20 mt-16">
+    <div className="grid gap-y-10 grid-cols-2 md:gap-20 gap-x-20">
       {sponsors.map(
         ({ name, link, width, height, shrink, tall, image, imageDark }) => (
           <div key={name} className="flex justify-center grid-cols-1">
