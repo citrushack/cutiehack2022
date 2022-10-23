@@ -149,7 +149,7 @@ const judges = [
 
 /** Grid of judge profiles. */
 export const JudgeGrid = () => (
-  <div className="flex flex-wrap justify-center gap-6 md:gap-12 md:gap-y-12">
+  <div className="flex flex-wrap py-20 justify-center gap-6 md:gap-12 md:gap-y-12">
     {judges.map(({ image, name, role }) => (
       <JudgeProfile key={name} image={image} name={name} role={role} />
     ))}
