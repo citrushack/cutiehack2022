@@ -130,19 +130,19 @@ const faq = [
     answer:
       'Those outside of the U.S. can still attend, compete, and win. However, due to shipping restrictions and COVID, we won’t be able to send any physical items to those residing outside of the U.S.',
   },
-  {
-    question: "My question isn't listed?",
-    answer: (
-      <p>
-        Feel free to email us at{' '}
-        <ExternalLink
-          name="citrushack@gmail.com"
-          link="mailto:citrushack@gmail.com"
-        />{' '}
-        if you have any more questions.
-      </p>
-    ),
-  },
+  // {
+  //   question: "My question isn't listed?",
+  //   answer: (
+  //     <p>
+  //       Feel free to email us at{' '}
+  //       <ExternalLink
+  //         name="citrushack@gmail.com"
+  //         link="mailto:citrushack@gmail.com"
+  //       />{' '}
+  //       if you have any more questions.
+  //     </p>
+  //   ),
+  // },
 ]
 
 export const FaqGrid = () => (
