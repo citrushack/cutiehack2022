@@ -8,7 +8,7 @@ export default function About() {
       <div className="flex w-full col-span-3 md:col-span-2 justify-center pt-20">
         <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-3xl px-10">
           <span className="flex whitespace-nowrap items-center">
-            <p className="text-5xl font-baloo_semi_bold text-text">About Us</p>
+            <p className="text-5xl font-baloo_semi_bold text-text pr-4">About Us</p>
             {/* <Image src={staffLineRight} alt="lineright" /> */}
             <div className="inline bg-gradient-to-r from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
           </span>
