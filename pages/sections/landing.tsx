@@ -43,8 +43,7 @@ export default function Landing() {
               illuminate your passion
             </p>
           </div>
-          {/* uncomment before event starts */}
-          <CountdownWrapper date="2022-11-05T00:00:00Z" />
+          <CountdownWrapper date="2022-11-05T16:00:00Z" />
 
           {/* testing date */}
           {/* <CountdownWrapper date="2022-10-21T09:00:00Z" /> */}

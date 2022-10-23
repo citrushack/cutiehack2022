@@ -58,7 +58,7 @@ export default function Landing() {
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
-          <HackerCountdownWrapper date="2022-11-05T21:00:00Z" />
+          <HackerCountdownWrapper date="2022-11-05T28:00:00Z" />
           <div className="flex flex-col gap-3">
             {/* uncomment the day before */}
             {status === 'authenticated' &&
