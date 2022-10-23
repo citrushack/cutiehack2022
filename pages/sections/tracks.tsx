@@ -3,7 +3,7 @@ import staffLineRight from '../../public/assets/staffLineRight.svg'
 import Image from 'next/image'
 export default function Tracks() {
   return (
-    <section className="flex flex-col w-full items-center pb-10 pt-40 md:pt-0 xl:-mt-32 bg-pattern bg-repeat">
+    <section className="flex flex-col w-full items-center pb-10 pt-40 md:pt-0 bg-pattern bg-repeat">
       <div className="flex justify-between pb-4">
         <Image src={staffLineLeft} alt="lineleft" className="inline" />
         <span className="whitespace-nowrap px-12 text-3xl md:text-5xl font-baloo_semi_bold text-text">
