@@ -187,7 +187,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       errors={errors}
       required
     />
-    <span className="flex flex-col mt-4 gap-2">
+    {/* <span className="flex flex-col mt-4 gap-2">
       <Checkbox
         label=""
         variable="MLH_code_of_conduct"
@@ -212,6 +212,6 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         errors={errors}
         required
       />
-    </span>
+    </span> */}
   </Group>
 )

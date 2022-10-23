@@ -26,9 +26,9 @@ export default async function createApplication(
       first_time,
       participation,
       criteria_met,
-      MLH_code_of_conduct,
-      MLH_privacy_policy,
-      MLH_communication,
+      // MLH_code_of_conduct,
+      // MLH_privacy_policy,
+      // MLH_communication,
       applied_after_limit,
     } = req.body
 
@@ -66,9 +66,9 @@ export default async function createApplication(
           firstTimeHacker: first_time,
           participation,
           criteriaMet: criteria_met,
-          MLHAcknowledgement: Boolean(
-            MLH_code_of_conduct && MLH_privacy_policy && MLH_communication
-          ),
+          // MLHAcknowledgement: Boolean(
+          //   MLH_code_of_conduct && MLH_privacy_policy && MLH_communication
+          // ),
           qualified: '',
           admin: false,
           appliedAt: new Date(),

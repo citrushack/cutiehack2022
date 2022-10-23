@@ -85,9 +85,9 @@ export function ApplicationForm() {
     resume,
     first_time,
     participation,
-    MLH_code_of_conduct,
-    MLH_privacy_policy,
-    MLH_communication,
+    // MLH_code_of_conduct,
+    // MLH_privacy_policy,
+    // MLH_communication,
   }) => {
     if (clickedSubmitOnce) {
       return
@@ -119,9 +119,9 @@ export function ApplicationForm() {
         first_time,
         participation,
         criteria_met,
-        MLH_code_of_conduct,
-        MLH_privacy_policy,
-        MLH_communication,
+        // MLH_code_of_conduct,
+        // MLH_privacy_policy,
+        // MLH_communication,
         applied_after_limit,
       })
       .then(() => {
