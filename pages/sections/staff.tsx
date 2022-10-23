@@ -25,13 +25,21 @@ export default function Staff() {
       </div>
       <TeamGrid />
       <div className="pt-10 md:pt-20 flex flex-col justify-center">
-        <p className="text-text font-baloo_semi_bold">Committee Members</p>
-        <div className="flex flex-col text-center text-sub font-baloo_regular">
-          <p>Valerie Wong</p>
-          <p>Theo Fernandez</p>
-          <p>Andrei Dimaano</p>
-          <p>Raidah Fairooz</p>
-          <p>Nicholas Chao</p>
+        <p className="text-text font-baloo_semi_bold text-center pb-4">Committee Members</p>
+        <div className="grid grid-cols-2 text-center text-sub font-baloo_regular">
+          <div>
+            <p className="text-text font-baloo_semi_bold">Web Development</p>
+            <p>Valerie Wong</p>
+            <p>Theo Fernandez</p>
+            <p>Andrei Dimaano</p>
+            <p>Raidah Fairooz</p>
+            <p>Nicholas Chao</p>
+          </div>
+          <div>
+            <p className="text-text font-baloo_semi_bold">Marketing</p>
+            <p>Natalie Jung</p>
+            <p>Elaine Lin</p>
+          </div>
         </div>
       </div>
     </section>
