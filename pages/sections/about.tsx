@@ -9,9 +9,10 @@ export default function About() {
         <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-3xl px-10">
           <span className="flex whitespace-nowrap items-center">
             <p className="text-5xl font-baloo_semi_bold text-text">About Us</p>
-            <Image src={staffLineRight} alt="lineright" />
+            {/* <Image src={staffLineRight} alt="lineright" /> */}
+            <div className="inline bg-gradient-to-r from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
           </span>
-          <p className="text-text font-baloo_regular z-20 text-lg md:text-xl">
+          <p className="text-text font-baloo_regular text-lg md:text-xl z-50">
             Cutie Hack is a virtual 12-hour, beginner-oriented hackathon hosted
             by students at the University of California, Riverside. Hackers are
             challenged with creating a cool project within the timeframe to demo
@@ -25,7 +26,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex absolute opacity-50 md:opacity-100 md:static z-10 flex-col">
+      <div className="flex absolute opacity-20 md:opacity-100 md:static z-10 flex-col">
         <motion.div
           animate={{ y: [0, -30, 0] }}
           transition={{
