@@ -7,6 +7,7 @@ interface ButtonProps {
   label: string
   skinny?: boolean
   minWidth?: boolean
+  opposite?: boolean
 }
 
 const Button = ({
@@ -15,6 +16,7 @@ const Button = ({
   label,
   skinny,
   minWidth,
+  opposite,
 }: ButtonProps) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
@@ -27,7 +29,8 @@ const Button = ({
         ? 'bg-third hover:bg-highlight '
         : 'hover:bg-accent-sub ') +
       (skinny ? 'py-1.5 ' : 'h-11 md:max-w-[16rem] text-lg ') +
-      (minWidth ? 'md:w-auto' : '')
+      (minWidth ? 'md:w-auto' : '') +
+      (opposite ? 'text-opposite': '')
     }
   >
     {label}
@@ -55,6 +58,7 @@ interface ButtonLinkProps {
   skinny?: boolean
   /** Decides whether the button is the minimum width needed to contain its label. */
   minWidth?: boolean
+  opposite?: boolean
 }
 
 /** Button that links to an internal or external source. */
@@ -66,6 +70,7 @@ export const ButtonLink = ({
   external,
   skinny,
   minWidth,
+  opposite,
 }: ButtonLinkProps) => (
   <>
     {external ? (
@@ -81,6 +86,7 @@ export const ButtonLink = ({
           label={label}
           skinny={skinny}
           minWidth={minWidth}
+          opposite={opposite}
         />
       </a>
     ) : (
@@ -92,6 +98,7 @@ export const ButtonLink = ({
             label={label}
             skinny={skinny}
             minWidth={minWidth}
+            opposite={opposite}
           />
         </span>
       </Link>

@@ -52,7 +52,7 @@ export default function Support() {
               }
             >
               {/* <h3 className="text-text font-baloo_semi_bold px-4">{title}</h3> */}
-              <ButtonLink link={buttonLink} label={title} external />
+              <ButtonLink link={buttonLink} label={title} external opposite/>
             </div>
             {/* <SupportCard
               title={title}

@@ -6,11 +6,11 @@ export default function Tracks() {
     <section className="flex flex-col w-full items-center pb-10 pt-40 md:pt-0 bg-pattern bg-repeat">
       <div className="flex justify-between pb-4 items-center">
         {/* <Image src={staffLineLeft} alt="lineleft" className="inline" /> */}
-        <div className="inline bg-gradient-to-l from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
-        <span className="whitespace-nowrap px-12 text-3xl md:text-5xl font-baloo_semi_bold text-text">
+        <div className="inline bg-gradient-to-l from-opposite to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
+        <span className="whitespace-nowrap px-12 text-3xl md:text-5xl font-baloo_semi_bold text-opposite">
           Tracks
         </span>
-        <div className="inline bg-gradient-to-r from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
+        <div className="inline bg-gradient-to-r from-opposite to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
         {/* <div className="inline bg-gradient-to-r from-text to-transparent w-full h-1 items-center rounded-md"></div> */}
         {/* <Image src={staffLineRight} alt="lineright" className="inline" /> */}
       </div>
@@ -25,7 +25,7 @@ export default function Tracks() {
             objectFit="contain"
             alt="plants"
           />
-          <p className="font-baloo_semi_bold text-text text-md md:text-2xl">
+          <p className="font-baloo_semi_bold text-opposite text-md md:text-2xl">
             Sustainability
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function Tracks() {
             objectFit="contain"
             alt="lightbulb"
           />
-          <p className="font-baloo_semi_bold text-text text-md md:text-2xl">
+          <p className="font-baloo_semi_bold text-opposite text-md md:text-2xl">
             Innovation
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Tracks() {
             objectFit="contain"
             alt="laptop"
           />
-          <p className="font-baloo_semi_bold text-text text-md md:text-2xl">
+          <p className="font-baloo_semi_bold text-opposite text-md md:text-2xl">
             Optimization
           </p>
         </div>

@@ -24,6 +24,7 @@ module.exports = {
         baloo_bold: ["BalooPaaji2Bold"]
       },
       colors: {
+        opposite: 'var(--opposite)',
         transparent: 'var(--transparent)',
         text: 'var(--text)',
         buttons: 'var(--buttons)',

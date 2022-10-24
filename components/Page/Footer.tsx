@@ -28,7 +28,7 @@ export default function Footer() {
     <div className="flex flex-col w-screen bg-pattern bg-repeat">
       <footer className="w-full z-30 pb-10 pt-5 md:pt-0 md:pb-20">
         <div className="flex flex-col justify-center mx-auto items-center">
-          <div className="flex flex-row mb-2 font-baloo_semi_bold text-sm md:text-2xl text-text">
+          <div className="flex flex-row mb-2 font-baloo_semi_bold text-sm md:text-2xl text-opposite">
             <p>Made with &lt;3 by Cutie Hack team.</p>
           </div>
           <div className="flex flex-row justify-center mx-auto">
@@ -40,7 +40,7 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       target="_blank"
                       title={link.title}
-                      className="fill-current text-text hover:text-gray-500"
+                      className="fill-current text-opposite hover:text-gray-500"
                     >
                       {link.image}
                     </a>
