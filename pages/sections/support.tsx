@@ -38,9 +38,7 @@ export default function Support() {
       <p className="mb-10 text-center max-w-lg md:max-w-2xl">
         Not interested in hacking but still want to participate? Great! We would
         love to have you on board. Fill out the forms below if you’d like to
-        help hackers throughout the day! Not interested in hacking but still
-        want to participate? Great! We would love to have you on board. Fill out
-        the forms below if you’d like to help hackers throughout the day!
+        help hackers throughout the day!
       </p>
       <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-center gap-6 mb-12">
         {cards.map(({ title, description, buttonLabel, buttonLink }) => (
