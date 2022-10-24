@@ -94,7 +94,7 @@ export function ApplicationForm() {
     }
     setClickedSubmitOnce(Boolean(true))
 
-    let applied_after_limit = data.numUsersInperson >= 2 ? true : false
+    let applied_after_limit = data.numUsersInperson >= 350 ? true : false
 
     // generate other user attributes
     let criteria_met = determineCriteriaMet(grad_date, grade)
