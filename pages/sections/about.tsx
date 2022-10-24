@@ -15,7 +15,7 @@ export default function About() {
             <div className="inline bg-gradient-to-r from-opposite to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
           </span>
           <p className="text-opposite font-baloo_regular text-lg md:text-xl z-50">
-            Cutie Hack is a virtual 12-hour, beginner-oriented hackathon hosted
+            Cutie Hack is a hybrid 12-hour, beginner-oriented hackathon hosted
             by students at the University of California, Riverside. Hackers are
             challenged with creating a cool project within the timeframe to demo
             in order to win awesome prizes. Cutie Hack will also be hosting
