@@ -13,7 +13,7 @@ import useSWR from 'swr'
 
 export function ApplicationForm() {
   const fetcher = (url) => fetch(url).then((res) => res.json())
-  const { data, error } = useSWR('/api/users/count', fetcher, {
+  const { data, error } = useSWR('/api/users/count-in-person', fetcher, {
     onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
       // Never retry on 404.
       if (error.status === 404) return
@@ -94,7 +94,7 @@ export function ApplicationForm() {
     }
     setClickedSubmitOnce(Boolean(true))
 
-    let applied_after_limit = data.numUsers >= 350 ? true : false
+    let applied_after_limit = data.numUsersInperson >= 2 ? true : false
 
     // generate other user attributes
     let criteria_met = determineCriteriaMet(grad_date, grade)
