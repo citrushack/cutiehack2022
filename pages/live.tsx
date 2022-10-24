@@ -14,8 +14,8 @@ import Faq from './sections/faq'
 
 import desktopLamps from '../public/assets/desktopLamps.svg'
 import mobileLamps from '../public/assets/mobileLamps2.svg'
-import mobileMountains from '../public/assets/mountains4.svg'
-import desktopMountains from '../public/assets/mountains2.svg'
+import mobileMountains from '../public/assets/mountains4.png'
+import desktopMountains from '../public/assets/mountains2.png'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -71,7 +71,7 @@ export default function Live() {
               placeholder="blur"
               blurDataURL="/assets/desktopLampsBlur.png"
               priority={Boolean(true)}
-              quality={1}
+              quality={100}
             />
           </motion.span>
           {/* <span className="absolute max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu"></span> */}
@@ -82,7 +82,7 @@ export default function Live() {
               placeholder="blur"
               blurDataURL="/assets/mountains4blur.png"
               priority={Boolean(true)}
-              quality={1}
+              quality={100}
             />
           </span>
           <span className="hidden md:flex self-end absolute right-0 bottom-0">

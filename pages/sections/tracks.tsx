@@ -17,10 +17,10 @@ export default function Tracks() {
       <div className="flex flex-col md:flex-row justify-center md:gap-20 gap-y-5 md:gap-y-0">
         <div className="flex flex-col justify-center items-center max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu">
           <Image
-            src="/assets/plants.svg"
+            src="/assets/plants.png"
             width={200}
             height={200}
-            quality={1}
+            quality={100}
             priority={Boolean(true)}
             objectFit="contain"
             alt="plants"
@@ -31,10 +31,10 @@ export default function Tracks() {
         </div>
         <div className="flex flex-col justify-center items-center max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu">
           <Image
-            src="/assets/lightbulb.svg"
+            src="/assets/lightbulb.png"
             width={200}
             height={200}
-            quality={1}
+            quality={100}
             priority={Boolean(true)}
             objectFit="contain"
             alt="lightbulb"
@@ -45,10 +45,10 @@ export default function Tracks() {
         </div>
         <div className="flex flex-col justify-center items-center max-w-[10rem] md:max-w-[10rem] lg:max-w-[30rem] lg:w-5/12 xl:w-full transform-gpu">
           <Image
-            src="/assets/laptop.svg"
+            src="/assets/laptop.png"
             width={200}
             height={200}
-            quality={1}
+            quality={100}
             priority={Boolean(true)}
             objectFit="contain"
             alt="laptop"
