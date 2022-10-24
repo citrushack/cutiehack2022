@@ -30,7 +30,7 @@ export default function Support() {
     <section className="flex flex-col w-full h-full max-w-[60rem] my-12 lg:mt-0 justify-center items-center pt-10">
       <div className="flex justify-between pb-4 items-center">
         <div className="inline bg-gradient-to-l from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
-        <h1 className="text-center text-3xl md:text-5xl font-baloo_medium px-4">
+        <h1 className="text-center text-3xl md:text-5xl font-baloo_bold px-4">
           Support
         </h1>
         <div className="inline bg-gradient-to-r from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />

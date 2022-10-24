@@ -14,9 +14,9 @@ export default function Staff() {
           quality={1}
         /> */}
         <div className="inline bg-gradient-to-l from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
-        <span className="whitespace-nowrap px-4 text-5xl font-baloo_medium text-text">
+        <h1 className="whitespace-nowrap px-4 text-5xl font-baloo_bold text-text">
           Staff
-        </span>
+        </h1>
         {/* <Image
           src={staffLineRight}
           alt="lineright"
@@ -29,7 +29,7 @@ export default function Staff() {
       <div className="pt-10 md:pt-20 flex flex-col justify-center">
         <div className="flex justify-between pb-4 items-center">
           <div className="inline bg-gradient-to-l from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
-          <p className="text-text font-baloo_semi_bold text-center px-4">
+          <p className="text-text text-xl font-baloo_semi_bold text-center px-4">
             Committee Members
           </p>
           <div className="inline bg-gradient-to-r from-text to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
