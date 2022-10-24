@@ -43,7 +43,7 @@ export const Sponsor = ({
           height={height}
           objectFit="contain"
           quality={1}
-          priority={Boolean(false)}
+          priority={Boolean(true)}
         />
       </a>
     </motion.div>
