@@ -43,7 +43,7 @@ export default function About() {
             width={558}
             height={500}
             quality={1}
-            priority={Boolean(true)}
+            priority={Boolean(false)}
             objectFit="contain"
             alt="lamps"
           />
@@ -55,7 +55,7 @@ export default function About() {
             width={615}
             height={600}
             quality={1}
-            priority={Boolean(true)}
+            priority={Boolean(false)}
             objectFit="contain"
             alt="hand"
           />

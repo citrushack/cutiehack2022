@@ -21,7 +21,7 @@ export default function Tracks() {
             width={200}
             height={200}
             quality={1}
-            priority={Boolean(true)}
+            priority={Boolean(false)}
             objectFit="contain"
             alt="plants"
           />
@@ -35,7 +35,7 @@ export default function Tracks() {
             width={200}
             height={200}
             quality={1}
-            priority={Boolean(true)}
+            priority={Boolean(false)}
             objectFit="contain"
             alt="lightbulb"
           />
@@ -49,7 +49,7 @@ export default function Tracks() {
             width={200}
             height={200}
             quality={1}
-            priority={Boolean(true)}
+            priority={Boolean(false)}
             objectFit="contain"
             alt="laptop"
           />
