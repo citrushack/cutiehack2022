@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-          <link rel="preload" as="image" href="/assets/logo.svg" />
+          <link rel="preload" as="image" href="/assets/BigLogo.svg" />
           <link rel="preload" as="image" href="/assets/aboutuslamps.svg" />
           <link rel="preload" as="image" href="/assets/aboutUsStars.svg" />
           <link rel="preload" as="image" href="/assets/BigLogo.svg" />
@@ -55,6 +55,77 @@ export default class MyDocument extends Document {
           <link rel="preload" as="image" href="/assets/mountains4.svg" />
           <link rel="preload" as="image" href="/assets/mountains4blur.png" />
           <link rel="preload" as="image" href="/assets/plants.svg" />
+          <link rel="preload" as="image" href="/assets/sponsors/acm-dark.svg" />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/acm-light.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/google-cloud.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/ieee-dark.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/ieee-light.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/interview-cake-dark.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/interview-cake-light.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/redbull-black.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/redbull-white.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/sketch-dark.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/sketch-light.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/triad-dark.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/triad-light.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/wolfram-dark.svg"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/sponsors/wolfram-light.svg"
+          />
         </Head>
         <body className="custom_class">
           <Main />
