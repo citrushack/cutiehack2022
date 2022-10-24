@@ -27,13 +27,13 @@ const Home: NextPage = () => {
         name="Home"
         className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
-        <span className="flex relative justify-center w-full items-center bg-pattern bg-repeat bg-contain">
+        <span className="flex relative justify-center w-full items-center">
           <svg
             viewBox="0 0 1920 1300"
             height="100%"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
-            className="absolute w-full top-0 z-10"
+            className="absolute w-full top-0 z-50 bg-pattern bg-repeat"
           >
             <path
               d="M0 1570V0H489.347C516.147 129.023 1124.91 272.686 1007.24 435.38C865.529 631.322 1089.25 661.401 983.034 777.872C876.813 894.343 970.587 967.341 1148.04 1001.87C1325.5 1036.4 1436.07 1205.55 1688.09 1157.97C1801.82 1136.5 1860.09 1209.31 1910.43 1282.12C1913.65 1286.78 1916.84 1291.43 1920 1296.07V1569.99L0 1570Z"
@@ -115,11 +115,11 @@ const Home: NextPage = () => {
         name="Support"
         className="flex justify-center w-full bg-gradient-to-b from-accent to-card"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat 2xl:bg-cover">
           <Support />
         </span>
       </Element>
-      <Element name="Sponsors">
+      <Element name="Sponsors" className="bg-pattern bg-repeat w-full">
         <Sponsors />
       </Element>
       <Wave type={2} bgColor="#FFFFFF" fillColor="from" />
