@@ -30,7 +30,7 @@ const Button = ({
         : 'hover:bg-accent-sub ') +
       (skinny ? 'py-1.5 ' : 'h-11 md:max-w-[16rem] text-lg ') +
       (minWidth ? 'md:w-auto' : '') +
-      (opposite ? 'text-opposite': '')
+      (opposite ? 'text-opposite' : '')
     }
   >
     {label}
