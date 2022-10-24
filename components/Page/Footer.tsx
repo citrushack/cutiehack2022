@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="flex flex-row mb-2 font-baloo_semi_bold text-sm md:text-2xl text-text">
             <p>Made with &lt;3 by Cutie Hack team.</p>
           </div>
-          {/* <div className="flex flex-row justify-center mx-auto">
+          <div className="flex flex-row justify-center mx-auto">
             {SocialLinks.map((link) => {
               return (
                 <div key={link.path} className="flex justify-center mr-1">
@@ -50,7 +50,7 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       target="_blank"
                       title={link.title}
-                      className="fill-current text-white hover:text-gray-500"
+                      className="fill-current text-text hover:text-gray-500"
                     >
                       {link.image}
                     </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                 </div>
               )
             })}
-          </div> */}
+          </div>
         </div>
       </footer>
     </div>
