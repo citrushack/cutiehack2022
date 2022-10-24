@@ -7,11 +7,6 @@ import { Wave } from '../Wave'
 
 const SocialLinks = [
   {
-    path: 'https://www.facebook.com/cutiehack/',
-    title: 'Facebook',
-    image: <FaFacebook size="20"></FaFacebook>,
-  },
-  {
     path: 'https://www.instagram.com/cutiehack_ucr/',
     title: 'Instagram',
     image: <FaInstagram size="20"></FaInstagram>,
@@ -20,11 +15,6 @@ const SocialLinks = [
     path: 'https://www.linkedin.com/company/17907222/admin/',
     title: 'LinkedIn',
     image: <FaLinkedin size="20"></FaLinkedin>,
-  },
-  {
-    path: 'https://twitter.com/citrushack',
-    title: 'Twitter',
-    image: <FaTwitter size="20"></FaTwitter>,
   },
   {
     path: 'mailto:citrushack@gmail.com',
