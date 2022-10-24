@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "BalooPaaji2Bold";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-SemiBold.ttf")
+}
+@font-face {
+  font-family: "BalooPaaji2Reg";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Regular.ttf");
+}
+@font-face {
+  font-family: "BalooPaaji2Medium";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Medium.ttf");
+}
+@font-face {
+  font-family: "BalooPaaji2Bold";
+  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Bold.ttf");
+}
+@layer base {
+  :root {
+    /* default light theme */
+    --overlay: #00000059;
+    --buttons: #F09372;
+    --primary: #FFD5C3;
+    --secondary: #DFDFDF;
+    --third: #B56B83;
+    --sub-secondary: #7A5770;
+    --highlight: #F09372;
+    --card: #AB6F82;
+    --text: #FFFFFF;
+    --opposite: #FFFFFF;
+    --sub: #F6DD5A;
+    --from: #190E56;
+    --wave-from: #65385D;
+    --wave-via: #FF8E6A;
+    --wave-to: #B56B83;
+    --via: #65385D;
+    --via2: #FF8E6A;
+    --to: #B56B83;
+    --transparent: #0000;
+    --pattern: url('/assets/aboutUsStars.svg');
+  }
+
+  [data-theme='light'] {
+    --buttons: #F09372;
+    --overlay: #00000059;
+    --primary: #FFD5C3;
+    --secondary: #DFDFDF;
+    --third: #B56B83;
+    --sub-secondary: #7A5770;
+    --highlight: #F09372;
+    --card: #AB6F82;
+    --text: #000000;
+    --opposite: #FFFFFF;
+    --sub: #F6DD5A;
+    --from: #190E56;
+    --via: #B56B83;
+    --to: #FF8E6A;
+    --transparent: #0000;
+    --pattern: url('/assets/aboutUsStars.svg');
+  }
+
+  [data-theme='dark'] {
+    --buttons: #F09372;
+    --overlay: #00000080;
+    --primary: #110A36;
+    --secondary: #353535;
+    --third: #B56B83;
+    --sub-secondary: #7A5770;
+    --highlight: #F09372;
+    --card: #AB6F82;
+    --text: #FFFFFF;
+    --opposite: #FFFFFF;
+    --sub: #F6DD5A;
+    --from: #190E56;
+    --via: #B56B83;
+    --to: #FF8E6A;
+    --transparent: #0000;
+    --pattern: url('/assets/aboutUsStars.svg');
+  }
+}
+
+/* * {
+  border: 2px solid greenyellow;
+} */
+
+html, body {
+  width: 100% !important;
+  background-color: var(--primary);
+}
+
+.min-safe-h-screen {
+  /* equivalent to 100dvh in major browsers */
+  min-height: calc(
+    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0)
+  ) !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .min-safe-h-screen {
+    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
+    min-height: -webkit-fill-available !important;
+  }
+}

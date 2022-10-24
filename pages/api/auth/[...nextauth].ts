@@ -1,9 +1,12 @@
+import { createTransport } from 'nodemailer'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import NextAuth from 'next-auth'
 import EmailProvider from 'next-auth/providers/email'
 import GoogleProvider from 'next-auth/providers/google'
+import GithubProvider from 'next-auth/providers/github'
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from 'lib/mongodb'
+import { htmlEmail, textEmail } from 'lib/verificationMailContent'
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   return await NextAuth(req, res, {
@@ -15,6 +18,10 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         clientId: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       }),
+      GithubProvider({
+        clientId: process.env.GITHUB_ID,
+        clientSecret: process.env.GITHUB_SECRET,
+      }),
       EmailProvider({
         server: {
           host: process.env.EMAIL_SERVER_HOST,
@@ -25,6 +32,21 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
           },
         },
         from: process.env.EMAIL_FROM,
+        async sendVerificationRequest({
+          identifier: email,
+          url,
+          provider: { server, from },
+        }) {
+          const { host } = new URL(url)
+          const transport = createTransport(server)
+          await transport.sendMail({
+            to: email,
+            from,
+            subject: `Sign in to ${host}`,
+            text: textEmail({ url, host }),
+            html: htmlEmail({ url, host, email }),
+          })
+        },
       }),
     ],
     callbacks: {
@@ -37,6 +59,12 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
             last: String(profile.family_name),
           }
         }
+        if (account.provider === 'github') {
+          user.name = {
+            first: null,
+            last: null,
+          }
+        }
         return true
       },
       async session({ session, user }) {
@@ -47,6 +75,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         session.user.admin = user.admin
         session.user.checkedIn = user.checkedIn
         session.user.participation = user.participation
+        session.user.applied_after_limit = user.applied_after_limit
         return session
       },
     },
