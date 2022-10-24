@@ -47,14 +47,14 @@ export default class MyDocument extends Document {
           <link rel="preload" as="image" href="/assets/BigLogo.svg" />
           <link rel="preload" as="image" href="/assets/blurredLogo.png" />
           <link rel="preload" as="image" href="/assets/hand2.svg" />
-          <link rel="preload" as="image" href="/assets/laptop.svg" />
-          <link rel="preload" as="image" href="/assets/lightbulb.svg" />
+          <link rel="preload" as="image" href="/assets/laptop.png" />
+          <link rel="preload" as="image" href="/assets/lightbulb.png" />
           <link rel="preload" as="image" href="/assets/mobileLamps2.svg" />
           <link rel="preload" as="image" href="/assets/mobileLampsBlur.png" />
           <link rel="preload" as="image" href="/assets/mountain2blur.png" />
           <link rel="preload" as="image" href="/assets/mountains4.svg" />
           <link rel="preload" as="image" href="/assets/mountains4blur.png" />
-          <link rel="preload" as="image" href="/assets/plants.svg" />
+          <link rel="preload" as="image" href="/assets/plants.png" />
           <link rel="preload" as="image" href="/assets/sponsors/acm-dark.svg" />
           <link
             rel="preload"

@@ -15,8 +15,8 @@ import { Wave } from '@/components/Wave'
 
 import desktopLamps from '../public/assets/desktopLamps.svg'
 import mobileLamps from '../public/assets/mobileLamps2.svg'
-import mobileMountains from '../public/assets/mountains4.svg'
-import desktopMountains from '../public/assets/mountains2.svg'
+import mobileMountains from '../public/assets/mountains4.png'
+import desktopMountains from '../public/assets/mountains2.png'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
               placeholder="blur"
               blurDataURL="/assets/mountains4blur.png"
               priority={Boolean(true)}
-              quality={1}
+              quality={100}
             />
           </span>
           <span className="hidden md:flex self-end absolute right-0 bottom-0">
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
               placeholder="blur"
               blurDataURL="/assets/mountain2blur.png"
               priority={Boolean(true)}
-              quality={1}
+              quality={100}
             />
           </span>
           <Landing />
