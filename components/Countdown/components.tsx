@@ -28,13 +28,13 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
                 key={label + String(idx)}
                 variants={buttonVariants}
                 whileHover="hover"
-                className="flex justify-center items-center w-8 xs:w-11 sm:w-14 h-8 xs:h-11 sm:h-14 rounded bg-secondary shadow-md cursor-default font-baloo_medium"
+                className="flex justify-center items-center w-8 xs:w-8 sm:w-10 h-8 xs:h-8 sm:h-10 rounded bg-secondary shadow-md cursor-default font-baloo_medium"
               >
                 {n}
               </motion.div>
             ))}
           </div>
-          <p className="absolute top-8 xs:top-10 sm:top-[3.25rem] text-lg xs:text-xl leading-3 font-baloo_semi_bold pt-2">
+          <p className="absolute top-8 xs:top-10 sm:top-[3.25rem] text-lg xs:text-xl leading-3 font-baloo_semi_bold pt-2 md:pt-0">
             {label}
           </p>
         </div>
@@ -127,7 +127,7 @@ export function CountdownWrapper({ date }) {
   })
 
   return (
-    <h2 className="text-2xl xs:text-4xl sm:text-5xl">
+    <h2 className="text-xl xs:text-2xl sm:text-3xl">
       <Countdown date={date} renderer={renderer} />
     </h2>
   )
@@ -214,7 +214,7 @@ export function HackerCountdownWrapper({ date }) {
   })
 
   return (
-    <h2 className="text-2xl xs:text-4xl sm:text-5xl">
+    <h2 className="text-xl xs:text-2xl sm:text-3xl">
       <Countdown date={date} renderer={hackingRenderer} />
     </h2>
   )
