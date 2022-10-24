@@ -61,7 +61,6 @@ export default function Landing() {
             <SignupCounter />
           </span>
 
-          {/* TODO: uncomment this when signups reach over 300+ */}
           {status == 'authenticated' && session.user.applied_after_limit && (
             <p className="font-baloo_regular text-center pb-6 max-w-sm">
               We reached our participants limit! Feel free to still come out but
