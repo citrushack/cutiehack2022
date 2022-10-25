@@ -163,8 +163,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         <>
           <div className="mb-2">
             <span className="font-medium">
-              Only UCR students can participate in-person. (Though exemptions
-              may be made.)
+              Only UCR students can participate in-person.
             </span>{' '}
             In-person participants will also get free food, swag, and a chance
             to network with real engineers.
