@@ -122,6 +122,6 @@ export default async function createApplication(
 
     res.status(200).json({})
   } else {
-    res.status(401).json({ not_session: 'reject' })
+    res.status(401).json({})
   }
 }
