@@ -32,6 +32,52 @@ export default async function createApplication(
       applied_after_limit,
     } = req.body
 
+    const bool_list = [true, false]
+
+    // input validation
+    if (uid.length != 21) {
+      return res.status(400).json({ errror: 'An Error has occrured.' })
+    }
+    if (first_name.length > 35 || last_name.length > 35) {
+      return res.status(400).json({ errror: 'An Error has occrured.' })
+    }
+    var expression = /[a-zA-Z]/g
+    if (expression.test(phone_number) || phone_number.trim().length > 12) {
+      return res.status(400).json({ errror: 'An error has occrured.' })
+    }
+    const food_preference_options = ['Meat', 'Vegetarian', 'Nut Allergy']
+    if (!food_preference_options.includes(food_preference)) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+    const participation_options = ['In-Person', 'Online']
+    if (!participation_options.includes(participation)) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+    const first_time_hacker_options = ['Yes', 'No']
+    if (!first_time_hacker_options.includes(first_time)) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+    if (ethnicity.length > 64) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+    const gender_options = [
+      'Male',
+      'Female',
+      'Nonbinary',
+      'Other',
+      'Prefer not to say',
+    ]
+    if (!gender_options.includes(gender)) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+    const shirt_size_options = ['S', 'M', 'L', 'XL']
+    if (!shirt_size_options.includes(shirt_size)) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+    if (major.length > 64) {
+      return res.status(400).json({ errror: 'An error has occured.' })
+    }
+
     // send email notification to user applying
     await sendEmail({
       email: session.user.email,
@@ -79,6 +125,6 @@ export default async function createApplication(
 
     res.status(200).json({})
   } else {
-    res.status(401).json({})
+    res.status(401).json({ not_session: 'reject' })
   }
 }
