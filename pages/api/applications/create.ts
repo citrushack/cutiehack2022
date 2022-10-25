@@ -35,9 +35,6 @@ export default async function createApplication(
     const bool_list = [true, false]
 
     // input validation
-    if (uid.length != 21) {
-      return res.status(400).json({ errror: 'An Error has occrured.' })
-    }
     if (first_name.length > 35 || last_name.length > 35) {
       return res.status(400).json({ errror: 'An Error has occrured.' })
     }
