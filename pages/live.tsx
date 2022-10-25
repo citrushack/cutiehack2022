@@ -13,7 +13,7 @@ import Footer from '@/components/Page/Footer'
 import Faq from './sections/faq'
 
 import desktopLamps from '../public/assets/desktopLamps.svg'
-import mobileLamps from '../public/assets/mobileLamps2.svg'
+import mobileLamps from '../public/assets/mobileLamps.png'
 import mobileMountains from '../public/assets/mountains4.png'
 import desktopMountains from '../public/assets/mountains2.png'
 
@@ -54,7 +54,7 @@ export default function Live() {
               placeholder="blur"
               blurDataURL="/assets/mobileLampsBlur.png"
               priority={Boolean(true)}
-              quality={1}
+              quality={100}
             />
           </motion.span>
           <motion.span
