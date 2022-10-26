@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Citrus Hack, a 24-hour hackathon hosted at University of California, Riverside."
+            content="Cutie Hack, a 12-hour hackathon hosted at University of California, Riverside."
           />
           <link rel="icon" href="/favicon.ico" />
           <link

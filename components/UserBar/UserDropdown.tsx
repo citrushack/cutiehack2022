@@ -25,7 +25,7 @@ export function UserDropdown() {
     toast(
       <div className="flex flex-col gap-3 text-base">
         <span>
-          This determines your eligibility to participate in Citrus Hack.
+          This determines your eligibility to participate in Cutie Hack.
         </span>
         <span>
           Application status will be updated within 24 hours, and you will
@@ -44,7 +44,7 @@ export function UserDropdown() {
     toast(
       <div className="flex flex-col gap-3 text-base">
         <span>
-          By checking in, you confirm your participation in Citrus Hack 2022.
+          By checking in, you confirm your participation in Cutie Hack 2022.
         </span>
       </div>,
       {
