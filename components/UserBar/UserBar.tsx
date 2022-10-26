@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { useSession, signIn } from 'next-auth/react'
-import { UserDropdown } from './UserDropdown'
-import Modal from '@/components/Modal'
-import { SigninForm } from '@/components/Form/SigninForm'
-import { ThemeButton } from '@/components/UserBar/ThemeButton'
-import Nav from '@/components/Page/Nav'
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useSession, signIn } from "next-auth/react";
+import { UserDropdown } from "./UserDropdown";
+import Modal from "@/components/Modal";
+import { SigninForm } from "@/components/Form/SigninForm";
+import { ThemeButton } from "@/components/UserBar/ThemeButton";
+import Nav from "@/components/Page/Nav";
 
 /** Wrapper containing user-action buttons (e.g. sign in, apply, user dropdown, theme button, etc.). */
 export function UserBar() {
   // const router = useRouter()
-  const { data: session, status } = useSession()
-  const [signinModalOpen, setSigninModalOpen] = useState(false)
+  const { data: session, status } = useSession();
+  const [signinModalOpen, setSigninModalOpen] = useState(false);
 
   const toggleSigninModal = () => {
-    setSigninModalOpen(!signinModalOpen)
-  }
+    setSigninModalOpen(!signinModalOpen);
+  };
 
   const handleSignin = (e: { preventDefault: () => void }) => {
-    e.preventDefault()
-    signIn()
-  }
+    e.preventDefault();
+    signIn();
+  };
 
   return (
     <>
@@ -57,12 +57,12 @@ export function UserBar() {
       </div>
       <Modal
         title="Sign In"
-        description="Sign in to Citrus Hack via Google to apply and access more. No password required."
+        description="Sign in to Cutie Hack via Google to apply and access more. No password required."
         show={signinModalOpen}
         handler={setSigninModalOpen}
       >
         <SigninForm />
       </Modal>
     </>
-  )
+  );
 }

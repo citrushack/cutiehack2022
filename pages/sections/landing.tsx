@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { useTheme } from 'next-themes'
-import { motion } from 'framer-motion'
-import { useSession } from 'next-auth/react'
-import { CountdownWrapper } from '@/components/Countdown'
-import { ButtonLink } from '@/components/ButtonLink'
-import Modal from '@/components/Modal'
-import { SigninForm } from '@/components/Form/SigninForm'
-import SignupCounter from '@/components/SignupCounter'
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
+import { useSession } from "next-auth/react";
+import { CountdownWrapper } from "@/components/Countdown";
+import { ButtonLink } from "@/components/ButtonLink";
+import Modal from "@/components/Modal";
+import { SigninForm } from "@/components/Form/SigninForm";
+import SignupCounter from "@/components/SignupCounter";
 
 export default function Landing() {
-  const [mounted, setMounted] = useState(false)
-  const { data: session, status } = useSession()
-  const [signinModalOpen, setSigninModalOpen] = useState(false)
+  const [mounted, setMounted] = useState(false);
+  const { data: session, status } = useSession();
+  const [signinModalOpen, setSigninModalOpen] = useState(false);
 
   const toggleSigninModal = () => {
-    setSigninModalOpen(!signinModalOpen)
-  }
+    setSigninModalOpen(!signinModalOpen);
+  };
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <>
@@ -61,14 +61,14 @@ export default function Landing() {
             <SignupCounter />
           </span>
 
-          {status == 'authenticated' && session.user.applied_after_limit && (
+          {status == "authenticated" && session.user.applied_after_limit && (
             <p className="font-baloo_regular text-center pb-6 max-w-sm">
               We reached our participants limit! Feel free to still come out but
               we can no longer guarantee a meal/shirt.
             </p>
           )}
 
-          {status === 'authenticated' && !session.user.uid && (
+          {status === "authenticated" && !session.user.uid && (
             <span className="flex justify-center z-[200]">
               <ButtonLink primary label="Apply Now" link="/apply" />
             </span>
@@ -88,17 +88,17 @@ export default function Landing() {
           )}
           <div className="flex flex-col w-full gap-3 px-20 md:px-0">
             {/* uncomment the day before */}
-            {status === 'authenticated' &&
+            {status === "authenticated" &&
               session.user.uid &&
-              session.user.qualified === 'yeah' &&
+              session.user.qualified === "yeah" &&
               !session.user.checkedIn && (
                 <span className="flex justify-center w-full z-[200]">
                   <ButtonLink primary label="Check-In Now!" link="/checkin" />
                 </span>
               )}
-            {status === 'authenticated' &&
+            {status === "authenticated" &&
               session.user.uid &&
-              session.user.qualified === 'yeah' && (
+              session.user.qualified === "yeah" && (
                 <>
                   <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
@@ -122,12 +122,12 @@ export default function Landing() {
       </section>
       <Modal
         title="Sign In"
-        description="Sign in to Citrus Hack via Google to apply and access more. No password required."
+        description="Sign in to Cutie Hack via Google to apply and access more. No password required."
         show={signinModalOpen}
         handler={setSigninModalOpen}
       >
         <SigninForm />
       </Modal>
     </>
-  )
+  );
 }
