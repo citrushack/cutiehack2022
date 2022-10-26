@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
-import { useSession } from "next-auth/react";
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { useTheme } from 'next-themes'
+import { motion } from 'framer-motion'
+import { useSession } from 'next-auth/react'
 import {
   CountdownWrapper,
   HackerCountdownWrapper,
-} from "@/components/Countdown";
-import { ButtonLink } from "@/components/ButtonLink";
-import Modal from "@/components/Modal";
-import { SigninForm } from "@/components/Form/SigninForm";
-import SignupCounter from "@/components/SignupCounter";
+} from '@/components/Countdown'
+import { ButtonLink } from '@/components/ButtonLink'
+import Modal from '@/components/Modal'
+import { SigninForm } from '@/components/Form/SigninForm'
+import SignupCounter from '@/components/SignupCounter'
 
 export default function Landing() {
-  const [mounted, setMounted] = useState(false);
-  const { data: session, status } = useSession();
-  const [signinModalOpen, setSigninModalOpen] = useState(false);
+  const [mounted, setMounted] = useState(false)
+  const { data: session, status } = useSession()
+  const [signinModalOpen, setSigninModalOpen] = useState(false)
 
   const toggleSigninModal = () => {
-    setSigninModalOpen(!signinModalOpen);
-  };
+    setSigninModalOpen(!signinModalOpen)
+  }
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
-  if (!mounted) return null;
+  if (!mounted) return null
 
   return (
     <>
@@ -61,9 +61,9 @@ export default function Landing() {
           <HackerCountdownWrapper date="2022-11-06T04:00:00Z" />
           <div className="flex flex-col gap-3">
             {/* uncomment the day before */}
-            {status === "authenticated" &&
+            {status === 'authenticated' &&
               session.user.uid &&
-              session.user.qualified === "yeah" &&
+              session.user.qualified === 'yeah' &&
               !session.user.checkedIn && (
                 <span className="flex justify-center w-full z-[200]">
                   <ButtonLink primary label="Check-In Now!" link="/checkin" />
@@ -75,9 +75,9 @@ export default function Landing() {
               label="Devpost"
               external
             />
-            {status === "authenticated" &&
+            {status === 'authenticated' &&
               session.user.uid &&
-              session.user.qualified === "yeah" && (
+              session.user.qualified === 'yeah' && (
                 <>
                   <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
@@ -140,5 +140,5 @@ export default function Landing() {
         <SigninForm />
       </Modal>
     </>
-  );
+  )
 }
