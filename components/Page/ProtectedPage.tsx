@@ -58,7 +58,7 @@ export function ProtectedPage({ title, restrictions, children }: Props) {
     return (
       <Layout>
         <Head>
-          <title>Citrus Hack 2022 {title && '| ' + title}</title>
+          <title>Cutie Hack 2022 {title && '| ' + title}</title>
         </Head>
         <section className="flex flex-col w-full items-center">
           Loading...
@@ -70,7 +70,7 @@ export function ProtectedPage({ title, restrictions, children }: Props) {
   return (
     <Layout>
       <Head>
-        <title>Citrus Hack 2022 {title && '| ' + title}</title>
+        <title>Cutie Hack 2022 {title && '| ' + title}</title>
       </Head>
       <section className="flex flex-col w-full px-4 justify-center items-center">
         {status === 'authenticated' &&
