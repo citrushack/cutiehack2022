@@ -75,7 +75,7 @@ export function CheckinForm() {
     <main className="flex flex-col items-center my-24 px-4 w-full">
       <h2 className="mb-6">Check-In Form</h2>
       <p className="pb-4 w-full sm:max-w-2xl">
-        Fill out this form to confirm your participation for Citrus Hack 2022!
+        Fill out this form to confirm your participation for Cutie Hack 2022!
       </p>
       <form
         className="flex flex-col gap-4 w-full sm:max-w-2xl self-center"

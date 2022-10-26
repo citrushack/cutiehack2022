@@ -57,7 +57,7 @@ export function UserBar() {
       </div>
       <Modal
         title="Sign In"
-        description="Sign in to Citrus Hack via Google to apply and access more. No password required."
+        description="Sign in to Cutie Hack via Google to apply and access more. No password required."
         show={signinModalOpen}
         handler={setSigninModalOpen}
       >
