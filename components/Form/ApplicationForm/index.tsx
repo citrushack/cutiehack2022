@@ -34,15 +34,11 @@ export function ApplicationForm() {
   const [fileUploaded, setFileUploaded] = useState(false)
 
   const determineCriteriaMet = (grad_date: string, grade: string) => {
-    const [year, month, day] = grad_date.split('-')
     var criteria_met = true
 
     // determine if criteria to participate is met
+    // only auto-accept if the applicant is a undergrad
     if (grade === 'Graduate') criteria_met = false
-    if (parseInt(year) < 2022) criteria_met = false
-    else if (parseInt(year) === 2022)
-      if (parseInt(month) < 4) criteria_met = false
-      else if (parseInt(month) === 4 && parseInt(day) <= 2) criteria_met = false
 
     return criteria_met
   }
