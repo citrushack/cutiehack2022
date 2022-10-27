@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from '@/lib/mongodb'
 import { sendEmail } from '@/lib/sendgrid'
 import { getSession } from 'next-auth/react'
+import { sendReReviewEmail } from '@/lib/rereviewAcceptNotification'
 
 export default async function rereviewApplication(
   req: NextApiRequest,
@@ -14,13 +15,9 @@ export default async function rereviewApplication(
 
     // send email notification about user's application status and update current status
     for (let i = 0; i < users.length; i++) {
-      await sendEmail({
+      await sendReReviewEmail({
         email: users[i].email,
-        template_id: process.env.APP_REREVIEWED_EMAIL_ID,
-        name: users[i].name.first,
-        members: '',
-        invite_code: '',
-        newcomer: '',
+        first_name: users[i].name.first,
       })
       await db
         .collection('users')
