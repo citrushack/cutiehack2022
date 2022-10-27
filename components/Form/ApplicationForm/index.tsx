@@ -33,16 +33,28 @@ export function ApplicationForm() {
   const [clickedSubmitOnce, setClickedSubmitOnce] = useState(false)
   const [fileUploaded, setFileUploaded] = useState(false)
 
-  const determineCriteriaMet = (grad_date: string, grade: string) => {
-    const [year, month, day] = grad_date.split('-')
+  const determineCriteriaMet = (
+    grade: string,
+    participation: string,
+    school: string
+  ) => {
     var criteria_met = true
 
     // determine if criteria to participate is met
+    // auto accept if
+    // if undergrad && UCR
+    // if undergrad && non-ucr && online
+    if (
+      school != 'University of California, Riverside' &&
+      school != 'UCR' &&
+      school != 'ucr' &&
+      school != 'UC Riverside' &&
+      school != 'uc riverside'
+    ) {
+      criteria_met = false
+    }
+    if (participation == 'Online') criteria_met = true
     if (grade === 'Graduate') criteria_met = false
-    if (parseInt(year) < 2022) criteria_met = false
-    else if (parseInt(year) === 2022)
-      if (parseInt(month) < 4) criteria_met = false
-      else if (parseInt(month) === 4 && parseInt(day) <= 2) criteria_met = false
 
     return criteria_met
   }
@@ -97,7 +109,7 @@ export function ApplicationForm() {
     let applied_after_limit = data.numUsersInperson >= 350 ? true : false
 
     // generate other user attributes
-    let criteria_met = determineCriteriaMet(grad_date, grade)
+    let criteria_met = determineCriteriaMet(grade, participation, school)
     const uid = nanoid()
 
     await uploadFile(resume, first_name, last_name, uid)
