@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { BiX } from "react-icons/bi";
-import ExternalLink from "@/components/ExternalLink";
+import React, { useState } from 'react'
+import { BiX } from 'react-icons/bi'
+import ExternalLink from '@/components/ExternalLink'
 
 interface Props {
   /** Heading for accordion. */
-  question: string;
+  question: string
   /** Content in accordion, which could be a string or HTML elements. */
-  answer: string | React.ReactNode;
+  answer: string | React.ReactNode
 }
 
 /** Accordion for a single FAQ. */
 export function FaqAccordion({ question, answer }: Props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(true)
 
   return (
     <div className="flex flex-col w-full border-b-2 border-highlight">
@@ -23,70 +23,70 @@ export function FaqAccordion({ question, answer }: Props) {
         <div>
           <BiX
             className={
-              "text-4xl transform-gpu transition-transform duration-150 " +
-              (open ? "rotate-0" : "rotate-45")
+              'text-4xl transform-gpu transition-transform duration-150 ' +
+              (open ? 'rotate-0' : 'rotate-45')
             }
           />
         </div>
       </div>
       <div
         className={
-          "transition-size overflow-hidden duration-250 h-full " +
-          (open ? "max-h-[30rem]" : "max-h-0")
+          'transition-size overflow-hidden duration-250 h-full ' +
+          (open ? 'max-h-[30rem]' : 'max-h-0')
         }
       >
-        {typeof answer === "string" ? (
+        {typeof answer === 'string' ? (
           <p className="m-0 mb-8">{answer}</p>
         ) : (
           <div className="m-0 mb-8">{answer}</div>
         )}
       </div>
     </div>
-  );
+  )
 }
 
 const faq = [
   {
-    question: "What is a hackathon?",
+    question: 'What is a hackathon?',
     answer:
-      "A hackathon is an event where teams or inviduals rush to make a creative project. Throughout, there will be free workshops intended to guide you in creating your project. At the end of the time slot, contestants have the opportunity to demo their projects to judges and win prizes.",
+      'A hackathon is an event where teams or inviduals rush to make a creative project. Throughout, there will be free workshops intended to guide you in creating your project. At the end of the time slot, contestants have the opportunity to demo their projects to judges and win prizes.',
   },
   {
-    question: "How do I apply?",
+    question: 'How do I apply?',
     answer:
-      "You need to sign in first with either email, your google account, or github. The application form is then accessible on the website after signing in.",
+      'You need to sign in first with either email, your google account, or github. The application form is then accessible on the website after signing in.',
   },
   {
-    question: "When are applications due?",
+    question: 'When are applications due?',
     answer:
-      "Applications are due by 11:59 pm on Friday, November 4, 2022. Be sure to submit your application before then in order to participate.",
+      'Applications are due by 11:59 pm on Friday, November 4, 2022. Be sure to submit your application before then in order to participate.',
   },
   {
-    question: "Is Cutie Hack free?",
+    question: 'Is Cutie Hack free?',
     answer:
-      "Applying and attending Cutie Hack is completely free! You’ll get access to mentors, workshops, and prizes at no extra cost.",
+      'Applying and attending Cutie Hack is completely free! You’ll get access to mentors, workshops, and prizes at no extra cost.',
   },
   {
-    question: "How long do I have to hack?",
-    answer: "You will have from 9:00am to 9:00pm to create your projects.",
+    question: 'How long do I have to hack?',
+    answer: 'You will have from 9:00am to 9:00pm to create your projects.',
   },
   {
-    question: "Who can come to Cutie Hack?",
+    question: 'Who can come to Cutie Hack?',
     answer:
-      "We welcome anyone from any high school or undergrad college to come out and hack with us.",
+      'We welcome anyone from any high school or undergrad college to come out and hack with us.',
   },
   {
-    question: "Where is the event?",
+    question: 'Where is the event?',
     answer: (
       <>
         <p className="mt-0">
-          Since this event will be hybrid, we will have{" "}
+          Since this event will be hybrid, we will have{' '}
           <span className="font-semibold">two</span> locations for the event.
         </p>
         <p>
           <span className="font-semibold">
             Note that only UCR students can attend in-person.
-          </span>{" "}
+          </span>{' '}
           For those attending in-person, the event will be located in Winston
           Chung Hall at UCR.
         </p>
@@ -105,14 +105,14 @@ const faq = [
       "That's the best reason to come out! Cutie Hack is open to people of all skill-levels. We'll have workshops and activities, along with mentors to help get you started and turn your project into reality.",
   },
   {
-    question: "What will I need to participate?",
+    question: 'What will I need to participate?',
     answer:
-      "All you need is a working device (i.e your laptop or PC) and a stable internet connection. If you are attending online, create a Discord and/or Zoom to help you participate.",
+      'All you need is a working device (i.e your laptop or PC) and a stable internet connection. If you are attending online, create a Discord and/or Zoom to help you participate.',
   },
   {
-    question: "Where will we submit?",
+    question: 'Where will we submit?',
     answer:
-      "You will submit through Devpost. Further instructions will follow on the day-of the event.",
+      'You will submit through Devpost. Further instructions will follow on the day-of the event.',
   },
   {
     question: "What if I don't have a team?",
@@ -120,7 +120,7 @@ const faq = [
       "If you don't have a team formed prior to Cutie Hack, we will have a channel on Discord where you can find other participants that share similar interests. We'll also be providing activities at the beginning of the event to help you form teams. Teams aren't required though, so feel free to work individually.",
   },
   {
-    question: "Do I have to hack or make a project?",
+    question: 'Do I have to hack or make a project?',
     answer:
       "Not at all! You can attend a workshop just to learn, network with fellow hackers, and participate in games and raffles. You'll be able to find the schedule on our website as we get closer to the event.",
   },
@@ -128,7 +128,7 @@ const faq = [
     question:
       "If I'm residing outside of the U.S., can I still attend and/or win a prize?",
     answer:
-      "Those outside of the U.S. can still attend, compete, and win. However, due to shipping restrictions and COVID, we won’t be able to send any physical items to those residing outside of the U.S.",
+      'Those outside of the U.S. can still attend, compete, and win. However, due to shipping restrictions and COVID, we won’t be able to send any physical items to those residing outside of the U.S.',
   },
   // {
   //   question: "My question isn't listed?",
@@ -143,7 +143,7 @@ const faq = [
   //     </p>
   //   ),
   // },
-];
+]
 
 export const FaqGrid = () => (
   <>
@@ -151,4 +151,4 @@ export const FaqGrid = () => (
       <FaqAccordion key={question} question={question} answer={answer} />
     ))}
   </>
-);
+)
