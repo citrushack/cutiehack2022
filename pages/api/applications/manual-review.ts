@@ -2,6 +2,8 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from '@/lib/mongodb'
 import { sendEmail } from '@/lib/sendgrid'
 import { getSession } from 'next-auth/react'
+import { sendAcceptanceEmail } from '@/lib/acceptNotification'
+import { sendRejectEmail } from '@/lib/rejectNotification'
 
 export default async function manualReviewApplication(
   req: NextApiRequest,
@@ -14,26 +16,17 @@ export default async function manualReviewApplication(
 
     // send email notification about user's application status and update current status
     for (let i = 0; i < users.length; i++) {
-      if (approved) {
-        await sendEmail({
+      if (approved && users[i].email) {
+        await sendAcceptanceEmail({
           email: users[i].email,
-          template_id: process.env.APP_APPROVED_EMAIL_ID,
-          name: users[i].name.first,
-          members: '',
-          invite_code: '',
-          newcomer: '',
+          first_name: users[i].name.first,
         })
         await db
           .collection('users')
           .updateOne({ uid: users[i].uid }, { $set: { qualified: 'yeah' } })
       } else {
-        await sendEmail({
+        await sendRejectEmail({
           email: users[i].email,
-          template_id: process.env.APP_REJECTED_EMAIL_ID,
-          name: users[i].name.first,
-          members: '',
-          invite_code: '',
-          newcomer: '',
         })
         await db
           .collection('users')
