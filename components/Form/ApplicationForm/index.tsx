@@ -42,14 +42,20 @@ export function ApplicationForm() {
 
     // determine if criteria to participate is met
     // auto accept if
-      // if undergrad && UCR
-      // if undergrad && non-ucr && online
-    if (school != 'University of California, Riverside' && school != 'UCR' && school != 'ucr' && school != 'UC Riverside' && school != 'uc riverside') {
+    // if undergrad && UCR
+    // if undergrad && non-ucr && online
+    if (
+      school != 'University of California, Riverside' &&
+      school != 'UCR' &&
+      school != 'ucr' &&
+      school != 'UC Riverside' &&
+      school != 'uc riverside'
+    ) {
       criteria_met = false
     }
     if (participation == 'Online') criteria_met = true
     if (grade === 'Graduate') criteria_met = false
-    
+
     return criteria_met
   }
 
