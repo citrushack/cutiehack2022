@@ -42,6 +42,9 @@ export default function Landing() {
             <p className="flex font-baloo_semi_bold text-2xl text-highlight justify-center">
               illuminate your passion
             </p>
+            <p className="flex font-baloo_semi_bold text-2xl text-highlight justify-center">
+              November 5th
+            </p>
           </div>
           <CountdownWrapper date="2022-11-05T16:00:00Z" />
 
