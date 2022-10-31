@@ -47,6 +47,11 @@ export function FaqAccordion({ question, answer }: Props) {
 
 const faq = [
   {
+    question: 'When does Cutie Hack start?',
+    answer:
+      'Cutie Hack starts at 8:00 am on November 5th with an opening ceremony. Hacking begins at 9:00 am.',
+  },
+  {
     question: 'What is a hackathon?',
     answer:
       'A hackathon is an event where teams or inviduals rush to make a creative project. Throughout, there will be free workshops intended to guide you in creating your project. At the end of the time slot, contestants have the opportunity to demo their projects to judges and win prizes.',
@@ -67,8 +72,8 @@ const faq = [
       'Applying and attending Cutie Hack is completely free! You’ll get access to mentors, workshops, and prizes at no extra cost.',
   },
   {
-    question: 'How long is Cutie Hack?',
-    answer: 'Cutie Hack will be a 12-hour event.',
+    question: 'How long do I have to hack?',
+    answer: 'You will have from 9:00am to 9:00pm to create your projects.',
   },
   {
     question: 'Who can come to Cutie Hack?',

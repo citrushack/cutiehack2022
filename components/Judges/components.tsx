@@ -31,9 +31,9 @@ export const JudgeProfile = ({ image, name, role }: ProfileProps) => (
 
 const judges = [
   {
-    image: '/judges/westin-montano.jpg',
-    name: 'Westin Montano',
-    role: 'Former Citrus Hack Ops Lead',
+    image: '/judges/craig-schroeder.jpg',
+    name: 'Dr. Craig Schroeder',
+    role: 'UCR Professor',
   },
   {
     image: '/judges/walid-najjar.jpg',
@@ -41,39 +41,9 @@ const judges = [
     role: 'UCR Professor',
   },
   {
-    image: '/judges/trinah-maulion.jpg',
-    name: 'Trinah Maulion',
-    role: 'DAU Marketing Lead',
-  },
-  {
     image: '/judges/allan-knight.jpg',
     name: 'Dr. Allan Knight',
     role: 'UCR Professor',
-  },
-  {
-    image: '/judges/rj-johar.jpg',
-    name: 'Rj Johar',
-    role: 'Former Citrus Hack Director',
-  },
-  {
-    image: '/judges/chloe-georgiou.jpg',
-    name: 'Chloe Georgiou',
-    role: 'IEEE President',
-  },
-  {
-    image: '/judges/sasya-uppugonduri.jpg',
-    name: 'Sasya Uppugonduri',
-    role: 'Hardware Engineer @ Synopsys',
-  },
-  {
-    image: '/judges/faud-jamour.jpg',
-    name: 'Faud Jamour',
-    role: 'Software Engineer @  AWS',
-  },
-  {
-    image: '/judges/js-pescasio.jpg',
-    name: 'JS Pescasio',
-    role: 'Former Citrus Hack Web Developer',
   },
   {
     image: '/judges/kelly-downey.jpg',
@@ -81,24 +51,14 @@ const judges = [
     role: 'UCR Professor',
   },
   {
-    image: '/judges/vahagn-tovmasian.jpg',
-    name: 'Vahagn Tovmasian',
-    role: 'Former IEEE President',
-  },
-  {
     image: '/judges/paea-lependu.jpg',
     name: 'Dr. Paea Lependu',
     role: 'UCR Professor',
   },
   {
-    image: '/judges/paulian-le.jpg',
-    name: 'Paulian Le',
-    role: 'Former Citrus Hack Ops Lead',
-  },
-  {
-    image: '/judges/divyank-shah.jpg',
-    name: 'Divyank Shah',
-    role: 'ACM Profesional Development Chair',
+    image: '/judges/brian-crites.jpg',
+    name: 'Dr. Brian Crites',
+    role: 'UCR Professor',
   },
   {
     image: '/judges/ryan-rusich.jpg',
@@ -106,8 +66,33 @@ const judges = [
     role: 'UCR Professor',
   },
   {
+    image: '/judges/amel-dechemi.jpg',
+    name: 'Amel Dechemi',
+    role: 'UCR PhD Candidate',
+  },
+  {
+    image: '/judges/faud-jamour.jpg',
+    name: 'Faud Jamour',
+    role: 'Software Engineer @  AWS',
+  },
+  {
+    image: '/judges/sasya-uppugonduri.jpg',
+    name: 'Sasya Uppugonduri',
+    role: 'Hardware Engineer @ Synopsys',
+  },
+  {
+    image: '/judges/rajbir-johar.jpg',
+    name: 'Rajbir Johar',
+    role: 'UX/Frontend Engineer',
+  },
+  {
     image: '/judges/danial-beg.jpg',
     name: 'Danial Beg',
+    role: 'Former Citrus Hack Director',
+  },
+  {
+    image: '/judges/jonathan-trinh.jpg',
+    name: 'Jonathan Trinh',
     role: 'Former Citrus Hack Director',
   },
   {
@@ -116,9 +101,34 @@ const judges = [
     role: "UI/UX Developer @ Art'rSpace",
   },
   {
-    image: '/judges/brian-crites.jpg',
-    name: 'Dr. Brian Crites',
-    role: 'UCR Professor',
+    image: '/judges/kimmy-lac.jpg',
+    name: 'Kimmy Lac',
+    role: 'Former Citrus Hack Marketing Lead',
+  },
+  {
+    image: '/judges/js-pescasio.jpg',
+    name: 'JS Pescasio',
+    role: 'Former Citrus Hack Web Developer',
+  },
+  {
+    image: '/judges/paulian-le.jpg',
+    name: 'Paulian Le',
+    role: 'Former Citrus Hack Ops Lead',
+  },
+  {
+    image: '/judges/westin-montano.jpg',
+    name: 'Westin Montano',
+    role: 'Former Citrus Hack Ops Lead',
+  },
+  {
+    image: '/judges/chloe-georgiou.jpg',
+    name: 'Chloe Georgiou',
+    role: 'IEEE President',
+  },
+  {
+    image: '/judges/vahagn-tovmasian.jpg',
+    name: 'Vahagn Tovmasian',
+    role: 'Former IEEE President',
   },
   {
     image: '/judges/sunny-zeng.jpg',
@@ -126,24 +136,19 @@ const judges = [
     role: 'Former Program Chair @ IEEE',
   },
   {
-    image: '/judges/amel-dechemi.jpg',
-    name: 'Amel Dechemi',
-    role: 'UCR PhD Candidate',
-  },
-  {
-    image: '/judges/jonathan-trinh.jpg',
-    name: 'Jonathan Trinh',
-    role: 'Former Citrus Hack Director',
-  },
-  {
-    image: '/judges/kimmy-lac.jpg',
-    name: 'Kimmy Lac',
-    role: 'Former Citrus Hack Marketing Lead',
-  },
-  {
     image: '/judges/leen-eisa.jpg',
     name: 'Leen Eisa',
     role: 'Project Manager @ Solar Car',
+  },
+  {
+    image: '/judges/divyank-shah.jpg',
+    name: 'Divyank Shah',
+    role: 'ACM Profesional Development Chair',
+  },
+  {
+    image: '/judges/trinah-maulion.jpg',
+    name: 'Trinah Maulion',
+    role: 'DAU Marketing Lead',
   },
 ]
 
