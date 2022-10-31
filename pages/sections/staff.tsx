@@ -39,6 +39,7 @@ export default function Staff() {
             <p className="text-opposite font-baloo_semi_bold">
               Web Development
             </p>
+            <p>Thomas Li</p>
             <p>Valerie Wong</p>
             <p>Theo Fernandez</p>
             <p>Andrei Dimaano</p>
