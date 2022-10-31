@@ -182,7 +182,7 @@ export function UserDropdown() {
                     <a
                       target="_blank"
                       rel="noreferrer noopener"
-                      href={process.env.discord}
+                      href="https://discord.com/invite/jduNFuwKuk"
                       className="w-full"
                     >
                       <motion.button
