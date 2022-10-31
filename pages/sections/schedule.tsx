@@ -1,4 +1,4 @@
-import { MasterSchedule } from "@/components/Schedule/components";
+import { MasterSchedule } from '@/components/Schedule/components'
 
 export default function Schedule() {
   return (
@@ -12,5 +12,5 @@ export default function Schedule() {
       {/* TODO: uncomment once mariam says so with updated schedule*/}
       <MasterSchedule />
     </section>
-  );
+  )
 }
