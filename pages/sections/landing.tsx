@@ -24,7 +24,7 @@ export default function Landing() {
 
   return (
     <>
-      <section className="relative flex w-full min-safe-h-screen min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] justify-center items-start my-40 lg:my-0 mb-20 md:mb-0 gap-6  z-50">
+      <section className="relative flex w-full min-safe-h-screen min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] justify-center items-center my-40 lg:my-0 mb-20 md:mb-0 gap-6  z-50">
         <div className="lg:absolute flex flex-col left-4 2xl:left-0 items-center">
           <div className="flex flex-col max-w-xl justify-center">
             {/* <h1 className="font-baloo_bold text-5xl">CUTIE HACK</h1> */}
@@ -111,7 +111,7 @@ export default function Landing() {
                       external
                     />
                   </span>
-                  <span className="pb-12 flex justify-center w-full z-[200]">
+                  <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
                       secondary
                       label="Group Dashboard"

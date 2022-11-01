@@ -25,7 +25,7 @@ const Home: NextPage = () => {
     <Page title="Home">
       <Element
         name="Home"
-        className="flex relative justify-center w-full bg-gradient-to-b from-from via-via to-to"
+        className="flex relative justify-center h-screen w-full bg-gradient-to-b from-from via-via to-to"
       >
         <span className="flex relative justify-center w-full items-center">
           <svg
