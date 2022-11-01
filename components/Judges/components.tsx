@@ -101,11 +101,6 @@ const judges = [
     role: "UI/UX Developer @ Art'rSpace",
   },
   {
-    image: '/judges/kimmy-lac.jpg',
-    name: 'Kimmy Lac',
-    role: 'Former Citrus Hack Marketing Lead',
-  },
-  {
     image: '/judges/js-pescasio.jpg',
     name: 'JS Pescasio',
     role: 'Former Citrus Hack Web Developer',
