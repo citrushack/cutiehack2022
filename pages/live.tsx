@@ -127,7 +127,7 @@ export default function Live() {
       </Element>
       {/* <Wave type={5} bgColor="#FFFFFF" fillColor="via2" /> */}
 
-      <Element name="Sponsors">
+      <Element name="Sponsors" className="bg-pattern bg-repeat w-full">
         <Sponsors />
       </Element>
       <Wave type={2} bgColor="#FFFFFF" fillColor="from" />
