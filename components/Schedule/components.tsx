@@ -232,7 +232,7 @@ const saturdaySchedule = {
     {
       name: 'League Streaming',
       startTime: '2',
-      endTime: '2:30 PM',
+      endTime: '7:00 PM',
       hybrid: Boolean(true),
       room: 'WCH 127',
     },
