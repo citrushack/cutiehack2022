@@ -203,7 +203,7 @@ const saturdaySchedule = {
       room: 'Bourns A265',
     },
     {
-      name: 'Into to Web Dev',
+      name: 'Intro to Web Dev',
       startTime: '5',
       endTime: '6 PM',
       hybrid: Boolean(true),
