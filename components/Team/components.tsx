@@ -23,7 +23,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
           height={170}
           objectFit="contain"
           priority={true}
-          quality={1}
+          quality={100}
           className="rounded-full mt-5"
           alt="profile photo"
         />
