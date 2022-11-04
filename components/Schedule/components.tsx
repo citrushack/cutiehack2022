@@ -230,13 +230,6 @@ const saturdaySchedule = {
       room: 'WCH 127',
     },
     {
-      name: 'League Streaming',
-      startTime: '2',
-      endTime: '7:00 PM',
-      hybrid: Boolean(true),
-      room: 'WCH 127',
-    },
-    {
       name: 'Skribble.io',
       startTime: '2',
       endTime: '2:30 PM',
@@ -255,6 +248,13 @@ const saturdaySchedule = {
       endTime: '4:30 PM',
       hybrid: Boolean(true),
       room: 'WCH 202',
+    },
+    {
+      name: 'League Of Legends World Finals Stream',
+      startTime: '5 PM',
+      endTime: 'End Of Series',
+      hybrid: Boolean(true),
+      room: 'WCH 127',
     },
     {
       name: 'Trivia Kahoot',
