@@ -56,11 +56,6 @@ const judges = [
     role: 'UCR Professor',
   },
   {
-    image: '/judges/brian-crites.jpg',
-    name: 'Dr. Brian Crites',
-    role: 'UCR Professor',
-  },
-  {
     image: '/judges/ryan-rusich.jpg',
     name: 'Dr. Ryan Rusich',
     role: 'UCR Professor',
@@ -69,11 +64,6 @@ const judges = [
     image: '/judges/amel-dechemi.jpg',
     name: 'Amel Dechemi',
     role: 'UCR PhD Candidate',
-  },
-  {
-    image: '/judges/faud-jamour.jpg',
-    name: 'Faud Jamour',
-    role: 'Software Engineer @  AWS',
   },
   {
     image: '/judges/sasya-uppugonduri.jpg',
@@ -99,6 +89,11 @@ const judges = [
     image: '/judges/elaine-lin.jpg',
     name: 'Elaine Lin',
     role: "UI/UX Developer @ Art'rSpace",
+  },
+  {
+    image: '/judges/kimmy-lac.jpg',
+    name: 'Kimmy Lac',
+    role: 'Former Citrus Hack Marketing Lead',
   },
   {
     image: '/judges/js-pescasio.jpg',
@@ -139,6 +134,11 @@ const judges = [
     image: '/judges/divyank-shah.jpg',
     name: 'Divyank Shah',
     role: 'ACM Profesional Development Chair',
+  },
+  {
+    image: '/judges/arlene-phimmasone.jpg',
+    name: 'Arlene Phimmasone',
+    role: 'DAU President',
   },
   {
     image: '/judges/trinah-maulion.jpg',
