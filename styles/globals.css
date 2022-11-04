@@ -40,6 +40,7 @@
     --via2: #FF8E6A;
     --to: #B56B83;
     --transparent: #0000;
+    --judge: #000000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 
@@ -59,6 +60,7 @@
     --via: #B56B83;
     --to: #FF8E6A;
     --transparent: #0000;
+    --judge: #000000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 
@@ -78,6 +80,7 @@
     --via: #B56B83;
     --to: #FF8E6A;
     --transparent: #0000;
+    --judge: #F6DD5A;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 }
