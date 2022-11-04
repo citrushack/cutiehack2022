@@ -22,7 +22,7 @@ export const JudgeProfile = ({ image, name, role }: ProfileProps) => (
         priority={true}
         quality={100}
         className="rounded-full"
-        alt=''
+        alt=""
       />
     </motion.span>
     <p className="mb-0 w-max font-semibold text-judge">{name}</p>
