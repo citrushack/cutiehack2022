@@ -53,17 +53,6 @@ export default function Staff() {
             <p>Ronit Bhushan</p>
           </div>
           <div>
-            <div className="pb-4 md:hidden">
-              <p className="text-opposite font-baloo_semi_bold">
-                Quality Assurance
-              </p>
-              <p>Paulian Le</p>
-            </div>
-            <p className="text-opposite font-baloo_semi_bold">Marketing</p>
-            <p>Natalie Jung</p>
-            <p>Elaine Lin</p>
-          </div>
-          <div>
             <p className="text-opposite font-baloo_semi_bold">UI/UX</p>
             <p>Chloe Xu</p>
             <p>Elaine Lin</p>
@@ -82,10 +71,13 @@ export default function Staff() {
             <p>Eliot Lee</p>
             <p>Skyler Saltos</p>
           </div>
-          <div className="hidden md:block">
-            <p className="text-opposite font-baloo_semi_bold">
-              Quality Assurance
-            </p>
+          <div>
+            <p className="text-opposite font-baloo_semi_bold">Marketing</p>
+            <p>Natalie Jung</p>
+            <p>Elaine Lin</p>
+          </div>
+          <div>
+            <p className="text-opposite font-baloo_semi_bold">Quality Assurance</p>
             <p>Paulian Le</p>
           </div>
         </div>
