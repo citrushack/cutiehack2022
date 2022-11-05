@@ -34,7 +34,7 @@ export default function Staff() {
           </p>
           <div className="inline bg-gradient-to-r from-opposite to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 text-center text-sub font-baloo_regular justify-center gap-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 text-center text-sub font-baloo_regular justify-center gap-y-4">
           <div>
             <p className="text-opposite font-baloo_semi_bold">
               Web Development
@@ -62,6 +62,14 @@ export default function Staff() {
             <p className="text-opposite font-baloo_semi_bold">Marketing</p>
             <p>Natalie Jung</p>
             <p>Elaine Lin</p>
+          </div>
+          <div>
+            <p className="text-opposite font-baloo_semi_bold">UI/UX</p>
+            <p>Chloe Xu</p>
+            <p>Elaine Lin</p>
+            <p>Kia Nooshi</p>
+            <p>Rania Saber</p>
+            <p>Siraaj Kudtarkar</p>
           </div>
           <div>
             <p className="text-opposite font-baloo_semi_bold">Sponsorship</p>
