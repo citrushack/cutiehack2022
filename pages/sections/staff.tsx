@@ -77,7 +77,9 @@ export default function Staff() {
             <p>Elaine Lin</p>
           </div>
           <div>
-            <p className="text-opposite font-baloo_semi_bold">Quality Assurance</p>
+            <p className="text-opposite font-baloo_semi_bold">
+              Quality Assurance
+            </p>
             <p>Paulian Le</p>
           </div>
         </div>
