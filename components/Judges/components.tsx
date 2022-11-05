@@ -82,19 +82,9 @@ const judges = [
     role: 'Former Citrus Hack Director',
   },
   {
-    image: '/judges/jonathan-trinh.jpg',
-    name: 'Jonathan Trinh',
-    role: 'Former Citrus Hack Director',
-  },
-  {
     image: '/judges/elaine-lin.jpg',
     name: 'Elaine Lin',
     role: "UI/UX Developer @ Art'rSpace",
-  },
-  {
-    image: '/judges/kimmy-lac.jpg',
-    name: 'Kimmy Lac',
-    role: 'Former Citrus Hack Marketing Lead',
   },
   {
     image: '/judges/js-pescasio.jpg',
