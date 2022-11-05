@@ -234,5 +234,7 @@ export const userViewDisplay = (view, user) => {
     return user.qualified === 'yeah' && user.checkedIn
   } else if (view === 'Not Checked-In') {
     return user.qualified === 'yeah' && !user.checkedIn
+  } else if (view === 'USE THIS FOR CHECK IN') {
+    return user.qualified === 'yeah' && !user.applied_after_limit
   }
 }
