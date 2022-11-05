@@ -22,6 +22,7 @@ export function Overview({ data }) {
   const viewOptions = [
     'Checked-In',
     'Not Checked-In',
+    'USE THIS FOR CHECK IN',
     'Approved',
     'All Users',
     'Rejected',
@@ -61,6 +62,8 @@ export function Overview({ data }) {
             (user) => user.qualified === 'yeah' && !user.checkedIn
           )
         )
+      } else if (selectedView === 'USE THIS FOR CHECK IN') {
+        setSelectedUsers(data.users.filter((user) => user.applied_after_limit))
       }
     } else {
       setSelectedUsers([])
@@ -202,6 +205,20 @@ export function Overview({ data }) {
       <QueriedUsers
         selectedView={selectedView}
         view="Not Checked-In"
+        showPending={Boolean(false)}
+        validSearch={validSearch}
+        sorted={sorted}
+        users={data.users}
+        selectedUsers={selectedUsers}
+        setSelectedUsers={setSelectedUsers}
+        expandedUsers={expandedUsers}
+        setExpandedUsers={setExpandedUsers}
+        filter={filter}
+        searchQuery={searchQuery}
+      />
+      <QueriedUsers
+        selectedView={selectedView}
+        view="USE THIS FOR CHECK IN"
         showPending={Boolean(false)}
         validSearch={validSearch}
         sorted={sorted}
