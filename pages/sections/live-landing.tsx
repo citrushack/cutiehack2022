@@ -71,7 +71,7 @@ export default function Landing() {
               )}
             <ButtonLink
               primary
-              link="https://citrus-hack-2022.devpost.com/"
+              link="https://cutie-hack-2022.devpost.com/"
               label="Devpost"
               external
             />
