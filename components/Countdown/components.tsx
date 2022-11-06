@@ -136,7 +136,7 @@ export function CountdownWrapper({ date }) {
 /** Content displayed after hacking countdown finishes. */
 const HackerCompletionist = () => (
   <div className="mb-4">
-    <h3 className="text-center font-bold">Hacking has ended!</h3>
+    <h3 className="text-center font-baloo_bold">Hacking has ended!</h3>
   </div>
 )
 
