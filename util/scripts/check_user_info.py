@@ -17,7 +17,7 @@ def check_size(client):
                 print('\n')
             
 if __name__ == "__main__":   
-    CONNECTION_STRING = "mongodb+srv://natedev:dJltSYC3qTf11STO@cutiehack2022.wntjvk5.mongodb.net/?retryWrites=true&w=majority"
+    CONNECTION_STRING = "key"
     client = MongoClient(CONNECTION_STRING)
 
     check_size(client)
