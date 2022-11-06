@@ -163,7 +163,7 @@ export function SponsorsGrid() {
   if (!mounted) return null
 
   return (
-    <div className="grid gap-y-10 grid-cols-2 md:gap-20 gap-x-20">
+    <div className="grid gap-y-10 grid-cols-2 md:grid-cols-4 md:gap-20 gap-x-20">
       {sponsors.map(
         ({ name, link, width, height, shrink, tall, image, imageDark }) => (
           <div key={name} className="flex justify-center grid-cols-1">
