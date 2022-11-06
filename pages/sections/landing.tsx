@@ -77,7 +77,9 @@ export default function Landing() {
             </span>
           )}
 
-          <h1 className="text-center font-baloo_bold text-3xl">Event has ended!</h1>
+          <h1 className="text-center font-baloo_bold text-3xl">
+            Event has ended!
+          </h1>
           {/* {!session && (
             <span className="flex justify-center w-1/2 lg:w-full z-[200]">
               <motion.button
