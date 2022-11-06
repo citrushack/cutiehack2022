@@ -59,23 +59,24 @@ export default function Landing() {
             <SignupCounter />
           </span>
           <HackerCountdownWrapper date="2022-11-06T04:00:00Z" />
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-3">
+
+          {/* <div className="flex flex-col md:grid md:grid-cols-2 gap-3"> */}
             {/* uncomment the day before */}
-            {status === 'authenticated' &&
+            {/* {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' &&
               !session.user.checkedIn && (
                 <span className="flex justify-center w-full z-[200]">
                   <ButtonLink primary label="Check-In Now!" link="/checkin" />
                 </span>
-              )}
-            <ButtonLink
+              )} */}
+            {/* <ButtonLink
               primary
               link="https://cutie-hack-2022.devpost.com/"
               label="Devpost"
               external
-            />
-            {status === 'authenticated' &&
+            /> */}
+            {/* {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' && (
                 <>
@@ -95,8 +96,10 @@ export default function Landing() {
                     />
                   </span>
                 </>
-              )}
-          </div>
+              )} */}
+          {/* </div> */}
+
+
           <div className="flex flex-col w-full gap-3">
             {/* uncomment the day before */}
             {/* {status === 'authenticated' &&
