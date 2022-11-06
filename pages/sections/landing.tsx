@@ -77,7 +77,8 @@ export default function Landing() {
             </span>
           )}
 
-          {!session && (
+          <h1 className="text-center font-baloo_bold text-3xl">Event has ended!</h1>
+          {/* {!session && (
             <span className="flex justify-center w-1/2 lg:w-full z-[200]">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -88,18 +89,19 @@ export default function Landing() {
                 Sign In
               </motion.button>
             </span>
-          )}
-          <div className="flex flex-col w-full gap-3 px-20 md:px-0">
-            {/* uncomment the day before */}
-            {status === 'authenticated' &&
+          )} */}
+          {/* <div className="flex flex-col w-full gap-3 px-20 md:px-0"> */}
+          {/* uncomment the day before */}
+          {/* {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' &&
               !session.user.checkedIn && (
                 <span className="flex justify-center w-full z-[200]">
                   <ButtonLink primary label="Check-In Now!" link="/checkin" />
                 </span>
-              )}
-            {status === 'authenticated' &&
+              )} */}
+
+          {/* {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' && (
                 <>
@@ -120,7 +122,7 @@ export default function Landing() {
                   </span>
                 </>
               )}
-          </div>
+          </div> */}
         </div>
       </section>
       <Modal
