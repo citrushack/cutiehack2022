@@ -37,7 +37,7 @@ export default function Staff() {
         <div className="grid grid-cols-2 md:grid-cols-5 text-center text-sub font-baloo_regular justify-center gap-y-4 items-center">
           <div>
             <p className="text-opposite font-baloo_semi_bold">
-              Web Development
+              Software Engineers
             </p>
             <p>Valerie Wong</p>
             <p>Theo Fernandez</p>
