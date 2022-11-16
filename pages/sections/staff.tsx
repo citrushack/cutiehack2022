@@ -34,7 +34,7 @@ export default function Staff() {
           </p>
           <div className="inline bg-gradient-to-r from-opposite to-transparent w-20 xl:w-96 h-1 items-center rounded-md" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 text-center text-sub font-baloo_regular justify-center gap-y-4 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 text-center text-sub font-baloo_regular justify-center gap-y-4 items-center">
           <div>
             <p className="text-opposite font-baloo_semi_bold">
               Web Development
@@ -72,15 +72,31 @@ export default function Staff() {
             <p>Skyler Saltos</p>
           </div>
           <div>
-            <p className="text-opposite font-baloo_semi_bold">Marketing</p>
-            <p>Natalie Jung</p>
-            <p>Elaine Lin</p>
+            <div>
+              <p className="text-opposite font-baloo_semi_bold">Marketing</p>
+              <p>Natalie Jung</p>
+              <p>Elaine Lin</p>
+            </div>
+            <div className="pt-4 hidden md:block">
+              <p className="text-opposite font-baloo_semi_bold">
+                Quality Assurance
+              </p>
+              <p>Paulian Le</p>
+            </div>
+            <div className="pt-4 hidden md:block">
+              <p className="text-opposite font-baloo_semi_bold">Photographer</p>
+              <p>Kobe Braga</p>
+            </div>
           </div>
-          <div>
+          <div className="md:hidden">
             <p className="text-opposite font-baloo_semi_bold">
               Quality Assurance
             </p>
             <p>Paulian Le</p>
+          </div>
+          <div className="col-span-2 md:hidden">
+            <p className="text-opposite font-baloo_semi_bold">Photographer</p>
+            <p>Kobe Braga</p>
           </div>
         </div>
       </div>
