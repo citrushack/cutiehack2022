@@ -55,7 +55,7 @@ const staff = [
     link: 'https://www.linkedin.com/in/minsookime/',
     image: '/leads/minsookim.png',
     name: 'Minsoo Kim',
-    role: 'Web Dev Lead',
+    role: 'Lead Software Engineer',
   },
   {
     link: 'https://www.linkedin.com/in/nathan-melwani/',
