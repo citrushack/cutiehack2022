@@ -1,5 +1,3 @@
-> modification of https://github.com/citrushack/citrushack2022/blob/dev/README.md
-
 # Cutie Hack 2022
 
 > Author: Minsoo Kim
@@ -10,7 +8,33 @@
 >
 > Nathan Melwani
 
-This is the codebase for Cutie Hack 2022. Below is a guide for setting up a local environment to run the website locally for development purposes
+This is the codebase for Cutie Hack 2022. 
+
+## Leads
+### Minsoo Kim
+
+<img align="left" src="public/leads/minsoo.png" alt="image of Minsoo Kim" width="100" height="100">
+
+Hey I'm Minsoo! I'm a software engineer based in California. I like to weightlift or boulder after a long day of coding :) You can connect with me on [LinkedIn](https://www.linkedin.com/in/minsookime/) or my [Github](https://github.com/minsooerickim).
+
+<br/>
+<br/>
+
+## Final Product
+### Desktop
+<p align="center">
+<img src="public/mockup/landing.jpg" alt="image of desktop view">
+<img src="public/mockup/schedule.jpg" alt="image of desktop view">
+</p>
+
+### Mobile
+<p align="center">
+<img src="public/mockup/mobile_sponsors.jpg" alt="image of mobile view">
+<img src="public/mockup/mobile_userbar.jpg" alt="image of mobile view">
+</p>
+
+## Development
+Below is a guide for setting up a local environment to run the website locally for development purposes
 
 ## Prerequisites
 

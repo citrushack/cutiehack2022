@@ -46,7 +46,7 @@ export default function Landing() {
               November 5th
             </p>
           </div>
-          <CountdownWrapper date="2022-11-05T16:00:00Z" />
+          <CountdownWrapper date="2023-01-05T16:00:00Z" />
 
           {/* testing date */}
           {/* <CountdownWrapper date="2022-10-21T09:00:00Z" /> */}
@@ -77,9 +77,9 @@ export default function Landing() {
             </span>
           )}
 
-          <h1 className="text-center font-baloo_bold text-3xl">
+          {/* <h1 className="text-center font-baloo_bold text-3xl">
             Event has ended!
-          </h1>
+          </h1> */}
           {/* {!session && (
             <span className="flex justify-center w-1/2 lg:w-full z-[200]">
               <motion.button
